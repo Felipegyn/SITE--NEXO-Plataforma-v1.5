@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Empresa Exemplo | Serviços e orçamento</title><meta name="description" content="Conheça os serviços, o jeito de trabalhar e peça um orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+:root{--ac:#8b4a2b;--on:#fff;--bg:#faf8f4;--sf:#fff;--ln:#e2ded5;--fg:#16161a;--mut:#5f5f66;--tint:#f1e6df;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;letter-spacing:-.03em;line-height:1.08;margin:0}p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.brand{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ac)}
+nav{display:flex;gap:24px;align-items:center;font-size:15px}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:var(--on);font:700 15px/1 "DM Sans",sans-serif;padding:14px 22px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px color-mix(in srgb,var(--ac) 30%,transparent)}
+.btn.ghost{background:none;color:var(--fg);border:1px solid var(--ln)}.btn.ghost:hover{border-color:var(--ac)}nav .btn{color:var(--on);padding:10px 18px}
+#mb{display:none;background:none;border:1px solid var(--ln);border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer;color:var(--fg)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:64px 0}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:800}.hero h1 span{color:var(--ac)}
+.lead{font-size:19px;color:var(--mut);margin:22px 0 28px;max-width:44ch}.acts{display:flex;flex-wrap:wrap;gap:12px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;width:100%;min-height:50px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 18%,transparent)}
+.ph{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:400/280;background:var(--ln)}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.info{position:absolute;left:14px;bottom:14px;right:14px;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:14px}
+.info b{display:block;font-size:12px;color:var(--ac);letter-spacing:.08em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--ln)}.stats div{padding:26px 0;text-align:center}
+.stats b{display:block;font:800 clamp(28px,4vw,44px) "Bricolage Grotesque",sans-serif;color:var(--ac)}.stats span{color:var(--mut);font-size:15px}
+section{padding:84px 0;border-top:1px solid var(--ln)}
+.head{max-width:640px;margin-bottom:34px}.head h2{font-size:clamp(30px,4.2vw,50px);font-weight:800}.head p{color:var(--mut);margin-top:12px;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips button{font:500 15px "DM Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--ln);border-radius:999px;padding:9px 18px;cursor:pointer}
+.chips button:hover{border-color:var(--ac)}.chips button[aria-pressed=true]{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}.two>*{min-width:0}
+.hr{display:grid;margin:18px 0}.hr div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--ln)}.hr span{color:var(--mut)}
+.pts{display:grid;gap:20px}.pts div{border-left:2px solid var(--ac);padding-left:18px}.pts b{display:block;font:700 19px "Bricolage Grotesque",sans-serif}.pts span{color:var(--mut)}
+form{display:grid;gap:14px;background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px}label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+.note{font-size:14px;color:var(--mut)}
+details{border-bottom:1px solid var(--ln);padding:18px 0}summary{cursor:pointer;font:700 19px "Bricolage Grotesque",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--ac);font-size:24px;line-height:1}details[open] summary:after{content:"–"}details p{color:var(--mut);margin-top:10px;max-width:62ch}
+footer{border-top:1px solid var(--ln);padding:34px 0 44px;color:var(--mut);font-size:15px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+dialog{border:0;border-radius:22px;padding:0;width:min(500px,calc(100% - 32px));max-height:88vh;background:var(--sf);color:var(--fg);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#0008}
+.dg{padding:26px;display:grid;gap:12px}.dg h3{font-size:28px}.dg .x{justify-self:end;background:none;border:1px solid var(--ln);border-radius:50%;width:38px;height:38px;cursor:pointer;color:var(--fg);font-size:16px}
+.mono{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--tint);color:var(--ac);font:800 20px "Bricolage Grotesque",sans-serif}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;box-shadow:0 8px 28px #0005}
+@media(max-width:900px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--ln);padding:10px 20px 20px}nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto}.hero,.two{grid-template-columns:1fr;gap:34px}.hero{padding:40px 0}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+.sv{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px;display:grid;gap:10px;align-content:start;transition:border-color .2s,transform .2s}.sv:hover{border-color:var(--ac);transform:translateY(-3px)}.sv h3{font-size:22px}.sv p{color:var(--mut);font-size:16px}.sv a{color:var(--ac);font-weight:700;text-decoration:none;margin-top:6px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stp{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.stp div{position:relative;padding-top:58px}.stp div:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font:800 18px "Bricolage Grotesque",sans-serif}.stp b{display:block;font:700 20px "Bricolage Grotesque",sans-serif;margin-bottom:6px}.stp span{color:var(--mut);font-size:16px}
+.cs{background:var(--tint);border-radius:20px;padding:26px;display:grid;gap:8px;align-content:start}.cs small{color:var(--ac);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.cs h3{font-size:22px}.cs p{color:var(--mut);font-size:16px}
+@media(max-width:900px){.g4,.g3,.stp{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap"><a class="brand" href="#topo" id="bn">Empresa</a><button id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav" aria-label="Principal"><a href="#servicos">Serviços</a><a href="#processo">Como trabalhamos</a><a href="#casos">Casos</a><a href="#faq">Dúvidas</a><a class="btn" href="#contato" id="cb">Pedir orçamento</a></nav></div></header>
+<main>
+<div class="wrap hero" id="topo"><div><p class="note" id="rt" style="font-weight:700;color:var(--ac);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px"></p><h1 id="h1"></h1><p class="lead" id="sl"></p><div class="acts"><a class="btn" href="#contato" id="c1">Pedir orçamento</a><a class="btn ghost" href="#servicos">Ver serviços</a></div></div>
+<div class="ph"><img id="im" alt="Profissional atendendo cliente" width="800" height="560"><div class="info" id="inf"></div></div></div>
+<div class="wrap stats" id="stats"></div>
+<section id="servicos"><div class="wrap"><div class="head"><h2>O que fazemos</h2><p id="sb"></p></div><div class="g4" id="sv"></div></div></section>
+<section id="diferenciais"><div class="wrap two"><div class="head" style="margin:0"><h2>Por que nos escolher</h2><p>Trabalho organizado, comunicação clara e compromisso com o que foi combinado.</p></div><div class="pts" id="df"></div></div></section>
+<section id="processo"><div class="wrap"><div class="head"><h2>Como trabalhamos</h2></div><div class="stp" id="pc"></div></div></section>
+<section id="casos"><div class="wrap"><div class="head"><h2>Portfólio e casos</h2><p>Exemplos do tipo de trabalho que realizamos. Substitua pelos seus projetos reais.</p></div><div class="g3" id="cs"></div></div></section>
+<section id="faq"><div class="wrap" style="max-width:860px"><div class="head"><h2>Dúvidas comuns</h2></div><div id="fq"></div></div></section>
+<section id="contato"><div class="wrap two"><div><div class="head" style="margin:0"><h2>Peça seu orçamento</h2><p>Conte o que você precisa. Abrimos o WhatsApp com a sua mensagem pronta, sem compromisso e sem cadastro.</p></div>
+<div class="hr" id="hr" style="margin-top:22px"></div><p id="ad" style="margin-top:6px"></p><p style="margin-top:14px"><a class="btn ghost" id="mp" target="_blank" rel="noopener noreferrer" href="#">Abrir no Google Maps</a></p></div>
+<form id="f" novalidate><label>Seu nome<input id="n" autocomplete="name"></label><label>Empresa (opcional)<input id="em" autocomplete="organization"></label><label>Assunto<select id="s"></select></label><label>Conte um pouco sobre o que precisa<textarea id="m" rows="4"></textarea></label><button class="btn" type="submit">Enviar pelo WhatsApp</button><p class="note" id="st" role="status" aria-live="polite">Nenhum dado fica guardado neste site.</p></form></div></section>
+</main>
+<footer><div class="wrap"><span id="fc"></span><span>Site criado pela <a href="https://wa.me/5581997488294" target="_blank" rel="noopener noreferrer">NEXO</a> · Ideias conectadas. Soluções em movimento.</span></div></footer>
+<a class="btn wa" id="wa" target="_blank" rel="noopener noreferrer" href="#">WhatsApp</a><dialog id="dlg"></dialog>
+<script src="config.js"></script>
+<script>
+const G=CONFIG.empresa;
+const $=id=>document.getElementById(id);
+const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const wa=(t,n)=>'https://wa.me/'+(n||G.whatsapp)+'?text='+encodeURIComponent(t);
+const brl=v=>typeof v==='number'?v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'Sob consulta';
+function base(){const R=document.documentElement.style;R.setProperty('--ac',G.cor);R.setProperty('--on',G.corSobre);R.setProperty('--tint','color-mix(in srgb,'+G.cor+' 12%,white)');
+$('bn').textContent=G.nome;if(G.imagemTopo){$('im').hidden=false;$('im').src=G.imagemTopo;if($('ar'))$('ar').hidden=true}else{$('im').hidden=true;if($('ar')){$('ar').hidden=false;$('am').textContent=G.nome[0]}}$('hr').innerHTML=G.horarios.map(h=>'<div><b>'+e(h[0])+'</b><span>'+e(h[1])+'</span></div>').join('');
+$('ad').textContent=G.endereco+' · '+G.cidade;$('mp').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(G.mapaBusca);
+$('fc').textContent='© '+new Date().getFullYear()+' '+G.nome;$('wa').href=wa('Olá! Vim pelo site '+G.nome+'.');
+$('mb').onclick=()=>{const o=$('nav').classList.toggle('open');$('mb').setAttribute('aria-expanded',o)};$('nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('nav').classList.remove('open'));
+$('dlg').addEventListener('click',ev=>{if(ev.target===$('dlg'))$('dlg').close()})}
+function dlg(h){$('dlg').innerHTML='<div class="dg"><button class="x" aria-label="Fechar" onclick="document.getElementById(\'dlg\').close()">✕</button>'+h+'</div>';$('dlg').showModal()}
+
+base();document.title=G.nome+' | Serviços e orçamento';$('h1').innerHTML=e(G.nome).replace(/^(\S+)/,'$1 <span>')+'</span>';$('sl').textContent=G.slogan;$('rt').textContent=G.rotulo;$('sb').textContent=G.sobre;
+$('cb').textContent=G.cta;$('c1').textContent=G.cta;
+$('inf').innerHTML='<div><b>Endereço</b>'+e(G.endereco)+'</div><div><b>Atendimento</b>'+e(G.horarios[0][0])+': '+e(G.horarios[0][1])+'</div>';
+$('stats').innerHTML=CONFIG.numeros.map(a=>'<div><b style="font-size:clamp(22px,3vw,34px)">'+e(a[0])+'</b><span>'+e(a[1])+'</span></div>').join('');
+$('sv').innerHTML=CONFIG.servicos.map((s,i)=>'<div class="sv"><h3>'+e(s.nome)+'</h3><p>'+e(s.desc)+'</p><a href="#contato" data-i="'+i+'">Pedir orçamento →</a></div>').join('');
+$('sv').querySelectorAll('a').forEach(a=>a.onclick=()=>{const o=CONFIG.opcoesServico,k=CONFIG.servicos[a.dataset.i].nome;if(o.includes(k))$('s').value=k});
+$('df').innerHTML=CONFIG.diferenciais.map(d=>'<div><b>'+e(d[0])+'</b><span>'+e(d[1])+'</span></div>').join('');
+$('pc').innerHTML=CONFIG.processo.map(p=>'<div><b>'+e(p[0])+'</b><span>'+e(p[1])+'</span></div>').join('');
+$('cs').innerHTML=CONFIG.casos.map(c=>'<div class="cs"><small>'+e(c.segmento)+'</small><h3>'+e(c.titulo)+'</h3><p>'+e(c.resumo)+'</p></div>').join('');
+$('fq').innerHTML=CONFIG.faq.map(q=>'<details><summary>'+e(q[0])+'</summary><p>'+e(q[1])+'</p></details>').join('');
+$('s').innerHTML=CONFIG.opcoesServico.map(o=>'<option>'+e(o)+'</option>').join('');
+$('f').addEventListener('submit',ev=>{ev.preventDefault();const a=$('n').value.trim(),m=$('m').value.trim(),em=$('em').value.trim();if(!a||m.length<10){$('st').textContent='Preencha seu nome e descreva o que precisa (mínimo 10 letras).';return}
+const u=wa('Olá, sou '+a+(em?' da '+em:'')+'. Assunto: '+$('s').value+'.\n\n'+m);$('st').textContent='Abrindo o WhatsApp...';if(!window.open(u,'_blank','noopener'))$('st').innerHTML='Janela bloqueada. <a href="'+u+'">Toque aqui para abrir o WhatsApp</a>.'});
+</script></body></html>

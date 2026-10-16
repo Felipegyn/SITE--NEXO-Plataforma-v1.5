@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Espaço Exemplo | Festas e eventos</title><meta name="description" content="Conheça a estrutura, as regras e consulte datas para festas e eventos pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+:root{--ac:#8b4a2b;--on:#fff;--bg:#faf8f4;--sf:#fff;--ln:#e2ded5;--fg:#16161a;--mut:#5f5f66;--tint:#f1e6df;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;letter-spacing:-.03em;line-height:1.08;margin:0}p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.brand{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ac)}
+nav{display:flex;gap:24px;align-items:center;font-size:15px}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:var(--on);font:700 15px/1 "DM Sans",sans-serif;padding:14px 22px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px color-mix(in srgb,var(--ac) 30%,transparent)}
+.btn.ghost{background:none;color:var(--fg);border:1px solid var(--ln)}.btn.ghost:hover{border-color:var(--ac)}nav .btn{color:var(--on);padding:10px 18px}
+#mb{display:none;background:none;border:1px solid var(--ln);border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer;color:var(--fg)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:64px 0}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:800}.hero h1 span{color:var(--ac)}
+.lead{font-size:19px;color:var(--mut);margin:22px 0 28px;max-width:44ch}.acts{display:flex;flex-wrap:wrap;gap:12px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;width:100%;min-height:50px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 18%,transparent)}
+.ph{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:400/280;background:var(--ln)}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.info{position:absolute;left:14px;bottom:14px;right:14px;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:14px}
+.info b{display:block;font-size:12px;color:var(--ac);letter-spacing:.08em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--ln)}.stats div{padding:26px 0;text-align:center}
+.stats b{display:block;font:800 clamp(28px,4vw,44px) "Bricolage Grotesque",sans-serif;color:var(--ac)}.stats span{color:var(--mut);font-size:15px}
+section{padding:84px 0;border-top:1px solid var(--ln)}
+.head{max-width:640px;margin-bottom:34px}.head h2{font-size:clamp(30px,4.2vw,50px);font-weight:800}.head p{color:var(--mut);margin-top:12px;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips button{font:500 15px "DM Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--ln);border-radius:999px;padding:9px 18px;cursor:pointer}
+.chips button:hover{border-color:var(--ac)}.chips button[aria-pressed=true]{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}.two>*{min-width:0}
+.hr{display:grid;margin:18px 0}.hr div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--ln)}.hr span{color:var(--mut)}
+.pts{display:grid;gap:20px}.pts div{border-left:2px solid var(--ac);padding-left:18px}.pts b{display:block;font:700 19px "Bricolage Grotesque",sans-serif}.pts span{color:var(--mut)}
+form{display:grid;gap:14px;background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px}label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+.note{font-size:14px;color:var(--mut)}
+details{border-bottom:1px solid var(--ln);padding:18px 0}summary{cursor:pointer;font:700 19px "Bricolage Grotesque",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--ac);font-size:24px;line-height:1}details[open] summary:after{content:"–"}details p{color:var(--mut);margin-top:10px;max-width:62ch}
+footer{border-top:1px solid var(--ln);padding:34px 0 44px;color:var(--mut);font-size:15px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+dialog{border:0;border-radius:22px;padding:0;width:min(500px,calc(100% - 32px));max-height:88vh;background:var(--sf);color:var(--fg);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#0008}
+.dg{padding:26px;display:grid;gap:12px}.dg h3{font-size:28px}.dg .x{justify-self:end;background:none;border:1px solid var(--ln);border-radius:50%;width:38px;height:38px;cursor:pointer;color:var(--fg);font-size:16px}
+.mono{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--tint);color:var(--ac);font:800 20px "Bricolage Grotesque",sans-serif}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;box-shadow:0 8px 28px #0005}
+@media(max-width:900px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--ln);padding:10px 20px 20px}nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto}.hero,.two{grid-template-columns:1fr;gap:34px}.hero{padding:40px 0}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gl{position:relative;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;background:var(--ln)}.gl img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gl:hover img{transform:scale(var(--z2,1.1))}
+.gl span{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;background:linear-gradient(transparent,#000a);color:#fff;font-size:14px;text-align:left}
+.es{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.es div{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:16px;font-weight:500}.es div:before{content:"✓";color:var(--ac);font-weight:800;margin-right:8px}
+.pk{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}.pk h3{font-size:24px}.pk p{color:var(--mut);font-size:16px}.pk ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:15px}.pk li:before{content:"•";color:var(--ac);margin-right:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.alert{color:#8a3b00;font-size:14px;font-weight:700}
+@media(max-width:900px){.gal,.g3{grid-template-columns:1fr}.es{grid-template-columns:1fr 1fr}.r2{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap"><a class="brand" href="#topo" id="bn">Espaço</a><button id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav" aria-label="Principal"><a href="#fotos">Fotos</a><a href="#estrutura">Estrutura</a><a href="#pacotes">Tipos de evento</a><a href="#reserva">Consultar data</a><a class="btn" href="#reserva">Reservar</a></nav></div></header>
+<main>
+<div class="wrap hero" id="topo"><div><h1 id="h1"></h1><p class="lead" id="sl"></p><div class="acts"><a class="btn" href="#reserva">Consultar disponibilidade</a><a class="btn ghost" href="#fotos">Ver fotos</a></div></div>
+<div class="ph"><img id="im" alt="Área de festas com piscina ao entardecer" width="800" height="560"><div class="info" id="inf"></div></div></div>
+<div class="wrap stats" id="stats"></div>
+<section id="fotos"><div class="wrap"><div class="head"><h2>Conheça o espaço</h2><p id="ds"></p></div><div class="gal" id="gal"></div></div></section>
+<section id="estrutura"><div class="wrap"><div class="head"><h2>Estrutura</h2><p>Tudo o que o espaço oferece para o seu evento.</p></div><div class="es" id="es"></div></div></section>
+<section id="pacotes"><div class="wrap"><div class="head"><h2>Tipos de evento</h2><p>Valores e condições são enviados sob consulta, de acordo com data, período e número de convidados.</p></div><div class="g3" id="pk"></div></div></section>
+<section id="reserva"><div class="wrap two"><div><div class="head" style="margin:0"><h2>Consulte a disponibilidade</h2><p>Escolha data, período e número de convidados. Abrimos o WhatsApp com a sua solicitação pronta. A data só é reservada após a confirmação da administração.</p></div>
+<div style="margin-top:26px"><h3 style="font-size:22px;margin-bottom:6px">Regras e dúvidas</h3><div id="rg"></div></div></div>
+<form id="f" novalidate><label>Seu nome<input id="n" autocomplete="name"></label><div class="r2"><label>Tipo de evento<select id="te"></select></label><label>Período<select id="pe"></select></label></div>
+<div class="r2"><label>Data desejada<input id="dt" type="date"></label><label>Nº de convidados<input id="cv" type="number" min="1" inputmode="numeric"></label></div><p class="alert" id="al" role="status" aria-live="polite"></p>
+<label>Observações (opcional)<textarea id="ob" rows="2"></textarea></label><button class="btn" type="submit">Consultar pelo WhatsApp</button><p class="note" id="st" role="status" aria-live="polite">Nenhum dado fica guardado neste site.</p></form></div></section>
+<section id="visite"><div class="wrap two"><div><div class="head" style="margin:0"><h2>Como chegar</h2></div><p id="ad" style="margin-top:14px;font-size:18px"></p><div class="hr" id="hr"></div><p style="margin-top:16px"><a class="btn ghost" id="mp" target="_blank" rel="noopener noreferrer" href="#">Abrir no Google Maps</a></p></div></div></section>
+</main>
+<footer><div class="wrap"><span id="fc"></span><span>Site criado pela <a href="https://wa.me/5581997488294" target="_blank" rel="noopener noreferrer">NEXO</a> · Ideias conectadas. Soluções em movimento.</span></div></footer>
+<a class="btn wa" id="wa" target="_blank" rel="noopener noreferrer" href="#">WhatsApp</a><dialog id="dlg"></dialog>
+<script src="config.js"></script>
+<script>
+const G=CONFIG.espaco;
+const $=id=>document.getElementById(id);
+const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const wa=(t,n)=>'https://wa.me/'+(n||G.whatsapp)+'?text='+encodeURIComponent(t);
+const brl=v=>typeof v==='number'?v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'Sob consulta';
+function base(){const R=document.documentElement.style;R.setProperty('--ac',G.cor);R.setProperty('--on',G.corSobre);R.setProperty('--tint','color-mix(in srgb,'+G.cor+' 12%,white)');
+$('bn').textContent=G.nome;$('im').src=G.imagemTopo;$('hr').innerHTML=G.horarios.map(h=>'<div><b>'+e(h[0])+'</b><span>'+e(h[1])+'</span></div>').join('');
+$('ad').textContent=G.endereco+' · '+G.cidade;$('mp').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(G.mapaBusca);
+$('fc').textContent='© '+new Date().getFullYear()+' '+G.nome;$('wa').href=wa('Olá! Vim pelo site '+G.nome+'.');
+$('mb').onclick=()=>{const o=$('nav').classList.toggle('open');$('mb').setAttribute('aria-expanded',o)};$('nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('nav').classList.remove('open'));
+$('dlg').addEventListener('click',ev=>{if(ev.target===$('dlg'))$('dlg').close()})}
+function dlg(h){$('dlg').innerHTML='<div class="dg"><button class="x" aria-label="Fechar" onclick="document.getElementById(\'dlg\').close()">✕</button>'+h+'</div>';$('dlg').showModal()}
+
+base();$('h1').innerHTML=e(G.nome).replace(/^(\S+)/,'$1 <span>')+'</span>';$('sl').textContent=G.slogan;$('ds').textContent=G.descricao;document.title=G.nome+' | Festas e eventos';
+$('inf').innerHTML='<div><b>Local</b>'+e(G.cidade)+'</div><div><b>Capacidade</b>até '+G.capacidade+' convidados</div>';
+$('stats').innerHTML=G.destaques.map(a=>'<div><b>'+e(a[0])+'</b><span>'+e(a[1])+'</span></div>').join('');
+$('gal').innerHTML=CONFIG.fotos.map((f,i)=>'<button class="gl" type="button" data-i="'+i+'" style="--z2:'+(f.zoom||1)*1.08+'"><img src="'+e(f.src||G.imagemTopo)+'" alt="'+e(f.legenda)+'" loading="lazy" style="object-position:'+e(f.pos||'50% 50%')+';transform:scale('+(f.zoom||1)+')"><span>'+e(f.legenda)+'</span></button>').join('');
+$('gal').querySelectorAll('.gl').forEach(b=>b.onclick=()=>{const f=CONFIG.fotos[b.dataset.i];dlg('<img src="'+e(f.src||G.imagemTopo)+'" alt="'+e(f.legenda)+'" style="width:100%;border-radius:14px;aspect-ratio:16/10;object-fit:cover;object-position:'+e(f.pos||'50% 50%')+'"><p><b>'+e(f.legenda)+'</b></p>')});
+$('es').innerHTML=CONFIG.estrutura.map(x=>'<div>'+e(x)+'</div>').join('');
+$('pk').innerHTML=CONFIG.pacotes.map((p,i)=>'<div class="pk"><h3>'+e(p.nome)+'</h3><p>'+e(p.descricao)+'</p><ul>'+p.inclui.map(x=>'<li>'+e(x)+'</li>').join('')+'</ul><a class="btn ghost" href="#reserva" data-k="'+i+'">Consultar</a></div>').join('');
+$('te').innerHTML=CONFIG.tiposEvento.map(x=>'<option>'+e(x)+'</option>').join('');$('pe').innerHTML=CONFIG.periodos.map(x=>'<option>'+e(x)+'</option>').join('');
+$('rg').innerHTML=CONFIG.regras.map(r=>'<details><summary>'+e(r[0])+'</summary><p>'+e(r[1])+'</p></details>').join('');
+const hj=new Date(),pad=x=>String(x).padStart(2,'0');$('dt').min=hj.getFullYear()+'-'+pad(hj.getMonth()+1)+'-'+pad(hj.getDate());
+$('cv').oninput=()=>{$('al').textContent=+$('cv').value>G.capacidade?'A capacidade informada é de até '+G.capacidade+' convidados. Fale com a administração para avaliar.':''};
+$('f').addEventListener('submit',ev=>{ev.preventDefault();const a=$('n').value.trim(),d=$('dt').value,c=+$('cv').value;
+if(!a||!d||!(c>0)){$('st').textContent='Preencha seu nome, a data e o número de convidados.';return}
+const dd=d.split('-').reverse().join('/'),ob=$('ob').value.trim();
+const u=wa('Olá! Sou '+a+' e gostaria de consultar disponibilidade no '+G.nome+'.\nEvento: '+$('te').value+'\nData: '+dd+'\nPeríodo: '+$('pe').value+'\nConvidados: '+c+(ob?'\nObservações: '+ob:''));
+$('st').textContent='Abrindo o WhatsApp...';if(!window.open(u,'_blank','noopener'))$('st').innerHTML='Janela bloqueada. <a href="'+u+'">Toque aqui para abrir o WhatsApp</a>.'});
+</script></body></html>

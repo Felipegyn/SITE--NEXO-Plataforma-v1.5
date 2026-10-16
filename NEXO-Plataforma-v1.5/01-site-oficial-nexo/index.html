@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXO | Soluções digitais integradas para o seu negócio</title>
+<meta name="description" content="A NEXO conecta site, Google, WhatsApp e gestão em uma estratégia digital integrada para lojas, galerias comerciais, espaços de lazer e prestadores de serviços.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--line:#e2ded5;--fg:#16161a;--mut:#5f5f66;--amber:#9a6508;--on-amber:#fff;--glow:#9a65081a;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#0c0c0e;--surface:#16161a;--line:#2b2b31;--fg:#f4f4f2;--mut:#a3a3a9;--amber:#d49a29;--on-amber:#141414;--glow:#d49a2926;color-scheme:dark}
+:root[data-theme="light"]{--bg:#faf8f4;--surface:#fff;--line:#e2ded5;--fg:#16161a;--mut:#5f5f66;--amber:#9a6508;--on-amber:#fff;--glow:#9a65081a;color-scheme:light}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"IBM Plex Sans","IBM Plex Sans",system-ui,sans-serif;line-height:1.05;letter-spacing:-.03em;margin:0}
+a{color:inherit}p{margin:0}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;background:var(--amber);color:var(--on-amber);padding:10px 14px;z-index:99}.skip:focus{top:12px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{height:28px;width:auto;aspect-ratio:568/78;color:var(--fg);display:block}
+nav{display:flex;align-items:center;gap:28px;font-size:15px}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--on-amber);font:700 16px/1 "IBM Plex Sans",sans-serif;padding:16px 26px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--glow)}
+.btn.ghost{background:none;color:var(--fg);border:1px solid var(--line)}.btn.ghost:hover{border-color:var(--amber)}
+nav .btn{padding:11px 20px;font-size:14px;color:var(--on-amber)}
+#mb{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer}
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(42px,6.2vw,80px);font-weight:800}
+.hero h1 span{color:var(--amber)}
+.hero p.lead{font-size:19px;color:var(--mut);max-width:46ch;margin:26px 0 34px}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:38px;color:var(--mut);font-size:15px}
+.proof b{color:var(--fg);font-weight:500}
+.net{width:100%;height:auto;max-width:520px;margin-inline:auto;display:block;overflow:visible}
+.net .ln{stroke:var(--amber);stroke-width:1.6;fill:none;stroke-dasharray:240;stroke-dashoffset:240;animation:draw 1.6s .2s ease forwards}
+.net .nd{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.net text{fill:var(--fg);font:500 14px "IBM Plex Sans",sans-serif;text-anchor:middle}
+.net .core{fill:var(--amber)}.net .core-t{fill:var(--on-amber);font-weight:700;font-size:15px}
+.net .pulse{fill:none;stroke:var(--amber);stroke-width:1;opacity:.5;animation:pulse 3s 1.8s ease-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes pulse{from{transform:scale(1);opacity:.5}to{transform:scale(1.9);opacity:0}}
+section{padding:92px 0;border-top:1px solid var(--line)}
+.head{max-width:680px;margin-bottom:48px}
+.head h2{font-size:clamp(32px,4.4vw,54px);font-weight:700}
+.head p{color:var(--mut);margin-top:16px;font-size:18px}
+.svc{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:.9fr 1.4fr auto;gap:28px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.row:hover{background:var(--surface);padding-inline:18px}
+.row h3{font-size:26px;font-weight:700}
+.row p{color:var(--mut);max-width:52ch}
+.row a{color:var(--amber);text-decoration:none;font-weight:700;white-space:nowrap}.row a:hover{text-decoration:underline}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
+.step{padding:0 26px 0 0;position:relative}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--amber);color:var(--on-amber);font:800 18px "IBM Plex Sans",sans-serif;margin-bottom:22px;position:relative;z-index:1}
+.step:after{content:"";position:absolute;top:21px;left:42px;right:0;height:1px;background:var(--line)}
+.step:last-child:after{display:none}
+.step h3{font-size:22px;margin-bottom:10px}.step p{color:var(--mut);font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.pts{display:grid;gap:22px}.pts div{border-left:2px solid var(--amber);padding-left:20px}
+.pts b{display:block;font:700 20px "IBM Plex Sans",sans-serif;margin-bottom:4px}.pts span{color:var(--mut)}
+.lab{display:grid;gap:12px}
+.lab div{display:flex;justify-content:space-between;gap:16px;align-items:center;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:18px 20px}
+.lab small{color:var(--amber);font-size:14px;white-space:nowrap}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font:700 20px "IBM Plex Sans",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--amber);font-size:26px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mut);margin-top:12px;max-width:62ch}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+form{display:grid;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;width:100%;min-height:50px}
+input:focus,select:focus,textarea:focus{border-color:var(--amber);outline:none;box-shadow:0 0 0 3px var(--glow)}
+.note{font-size:14px;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:40px 0 48px;color:var(--mut);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--amber);color:var(--on-amber);font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;box-shadow:0 8px 30px #0006;z-index:15}
+@media(max-width:900px){
+ #mb{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px 20px}
+ nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto;margin-top:8px}
+ .hero,.two,.cta{grid-template-columns:1fr;gap:40px}.hero{padding-top:56px}
+ .row{grid-template-columns:1fr;gap:8px}.row:hover{padding-inline:0;background:none}
+ .steps{grid-template-columns:1fr;gap:30px}.step:after{display:none}
+ section{padding:68px 0}
+}
+.net .n{cursor:pointer}.net .n .nd{transition:stroke .2s,fill .2s}.net .n:hover .nd,.net .n.on .nd{stroke:var(--amber);fill:var(--glow)}.net .n:focus{outline:none}.net .n:focus-visible .nd{stroke:var(--amber);stroke-width:3}.net .ln.on{stroke-width:3.4}.net #cap{fill:var(--mut);font-size:14px}
+.tb{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tb button{font:500 16px "IBM Plex Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:background .2s,color .2s}
+.tb button:hover{border-color:var(--amber)}.tb button[aria-selected=true]{background:var(--amber);color:var(--on-amber);border-color:var(--amber)}
+.pn{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,44px)}.pn[hidden]{display:none}
+.def{font:700 clamp(24px,3vw,34px)/1.15 "IBM Plex Sans",sans-serif;letter-spacing:-.02em;margin-bottom:16px}
+.use{color:var(--mut)}.use b{color:var(--amber)}
+.cc{fill:var(--bg);stroke:var(--amber);stroke-width:1.5}.ct{fill:var(--fg);font:500 13px "IBM Plex Sans",sans-serif;text-anchor:middle}
+.sl input{padding:0;border:0;background:none;min-height:32px;accent-color:var(--amber)}
+.cz{position:relative;height:210px;margin-bottom:12px}
+.cz .rail{position:absolute;left:12.5%;right:12.5%;top:50%;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .8s .3s}
+.cz.ok .rail{transform:scaleX(1)}
+.cz .c{position:absolute;left:var(--sx);top:var(--sy);transform:translate(-50%,-50%);padding:10px 16px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-weight:500;white-space:nowrap;transition:left .9s cubic-bezier(.2,.8,.2,1),top .9s cubic-bezier(.2,.8,.2,1),border-color .4s}
+.cz.ok .c{left:var(--ox);top:50%;border-color:var(--amber)}
+.ce{display:grid;gap:14px}.ce .r{display:grid;grid-template-columns:1fr 36px 1fr;gap:8px;align-items:center}
+.ce button{font:500 15px "IBM Plex Sans",sans-serif;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;text-align:left}
+.ce .r.on button{border-color:var(--amber)}
+.ce .ar{display:block;height:2px;background:var(--line);position:relative}.ce .ar:after{content:"";position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.ce .r.on .ar:after{transform:scaleX(1)}
+.ce .ef{color:var(--mut);opacity:.35;transition:opacity .4s .3s;font-weight:500}.ce .r.on .ef{opacity:1;color:var(--fg)}
+.mdl{margin-top:30px;max-width:70ch;color:var(--mut);font-size:18px}.mdl b{color:var(--fg)}
+.two>*,.cta>*,.pn>*{min-width:0}.lab div{flex-wrap:wrap}
+@media(max-width:900px){.pn{grid-template-columns:1fr;gap:26px}.cz .c{padding:8px 11px;font-size:13px}}
+.tg{background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;flex:none}.tg:hover{border-color:var(--amber)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--mut)}.card.star .chips span{border-color:var(--amber);color:var(--fg)}
+.pv{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface);margin-bottom:8px;box-shadow:0 8px 28px #0002}
+.pv .bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--surface);border-bottom:1px solid var(--line);font-size:12px;color:var(--mut)}
+.pv .bar i{width:9px;height:9px;border-radius:50%;background:var(--line);flex:none}
+.pv .bar span{margin-left:8px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 12px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pv .vp{position:relative;aspect-ratio:16/10;overflow:hidden;background:#fff;cursor:pointer}
+.pv iframe{position:absolute;left:0;top:0;width:1100px;height:2600px;border:0;transform-origin:0 0;transform:scale(var(--s,.4));transition:transform .9s ease;pointer-events:none;background:#fff}
+.card:hover .pv iframe,.pv.live iframe{transform:scale(var(--s,.4)) translateY(-950px);transition-duration:8s;transition-timing-function:ease-in-out}
+.pv .open{position:absolute;right:12px;bottom:12px;background:var(--amber);color:var(--on-amber,#fff);border:0;border-radius:999px;font:700 13px "IBM Plex Sans",sans-serif;padding:9px 16px;cursor:pointer;box-shadow:0 4px 16px #0004;transition:transform .2s}
+.pv .open:hover,.pv .open:focus-visible{transform:translateY(-2px);outline:2px solid var(--fg);outline-offset:2px}
+.pvn{font-size:13px;color:var(--mut);margin:0 0 4px}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr;gap:6px 34px;align-items:start}.card.wide .pv,.card.wide .pvn{grid-column:1}.card.wide .tx{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:10px;align-self:center}
+#dd{width:min(1240px,96vw);height:92vh;max-width:none;border:1px solid var(--line);border-radius:18px;padding:0;background:var(--bg);color:var(--fg);box-shadow:0 24px 80px #0007}#dd[open]{display:flex;flex-direction:column}#dd::backdrop{background:#000a}
+#dd .dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface)}#dd .dh b{font:800 18px "IBM Plex Sans",sans-serif;margin-right:auto}
+#dd .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}#dd .seg button{font:600 13px "IBM Plex Sans",sans-serif;background:none;color:var(--fg);border:0;padding:8px 14px;cursor:pointer}#dd .seg button[aria-pressed=true]{background:var(--amber);color:var(--on-amber,#fff)}
+#dd .dh a,#dd .dh .x{font:600 13px "IBM Plex Sans",sans-serif;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:8px 14px;text-decoration:none;background:none;cursor:pointer}#dd .dh .x{width:38px;height:38px;padding:0;border-radius:50%}
+#dd .dn{margin:0;padding:8px 16px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--line)}
+#dd .dv{flex:1;min-height:0;display:flex;justify-content:center;background:color-mix(in srgb,var(--fg) 8%,var(--bg));padding:0}#dd .dv iframe{width:100%;height:100%;border:0;background:#fff}
+#dd .dv.m{padding:14px}#dd .dv.m iframe{width:390px;max-width:100%;border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 40px #0004}
+@media(max-width:900px){.card.wide{display:flex}.card.wide .tx{display:flex}#dd{width:100vw;height:100dvh;border-radius:0}}
+.mod{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}.card:hover{border-color:var(--amber);transform:translateY(-3px)}.card small{color:var(--amber);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.card h3{font-size:24px}.card p{color:var(--mut);font-size:16px}.card a{color:var(--amber);font-weight:700;text-decoration:none;margin-top:auto;padding-top:8px}.card a:hover{text-decoration:underline}.card.star{border-color:var(--amber);background:linear-gradient(var(--glow),var(--glow)),var(--surface)}.gl{display:grid;gap:12px;margin-top:8px}.gl div{border-left:2px solid var(--amber);padding-left:18px}.gl b{font:700 19px "IBM Plex Sans",sans-serif;display:block}.gl span{color:var(--mut);font-size:16px}.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:28px;color:var(--mut);font-size:15px}.flow b{border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:8px 14px;border-radius:999px;font-weight:500}.flow i{color:var(--amber);font-style:normal}.steps.s8{grid-template-columns:repeat(4,1fr);row-gap:44px}.steps.s8 .step:nth-child(4n):after{display:none}.steps.s8 .step h3{font-size:20px}.steps.s8 .step p{font-size:15px}.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:900px){.mod,.pl{grid-template-columns:1fr}.steps.s8{grid-template-columns:1fr;row-gap:30px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.net .ln{stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+/* ===== Cabeçalho moderno: logo itálico com brilho, vidro, progresso, scrollspy ===== */
+:root{--lgA:var(--fg);--lgB:#b9770e;--lgC:#f2b53c;--halo:#c98a1440}
+:root[data-theme="dark"]{--lgB:#e7b23e;--lgC:#fff3c4;--halo:#e7b23e66}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--lgB:#e7b23e;--lgC:#fff3c4;--halo:#e7b23e66}}
+.logo{fill:currentColor}
+header{animation:hdrIn .8s cubic-bezier(.2,.8,.2,1) both;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header .wrap{transition:height .3s cubic-bezier(.2,.8,.2,1)}
+header.scrolled{background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);box-shadow:0 12px 32px -16px #0006}
+header.scrolled .wrap{height:58px}
+header:after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--amber),var(--lgC));box-shadow:0 0 12px var(--halo);pointer-events:none}
+header .brand{display:inline-block;padding:6px 10px 6px 4px;margin:-6px 0 -6px -4px;border-radius:10px;line-height:0}
+header .brand .logo{fill:url(#nxShine);transform:skewX(-11deg);transform-origin:0 100%;filter:drop-shadow(0 0 0 transparent);animation:halo 6s ease-in-out infinite;transition:transform .35s cubic-bezier(.2,.8,.2,1),height .3s}
+header .brand:hover .logo{transform:skewX(-11deg) scale(1.04)}
+header.scrolled .brand .logo{height:24px}
+nav>*{animation:navIn .6s cubic-bezier(.2,.8,.2,1) both}
+nav>*:nth-child(1){animation-delay:.15s}nav>*:nth-child(2){animation-delay:.2s}nav>*:nth-child(3){animation-delay:.25s}nav>*:nth-child(4){animation-delay:.3s}nav>*:nth-child(5){animation-delay:.35s}nav>*:nth-child(6){animation-delay:.4s}nav>*:nth-child(7){animation-delay:.45s}nav>*:nth-child(8){animation-delay:.5s}nav>*:nth-child(9){animation-delay:.55s}
+nav a:not(.btn){position:relative;transition:color .25s}
+nav a:not(.btn):after{content:"";position:absolute;left:50%;bottom:6px;height:2px;width:0;transform:translateX(-50%);border-radius:2px;background:linear-gradient(90deg,transparent,var(--amber),transparent);transition:width .35s cubic-bezier(.2,.8,.2,1)}
+nav a:not(.btn):hover:after,nav a:not(.btn).on:after{width:100%}
+nav a.on{color:var(--fg)}
+header nav .btn{position:relative;overflow:hidden;isolation:isolate}
+header nav .btn:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 35%,#ffffff66 50%,transparent 65%);transform:translateX(-130%);animation:glint 5.5s ease-in-out 1.5s infinite}
+header nav .btn:hover{box-shadow:0 8px 28px var(--halo),0 0 0 3px color-mix(in srgb,var(--amber) 22%,transparent)}
+.tg{transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .25s}.tg:hover{transform:rotate(180deg);border-color:var(--amber)}
+nav.open{animation:menuIn .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes hdrIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes navIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes menuIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+@keyframes halo{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 9px var(--halo))}}
+@keyframes glint{0%,60%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@media(prefers-reduced-motion:reduce){header,header *,header:before,header:after,nav>*{animation:none!important;transition:none!important}header nav .btn:before{display:none}}
+
+/* ===== NEXO v11: tipografia sóbria (IBM Plex Sans) e efeitos de "dar nexo" ===== */
+body{font-family:"IBM Plex Sans",system-ui,"Segoe UI",sans-serif}
+h1,h2,h3{font-weight:600;letter-spacing:-.015em;line-height:1.18}
+.hero h1{font-size:clamp(34px,4.9vw,58px);font-weight:600;line-height:1.1}
+.hero h1 span{color:inherit}
+.head h2{font-size:clamp(28px,3.6vw,42px);font-weight:600}
+.row h3{font-size:22px;font-weight:600}.step h3{font-size:19px}.card h3{font-size:21px}
+.def{font-weight:600;letter-spacing:-.01em}
+.btn{font-weight:600}
+:root{--ease:cubic-bezier(.2,.8,.2,1)}
+/* Coerência: os canais se juntam, encaixam e o caminho acende */
+.cz .c{transition:left .9s var(--ease),top .9s var(--ease),border-color .4s,background .4s,box-shadow .4s;border-style:dashed}
+.cz.ok .c:nth-of-type(2){transition-delay:.0s}.cz.ok .c:nth-of-type(3){transition-delay:.08s}.cz.ok .c:nth-of-type(4){transition-delay:.16s}.cz.ok .c:nth-of-type(5){transition-delay:.24s}
+.cz.ok .c{border-style:solid;background:color-mix(in srgb,var(--amber) 12%,var(--bg));animation:snap .45s 1s var(--ease) both}
+.cz .rail:after{content:"";position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px var(--glow);opacity:0}
+.cz.ok .rail:after{animation:run 1.6s 1.1s var(--ease) infinite}
+.cz .rail{z-index:0}.cz .c{z-index:1}
+@keyframes snap{0%{transform:translate(-50%,-50%) scale(1)}45%{transform:translate(-50%,-50%) scale(1.12)}100%{transform:translate(-50%,-50%) scale(1)}}
+@keyframes run{0%{left:0;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:calc(100% - 8px);opacity:0}}
+/* Ligação: ao encostar, os círculos se fundem com um anel de impacto */
+#bst{fill:none;stroke:var(--amber);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.lkok #bst{animation:burst .9s var(--ease)}
+.lkok #cl,.lkok #cr{fill:var(--glow)}
+@keyframes burst{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(3.4)}}
+/* Causa e efeito: um ponto percorre a seta e o efeito chega */
+.ce .ar:before{content:"";position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--amber);opacity:0;z-index:1}
+.ce .r.on .ar:before{animation:hop .7s .1s var(--ease) both}
+.ce .r.on .ef{animation:land .5s .55s var(--ease) both}
+.ce .r.on button{animation:snap2 .4s var(--ease)}
+@keyframes hop{0%{left:0;opacity:1}90%{opacity:1}100%{left:calc(100% - 8px);opacity:0}}
+@keyframes land{0%{transform:translateX(-8px)}100%{transform:none}}
+@keyframes snap2{50%{transform:scale(1.04)}}
+/* Rede do início: um sinal viaja do ponto até o negócio, que absorve */
+.net .pk{fill:var(--amber);stroke:var(--bg);stroke-width:2;pointer-events:none}
+.net .core.join{animation:absorb .6s var(--ease)}
+@keyframes absorb{40%{transform:scale(1.07)}}
+.net .core{transform-box:fill-box;transform-origin:center}
+/* Abas: o conteúdo se junta ao entrar */
+.pn:not([hidden])>*:first-child{animation:fromL .55s var(--ease) both}
+.pn:not([hidden])>*:last-child{animation:fromR .55s var(--ease) both}
+@keyframes fromL{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:none}}
+@keyframes fromR{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.cz .c,.cz .rail{transition:none!important}.cz .rail:after,.ce .ar:before{display:none}.cz.ok .c,.cz.ok .rail:after,.lkok #bst,.ce .r.on *,.pn *,.net .core{animation:none!important}}
+
+/* logo do cabeçalho: mesmo logo do rodapé, sem brilho */
+header .brand svg.logo{height:30px;fill:currentColor;color:var(--fg);transform:none;animation:none;filter:none}
+header .brand:hover svg.logo{transform:none}
+header.scrolled .brand svg.logo{height:26px}
+
+/* abertura: as palavras do título se juntam */
+.hero h1 .w{display:inline-block;opacity:0;animation:wIn .8s var(--ease,cubic-bezier(.2,.8,.2,1)) forwards;animation-delay:calc(.15s + var(--i)*.12s)}
+.hero h1 .w:nth-child(odd){--dx:-34px}.hero h1 .w:nth-child(even){--dx:34px}
+@keyframes wIn{from{opacity:0;transform:translateX(var(--dx)) translateY(8px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+/* contínuo e suave: um fio de conexão percorre as palavras enquanto a página está aberta */
+.hero h1 .w{animation:wIn .8s var(--ease,cubic-bezier(.2,.8,.2,1)) forwards,wave 8s ease-in-out infinite;animation-delay:calc(.15s + var(--i)*.12s),calc(2.2s + var(--i)*.4s)}
+@keyframes wave{0%,34%,100%{transform:none;color:inherit}14%{transform:translateY(-3px);color:color-mix(in srgb,var(--amber) 78%,var(--fg))}}
+@media(prefers-reduced-motion:reduce){.hero h1 .w{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><linearGradient id="nxShine" x1="0" y1="0" x2="2" y2="0" spreadMethod="repeat" gradientTransform="skewX(-18) translate(-1.4 0)"><stop offset="0" style="stop-color:var(--lgA)"/><stop offset=".36" style="stop-color:var(--lgA)"/><stop offset=".43" style="stop-color:var(--lgB)"/><stop offset=".5" style="stop-color:var(--lgC)"/><stop offset=".57" style="stop-color:var(--lgB)"/><stop offset=".64" style="stop-color:var(--lgA)"/><stop offset="1" style="stop-color:var(--lgA)"/><animateTransform attributeName="gradientTransform" type="translate" additive="sum" from="0 0" to="2 0" dur="6s" repeatCount="indefinite"/></linearGradient></defs></svg>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 568 78"><path fill-rule="evenodd" d="M132 6H191V13H132Z M132 33H186V40H132Z M132 62H191V69H132Z M5 6 L11.4 6 L79 57.8 L79 6 L88 6 L88 69 L80.1 69 L13 18.9 L13 69 L5 69Z M228 5 L238 5 L263 31.67 L288 5 L298 5 L268 37 L298 69 L288 69 L263 42.33 L238 69 L228 69 L258 37Z M414 37.5 L414 38.41 L414 39.03 L413.99 39.58 L413.98 40.08 L413.97 40.56 L413.96 41.01 L413.95 41.44 L413.93 41.86 L413.91 42.26 L413.89 42.65 L413.86 43.04 L413.84 43.41 L413.81 43.78 L413.78 44.14 L413.75 44.49 L413.71 44.84 L413.68 45.18 L413.64 45.51 L413.6 45.84 L413.55 46.17 L413.51 46.49 L413.46 46.81 L413.41 47.12 L413.36 47.43 L413.3 47.74 L413.24 48.04 L413.18 48.34 L413.12 48.64 L413.06 48.93 L412.99 49.22 L412.92 49.5 L412.85 49.79 L412.78 50.07 L412.71 50.35 L412.63 50.62 L412.55 50.9 L412.47 51.17 L412.39 51.43 L412.3 51.7 L412.21 51.96 L412.12 52.22 L412.03 52.48 L411.93 52.74 L411.84 52.99 L411.74 53.24 L411.64 53.49 L411.53 53.74 L411.43 53.98 L411.32 54.23 L411.21 54.47 L411.1 54.7 L410.98 54.94 L410.87 55.18 L410.75 55.41 L410.63 55.64 L410.5 55.87 L410.38 56.09 L410.25 56.32 L410.12 56.54 L409.99 56.76 L409.85 56.98 L409.72 57.2 L409.58 57.41 L409.44 57.63 L409.3 57.84 L409.15 58.05 L409 58.25 L408.85 58.46 L408.7 58.66 L408.55 58.86 L408.39 59.06 L408.24 59.26 L408.08 59.46 L407.91 59.65 L407.75 59.85 L407.58 60.04 L407.41 60.23 L407.24 60.41 L407.07 60.6 L406.89 60.78 L406.72 60.96 L406.54 61.14 L406.36 61.32 L406.17 61.5 L405.99 61.67 L405.8 61.85 L405.61 62.02 L405.42 62.19 L405.22 62.35 L405.02 62.52 L404.83 62.68 L404.62 62.85 L404.42 63.01 L404.22 63.16 L404.01 63.32 L403.8 63.48 L403.59 63.63 L403.37 63.78 L403.16 63.93 L402.94 64.08 L402.72 64.22 L402.5 64.37 L402.27 64.51 L402.04 64.65 L401.82 64.79 L401.58 64.93 L401.35 65.06 L401.11 65.2 L400.88 65.33 L400.64 65.46 L400.39 65.59 L400.15 65.71 L399.9 65.84 L399.65 65.96 L399.4 66.08 L399.15 66.2 L398.89 66.32 L398.64 66.43 L398.38 66.54 L398.11 66.66 L397.85 66.77 L397.58 66.87 L397.31 66.98 L397.04 67.09 L396.77 67.19 L396.49 67.29 L396.21 67.39 L395.93 67.49 L395.65 67.58 L395.36 67.67 L395.07 67.77 L394.78 67.86 L394.49 67.94 L394.19 68.03 L393.89 68.11 L393.59 68.2 L393.28 68.28 L392.98 68.36 L392.67 68.43 L392.35 68.51 L392.04 68.58 L391.72 68.65 L391.4 68.72 L391.07 68.79 L390.75 68.86 L390.42 68.92 L390.08 68.98 L389.75 69.05 L389.41 69.1 L389.06 69.16 L388.71 69.22 L388.36 69.27 L388.01 69.32 L387.65 69.37 L387.29 69.42 L386.92 69.46 L386.55 69.51 L386.17 69.55 L385.79 69.59 L385.4 69.63 L385.01 69.66 L384.62 69.7 L384.21 69.73 L383.8 69.76 L383.39 69.79 L382.96 69.82 L382.53 69.84 L382.09 69.87 L381.64 69.89 L381.18 69.91 L380.71 69.92 L380.23 69.94 L379.73 69.95 L379.21 69.97 L378.67 69.98 L378.1 69.99 L377.49 69.99 L376.84 70 L376.09 70 L375 70 L373.91 70 L373.16 70 L372.51 69.99 L371.9 69.99 L371.33 69.98 L370.79 69.97 L370.27 69.95 L369.77 69.94 L369.29 69.92 L368.82 69.91 L368.36 69.89 L367.91 69.87 L367.47 69.84 L367.04 69.82 L366.61 69.79 L366.2 69.76 L365.79 69.73 L365.38 69.7 L364.99 69.66 L364.6 69.63 L364.21 69.59 L363.83 69.55 L363.45 69.51 L363.08 69.46 L362.71 69.42 L362.35 69.37 L361.99 69.32 L361.64 69.27 L361.29 69.22 L360.94 69.16 L360.59 69.1 L360.25 69.05 L359.92 68.98 L359.58 68.92 L359.25 68.86 L358.93 68.79 L358.6 68.72 L358.28 68.65 L357.96 68.58 L357.65 68.51 L357.33 68.43 L357.02 68.36 L356.72 68.28 L356.41 68.2 L356.11 68.11 L355.81 68.03 L355.51 67.94 L355.22 67.86 L354.93 67.77 L354.64 67.67 L354.35 67.58 L354.07 67.49 L353.79 67.39 L353.51 67.29 L353.23 67.19 L352.96 67.09 L352.69 66.98 L352.42 66.87 L352.15 66.77 L351.89 66.66 L351.62 66.54 L351.36 66.43 L351.11 66.32 L350.85 66.2 L350.6 66.08 L350.35 65.96 L350.1 65.84 L349.85 65.71 L349.61 65.59 L349.36 65.46 L349.12 65.33 L348.89 65.2 L348.65 65.06 L348.42 64.93 L348.18 64.79 L347.96 64.65 L347.73 64.51 L347.5 64.37 L347.28 64.22 L347.06 64.08 L346.84 63.93 L346.63 63.78 L346.41 63.63 L346.2 63.48 L345.99 63.32 L345.78 63.16 L345.58 63.01 L345.38 62.85 L345.17 62.68 L344.98 62.52 L344.78 62.35 L344.58 62.19 L344.39 62.02 L344.2 61.85 L344.01 61.67 L343.83 61.5 L343.64 61.32 L343.46 61.14 L343.28 60.96 L343.11 60.78 L342.93 60.6 L342.76 60.41 L342.59 60.23 L342.42 60.04 L342.25 59.85 L342.09 59.65 L341.92 59.46 L341.76 59.26 L341.61 59.06 L341.45 58.86 L341.3 58.66 L341.15 58.46 L341 58.25 L340.85 58.05 L340.7 57.84 L340.56 57.63 L340.42 57.41 L340.28 57.2 L340.15 56.98 L340.01 56.76 L339.88 56.54 L339.75 56.32 L339.62 56.09 L339.5 55.87 L339.37 55.64 L339.25 55.41 L339.13 55.18 L339.02 54.94 L338.9 54.7 L338.79 54.47 L338.68 54.23 L338.57 53.98 L338.47 53.74 L338.36 53.49 L338.26 53.24 L338.16 52.99 L338.07 52.74 L337.97 52.48 L337.88 52.22 L337.79 51.96 L337.7 51.7 L337.61 51.43 L337.53 51.17 L337.45 50.9 L337.37 50.62 L337.29 50.35 L337.22 50.07 L337.15 49.79 L337.08 49.5 L337.01 49.22 L336.94 48.93 L336.88 48.64 L336.82 48.34 L336.76 48.04 L336.7 47.74 L336.64 47.43 L336.59 47.12 L336.54 46.81 L336.49 46.49 L336.45 46.17 L336.4 45.84 L336.36 45.51 L336.32 45.18 L336.29 44.84 L336.25 44.49 L336.22 44.14 L336.19 43.78 L336.16 43.41 L336.14 43.04 L336.11 42.65 L336.09 42.26 L336.07 41.86 L336.05 41.44 L336.04 41.01 L336.03 40.56 L336.02 40.08 L336.01 39.58 L336 39.03 L336 38.41 L336 37.5 L336 36.59 L336 35.97 L336.01 35.42 L336.02 34.92 L336.03 34.44 L336.04 33.99 L336.05 33.56 L336.07 33.14 L336.09 32.74 L336.11 32.35 L336.14 31.96 L336.16 31.59 L336.19 31.22 L336.22 30.86 L336.25 30.51 L336.29 30.16 L336.32 29.82 L336.36 29.49 L336.4 29.16 L336.45 28.83 L336.49 28.51 L336.54 28.19 L336.59 27.88 L336.64 27.57 L336.7 27.26 L336.76 26.96 L336.82 26.66 L336.88 26.36 L336.94 26.07 L337.01 25.78 L337.08 25.5 L337.15 25.21 L337.22 24.93 L337.29 24.65 L337.37 24.38 L337.45 24.1 L337.53 23.83 L337.61 23.57 L337.7 23.3 L337.79 23.04 L337.88 22.78 L337.97 22.52 L338.07 22.26 L338.16 22.01 L338.26 21.76 L338.36 21.51 L338.47 21.26 L338.57 21.02 L338.68 20.77 L338.79 20.53 L338.9 20.3 L339.02 20.06 L339.13 19.82 L339.25 19.59 L339.37 19.36 L339.5 19.13 L339.62 18.91 L339.75 18.68 L339.88 18.46 L340.01 18.24 L340.15 18.02 L340.28 17.8 L340.42 17.59 L340.56 17.37 L340.7 17.16 L340.85 16.95 L341 16.75 L341.15 16.54 L341.3 16.34 L341.45 16.14 L341.61 15.94 L341.76 15.74 L341.92 15.54 L342.09 15.35 L342.25 15.15 L342.42 14.96 L342.59 14.77 L342.76 14.59 L342.93 14.4 L343.11 14.22 L343.28 14.04 L343.46 13.86 L343.64 13.68 L343.83 13.5 L344.01 13.33 L344.2 13.15 L344.39 12.98 L344.58 12.81 L344.78 12.65 L344.98 12.48 L345.17 12.32 L345.38 12.15 L345.58 11.99 L345.78 11.84 L345.99 11.68 L346.2 11.52 L346.41 11.37 L346.63 11.22 L346.84 11.07 L347.06 10.92 L347.28 10.78 L347.5 10.63 L347.73 10.49 L347.96 10.35 L348.18 10.21 L348.42 10.07 L348.65 9.94 L348.89 9.8 L349.12 9.67 L349.36 9.54 L349.61 9.41 L349.85 9.29 L350.1 9.16 L350.35 9.04 L350.6 8.92 L350.85 8.8 L351.11 8.68 L351.36 8.57 L351.62 8.46 L351.89 8.34 L352.15 8.23 L352.42 8.13 L352.69 8.02 L352.96 7.91 L353.23 7.81 L353.51 7.71 L353.79 7.61 L354.07 7.51 L354.35 7.42 L354.64 7.33 L354.93 7.23 L355.22 7.14 L355.51 7.06 L355.81 6.97 L356.11 6.89 L356.41 6.8 L356.72 6.72 L357.02 6.64 L357.33 6.57 L357.65 6.49 L357.96 6.42 L358.28 6.35 L358.6 6.28 L358.93 6.21 L359.25 6.14 L359.58 6.08 L359.92 6.02 L360.25 5.95 L360.59 5.9 L360.94 5.84 L361.29 5.78 L361.64 5.73 L361.99 5.68 L362.35 5.63 L362.71 5.58 L363.08 5.54 L363.45 5.49 L363.83 5.45 L364.21 5.41 L364.6 5.37 L364.99 5.34 L365.38 5.3 L365.79 5.27 L366.2 5.24 L366.61 5.21 L367.04 5.18 L367.47 5.16 L367.91 5.13 L368.36 5.11 L368.82 5.09 L369.29 5.08 L369.77 5.06 L370.27 5.05 L370.79 5.03 L371.33 5.02 L371.9 5.01 L372.51 5.01 L373.16 5 L373.91 5 L375 5 L376.09 5 L376.84 5 L377.49 5.01 L378.1 5.01 L378.67 5.02 L379.21 5.03 L379.73 5.05 L380.23 5.06 L380.71 5.08 L381.18 5.09 L381.64 5.11 L382.09 5.13 L382.53 5.16 L382.96 5.18 L383.39 5.21 L383.8 5.24 L384.21 5.27 L384.62 5.3 L385.01 5.34 L385.4 5.37 L385.79 5.41 L386.17 5.45 L386.55 5.49 L386.92 5.54 L387.29 5.58 L387.65 5.63 L388.01 5.68 L388.36 5.73 L388.71 5.78 L389.06 5.84 L389.41 5.9 L389.75 5.95 L390.08 6.02 L390.42 6.08 L390.75 6.14 L391.07 6.21 L391.4 6.28 L391.72 6.35 L392.04 6.42 L392.35 6.49 L392.67 6.57 L392.98 6.64 L393.28 6.72 L393.59 6.8 L393.89 6.89 L394.19 6.97 L394.49 7.06 L394.78 7.14 L395.07 7.23 L395.36 7.33 L395.65 7.42 L395.93 7.51 L396.21 7.61 L396.49 7.71 L396.77 7.81 L397.04 7.91 L397.31 8.02 L397.58 8.13 L397.85 8.23 L398.11 8.34 L398.38 8.46 L398.64 8.57 L398.89 8.68 L399.15 8.8 L399.4 8.92 L399.65 9.04 L399.9 9.16 L400.15 9.29 L400.39 9.41 L400.64 9.54 L400.88 9.67 L401.11 9.8 L401.35 9.94 L401.58 10.07 L401.82 10.21 L402.04 10.35 L402.27 10.49 L402.5 10.63 L402.72 10.78 L402.94 10.92 L403.16 11.07 L403.37 11.22 L403.59 11.37 L403.8 11.52 L404.01 11.68 L404.22 11.84 L404.42 11.99 L404.62 12.15 L404.83 12.32 L405.02 12.48 L405.22 12.65 L405.42 12.81 L405.61 12.98 L405.8 13.15 L405.99 13.33 L406.17 13.5 L406.36 13.68 L406.54 13.86 L406.72 14.04 L406.89 14.22 L407.07 14.4 L407.24 14.59 L407.41 14.77 L407.58 14.96 L407.75 15.15 L407.91 15.35 L408.08 15.54 L408.24 15.74 L408.39 15.94 L408.55 16.14 L408.7 16.34 L408.85 16.54 L409 16.75 L409.15 16.95 L409.3 17.16 L409.44 17.37 L409.58 17.59 L409.72 17.8 L409.85 18.02 L409.99 18.24 L410.12 18.46 L410.25 18.68 L410.38 18.91 L410.5 19.13 L410.63 19.36 L410.75 19.59 L410.87 19.82 L410.98 20.06 L411.1 20.3 L411.21 20.53 L411.32 20.77 L411.43 21.02 L411.53 21.26 L411.64 21.51 L411.74 21.76 L411.84 22.01 L411.93 22.26 L412.03 22.52 L412.12 22.78 L412.21 23.04 L412.3 23.3 L412.39 23.57 L412.47 23.83 L412.55 24.1 L412.63 24.38 L412.71 24.65 L412.78 24.93 L412.85 25.21 L412.92 25.5 L412.99 25.78 L413.06 26.07 L413.12 26.36 L413.18 26.66 L413.24 26.96 L413.3 27.26 L413.36 27.57 L413.41 27.88 L413.46 28.19 L413.51 28.51 L413.55 28.83 L413.6 29.16 L413.64 29.49 L413.68 29.82 L413.71 30.16 L413.75 30.51 L413.78 30.86 L413.81 31.22 L413.84 31.59 L413.86 31.96 L413.89 32.35 L413.91 32.74 L413.93 33.14 L413.95 33.56 L413.96 33.99 L413.97 34.44 L413.98 34.92 L413.99 35.42 L414 35.97 L414 36.59Z M406 37.5 L406 38.18 L406 38.65 L405.99 39.07 L405.99 39.45 L405.98 39.8 L405.97 40.14 L405.96 40.47 L405.94 40.78 L405.93 41.09 L405.91 41.38 L405.89 41.67 L405.87 41.96 L405.85 42.23 L405.83 42.5 L405.8 42.77 L405.78 43.03 L405.75 43.29 L405.72 43.54 L405.68 43.79 L405.65 44.04 L405.61 44.28 L405.58 44.52 L405.54 44.75 L405.5 44.99 L405.45 45.22 L405.41 45.45 L405.36 45.67 L405.31 45.89 L405.26 46.12 L405.21 46.33 L405.16 46.55 L405.1 46.76 L405.05 46.98 L404.99 47.18 L404.93 47.39 L404.87 47.6 L404.8 47.8 L404.74 48 L404.67 48.2 L404.6 48.4 L404.53 48.6 L404.46 48.79 L404.38 48.99 L404.31 49.18 L404.23 49.37 L404.15 49.55 L404.07 49.74 L403.99 49.93 L403.9 50.11 L403.82 50.29 L403.73 50.47 L403.64 50.65 L403.55 50.82 L403.46 51 L403.36 51.17 L403.26 51.35 L403.17 51.52 L403.07 51.69 L402.97 51.85 L402.86 52.02 L402.76 52.19 L402.65 52.35 L402.54 52.51 L402.43 52.67 L402.32 52.83 L402.21 52.99 L402.09 53.14 L401.98 53.3 L401.86 53.45 L401.74 53.61 L401.62 53.76 L401.49 53.91 L401.37 54.05 L401.24 54.2 L401.11 54.35 L400.98 54.49 L400.85 54.63 L400.72 54.77 L400.58 54.91 L400.44 55.05 L400.3 55.19 L400.16 55.32 L400.02 55.46 L399.88 55.59 L399.73 55.72 L399.59 55.85 L399.44 55.98 L399.29 56.11 L399.13 56.24 L398.98 56.36 L398.82 56.48 L398.67 56.61 L398.51 56.73 L398.35 56.85 L398.19 56.97 L398.02 57.08 L397.86 57.2 L397.69 57.31 L397.52 57.42 L397.35 57.54 L397.18 57.65 L397 57.75 L396.83 57.86 L396.65 57.97 L396.47 58.07 L396.29 58.18 L396.11 58.28 L395.92 58.38 L395.74 58.48 L395.55 58.58 L395.36 58.67 L395.17 58.77 L394.98 58.86 L394.78 58.95 L394.58 59.04 L394.39 59.13 L394.19 59.22 L393.99 59.31 L393.78 59.4 L393.58 59.48 L393.37 59.56 L393.16 59.64 L392.95 59.72 L392.74 59.8 L392.52 59.88 L392.31 59.96 L392.09 60.03 L391.87 60.1 L391.65 60.18 L391.42 60.25 L391.2 60.32 L390.97 60.38 L390.74 60.45 L390.51 60.52 L390.27 60.58 L390.04 60.64 L389.8 60.7 L389.56 60.76 L389.32 60.82 L389.07 60.88 L388.83 60.93 L388.58 60.99 L388.32 61.04 L388.07 61.09 L387.82 61.14 L387.56 61.19 L387.3 61.23 L387.03 61.28 L386.77 61.32 L386.5 61.37 L386.23 61.41 L385.95 61.45 L385.67 61.49 L385.39 61.52 L385.11 61.56 L384.82 61.59 L384.53 61.63 L384.24 61.66 L383.94 61.69 L383.64 61.72 L383.33 61.75 L383.02 61.77 L382.71 61.8 L382.39 61.82 L382.06 61.84 L381.73 61.86 L381.39 61.88 L381.05 61.9 L380.7 61.91 L380.34 61.93 L379.97 61.94 L379.59 61.95 L379.2 61.97 L378.79 61.97 L378.37 61.98 L377.92 61.99 L377.45 61.99 L376.94 62 L376.35 62 L375.5 62 L374.65 62 L374.06 62 L373.55 61.99 L373.08 61.99 L372.63 61.98 L372.21 61.97 L371.8 61.97 L371.41 61.95 L371.03 61.94 L370.66 61.93 L370.3 61.91 L369.95 61.9 L369.61 61.88 L369.27 61.86 L368.94 61.84 L368.61 61.82 L368.29 61.8 L367.98 61.77 L367.67 61.75 L367.36 61.72 L367.06 61.69 L366.76 61.66 L366.47 61.63 L366.18 61.59 L365.89 61.56 L365.61 61.52 L365.33 61.49 L365.05 61.45 L364.77 61.41 L364.5 61.37 L364.23 61.32 L363.97 61.28 L363.7 61.23 L363.44 61.19 L363.18 61.14 L362.93 61.09 L362.68 61.04 L362.42 60.99 L362.17 60.93 L361.93 60.88 L361.68 60.82 L361.44 60.76 L361.2 60.7 L360.96 60.64 L360.73 60.58 L360.49 60.52 L360.26 60.45 L360.03 60.38 L359.8 60.32 L359.58 60.25 L359.35 60.18 L359.13 60.1 L358.91 60.03 L358.69 59.96 L358.48 59.88 L358.26 59.8 L358.05 59.72 L357.84 59.64 L357.63 59.56 L357.42 59.48 L357.22 59.4 L357.01 59.31 L356.81 59.22 L356.61 59.13 L356.42 59.04 L356.22 58.95 L356.02 58.86 L355.83 58.77 L355.64 58.67 L355.45 58.58 L355.26 58.48 L355.08 58.38 L354.89 58.28 L354.71 58.18 L354.53 58.07 L354.35 57.97 L354.17 57.86 L354 57.75 L353.82 57.65 L353.65 57.54 L353.48 57.42 L353.31 57.31 L353.14 57.2 L352.98 57.08 L352.81 56.97 L352.65 56.85 L352.49 56.73 L352.33 56.61 L352.18 56.48 L352.02 56.36 L351.87 56.24 L351.71 56.11 L351.56 55.98 L351.41 55.85 L351.27 55.72 L351.12 55.59 L350.98 55.46 L350.84 55.32 L350.7 55.19 L350.56 55.05 L350.42 54.91 L350.28 54.77 L350.15 54.63 L350.02 54.49 L349.89 54.35 L349.76 54.2 L349.63 54.05 L349.51 53.91 L349.38 53.76 L349.26 53.61 L349.14 53.45 L349.02 53.3 L348.91 53.14 L348.79 52.99 L348.68 52.83 L348.57 52.67 L348.46 52.51 L348.35 52.35 L348.24 52.19 L348.14 52.02 L348.03 51.85 L347.93 51.69 L347.83 51.52 L347.74 51.35 L347.64 51.17 L347.54 51 L347.45 50.82 L347.36 50.65 L347.27 50.47 L347.18 50.29 L347.1 50.11 L347.01 49.93 L346.93 49.74 L346.85 49.55 L346.77 49.37 L346.69 49.18 L346.62 48.99 L346.54 48.79 L346.47 48.6 L346.4 48.4 L346.33 48.2 L346.26 48 L346.2 47.8 L346.13 47.6 L346.07 47.39 L346.01 47.18 L345.95 46.98 L345.9 46.76 L345.84 46.55 L345.79 46.33 L345.74 46.12 L345.69 45.89 L345.64 45.67 L345.59 45.45 L345.55 45.22 L345.5 44.99 L345.46 44.75 L345.42 44.52 L345.39 44.28 L345.35 44.04 L345.32 43.79 L345.28 43.54 L345.25 43.29 L345.22 43.03 L345.2 42.77 L345.17 42.5 L345.15 42.23 L345.13 41.96 L345.11 41.67 L345.09 41.38 L345.07 41.09 L345.06 40.78 L345.04 40.47 L345.03 40.14 L345.02 39.8 L345.01 39.45 L345.01 39.07 L345 38.65 L345 38.18 L345 37.5 L345 36.82 L345 36.35 L345.01 35.93 L345.01 35.55 L345.02 35.2 L345.03 34.86 L345.04 34.53 L345.06 34.22 L345.07 33.91 L345.09 33.62 L345.11 33.33 L345.13 33.04 L345.15 32.77 L345.17 32.5 L345.2 32.23 L345.22 31.97 L345.25 31.71 L345.28 31.46 L345.32 31.21 L345.35 30.96 L345.39 30.72 L345.42 30.48 L345.46 30.25 L345.5 30.01 L345.55 29.78 L345.59 29.55 L345.64 29.33 L345.69 29.11 L345.74 28.88 L345.79 28.67 L345.84 28.45 L345.9 28.24 L345.95 28.02 L346.01 27.82 L346.07 27.61 L346.13 27.4 L346.2 27.2 L346.26 27 L346.33 26.8 L346.4 26.6 L346.47 26.4 L346.54 26.21 L346.62 26.01 L346.69 25.82 L346.77 25.63 L346.85 25.45 L346.93 25.26 L347.01 25.07 L347.1 24.89 L347.18 24.71 L347.27 24.53 L347.36 24.35 L347.45 24.18 L347.54 24 L347.64 23.83 L347.74 23.65 L347.83 23.48 L347.93 23.31 L348.03 23.15 L348.14 22.98 L348.24 22.81 L348.35 22.65 L348.46 22.49 L348.57 22.33 L348.68 22.17 L348.79 22.01 L348.91 21.86 L349.02 21.7 L349.14 21.55 L349.26 21.39 L349.38 21.24 L349.51 21.09 L349.63 20.95 L349.76 20.8 L349.89 20.65 L350.02 20.51 L350.15 20.37 L350.28 20.23 L350.42 20.09 L350.56 19.95 L350.7 19.81 L350.84 19.68 L350.98 19.54 L351.12 19.41 L351.27 19.28 L351.41 19.15 L351.56 19.02 L351.71 18.89 L351.87 18.76 L352.02 18.64 L352.18 18.52 L352.33 18.39 L352.49 18.27 L352.65 18.15 L352.81 18.03 L352.98 17.92 L353.14 17.8 L353.31 17.69 L353.48 17.58 L353.65 17.46 L353.82 17.35 L354 17.25 L354.17 17.14 L354.35 17.03 L354.53 16.93 L354.71 16.82 L354.89 16.72 L355.08 16.62 L355.26 16.52 L355.45 16.42 L355.64 16.33 L355.83 16.23 L356.02 16.14 L356.22 16.05 L356.42 15.96 L356.61 15.87 L356.81 15.78 L357.01 15.69 L357.22 15.6 L357.42 15.52 L357.63 15.44 L357.84 15.36 L358.05 15.28 L358.26 15.2 L358.48 15.12 L358.69 15.04 L358.91 14.97 L359.13 14.9 L359.35 14.82 L359.58 14.75 L359.8 14.68 L360.03 14.62 L360.26 14.55 L360.49 14.48 L360.73 14.42 L360.96 14.36 L361.2 14.3 L361.44 14.24 L361.68 14.18 L361.93 14.12 L362.17 14.07 L362.42 14.01 L362.68 13.96 L362.93 13.91 L363.18 13.86 L363.44 13.81 L363.7 13.77 L363.97 13.72 L364.23 13.68 L364.5 13.63 L364.77 13.59 L365.05 13.55 L365.33 13.51 L365.61 13.48 L365.89 13.44 L366.18 13.41 L366.47 13.37 L366.76 13.34 L367.06 13.31 L367.36 13.28 L367.67 13.25 L367.98 13.23 L368.29 13.2 L368.61 13.18 L368.94 13.16 L369.27 13.14 L369.61 13.12 L369.95 13.1 L370.3 13.09 L370.66 13.07 L371.03 13.06 L371.41 13.05 L371.8 13.03 L372.21 13.03 L372.63 13.02 L373.08 13.01 L373.55 13.01 L374.06 13 L374.65 13 L375.5 13 L376.35 13 L376.94 13 L377.45 13.01 L377.92 13.01 L378.37 13.02 L378.79 13.03 L379.2 13.03 L379.59 13.05 L379.97 13.06 L380.34 13.07 L380.7 13.09 L381.05 13.1 L381.39 13.12 L381.73 13.14 L382.06 13.16 L382.39 13.18 L382.71 13.2 L383.02 13.23 L383.33 13.25 L383.64 13.28 L383.94 13.31 L384.24 13.34 L384.53 13.37 L384.82 13.41 L385.11 13.44 L385.39 13.48 L385.67 13.51 L385.95 13.55 L386.23 13.59 L386.5 13.63 L386.77 13.68 L387.03 13.72 L387.3 13.77 L387.56 13.81 L387.82 13.86 L388.07 13.91 L388.32 13.96 L388.58 14.01 L388.83 14.07 L389.07 14.12 L389.32 14.18 L389.56 14.24 L389.8 14.3 L390.04 14.36 L390.27 14.42 L390.51 14.48 L390.74 14.55 L390.97 14.62 L391.2 14.68 L391.42 14.75 L391.65 14.82 L391.87 14.9 L392.09 14.97 L392.31 15.04 L392.52 15.12 L392.74 15.2 L392.95 15.28 L393.16 15.36 L393.37 15.44 L393.58 15.52 L393.78 15.6 L393.99 15.69 L394.19 15.78 L394.39 15.87 L394.58 15.96 L394.78 16.05 L394.98 16.14 L395.17 16.23 L395.36 16.33 L395.55 16.42 L395.74 16.52 L395.92 16.62 L396.11 16.72 L396.29 16.82 L396.47 16.93 L396.65 17.03 L396.83 17.14 L397 17.25 L397.18 17.35 L397.35 17.46 L397.52 17.58 L397.69 17.69 L397.86 17.8 L398.02 17.92 L398.19 18.03 L398.35 18.15 L398.51 18.27 L398.67 18.39 L398.82 18.52 L398.98 18.64 L399.13 18.76 L399.29 18.89 L399.44 19.02 L399.59 19.15 L399.73 19.28 L399.88 19.41 L400.02 19.54 L400.16 19.68 L400.3 19.81 L400.44 19.95 L400.58 20.09 L400.72 20.23 L400.85 20.37 L400.98 20.51 L401.11 20.65 L401.24 20.8 L401.37 20.95 L401.49 21.09 L401.62 21.24 L401.74 21.39 L401.86 21.55 L401.98 21.7 L402.09 21.86 L402.21 22.01 L402.32 22.17 L402.43 22.33 L402.54 22.49 L402.65 22.65 L402.76 22.81 L402.86 22.98 L402.97 23.15 L403.07 23.31 L403.17 23.48 L403.26 23.65 L403.36 23.83 L403.46 24 L403.55 24.18 L403.64 24.35 L403.73 24.53 L403.82 24.71 L403.9 24.89 L403.99 25.07 L404.07 25.26 L404.15 25.45 L404.23 25.63 L404.31 25.82 L404.38 26.01 L404.46 26.21 L404.53 26.4 L404.6 26.6 L404.67 26.8 L404.74 27 L404.8 27.2 L404.87 27.4 L404.93 27.61 L404.99 27.82 L405.05 28.02 L405.1 28.24 L405.16 28.45 L405.21 28.67 L405.26 28.88 L405.31 29.11 L405.36 29.33 L405.41 29.55 L405.45 29.78 L405.5 30.01 L405.54 30.25 L405.58 30.48 L405.61 30.72 L405.65 30.96 L405.68 31.21 L405.72 31.46 L405.75 31.71 L405.78 31.97 L405.8 32.23 L405.83 32.5 L405.85 32.77 L405.87 33.04 L405.89 33.33 L405.91 33.62 L405.93 33.91 L405.94 34.22 L405.96 34.53 L405.97 34.86 L405.98 35.2 L405.99 35.55 L405.99 35.93 L406 36.35 L406 36.82Z"/><path fill-opacity=".85" d="M442.26 59.95Q443.64 60.17 444.5 61.28Q445.37 62.38 445.37 63.9Q445.37 64.34 445.29 64.76Q445.04 66.25 444.07 67.44Q443.1 68.63 441.54 69.31Q439.97 70 438.01 70H430.73L434.2 50.48H441.2Q443.83 50.48 445.19 51.6Q446.55 52.72 446.55 54.52Q446.55 54.96 446.46 55.44Q446.16 57.18 445.02 58.31Q443.89 59.44 442.26 59.95ZM443.89 55.05Q443.89 53.84 443.05 53.17Q442.21 52.5 440.61 52.5H436.38L435.24 58.97H439.52Q441.28 58.97 442.43 58.11Q443.58 57.26 443.83 55.75Q443.89 55.5 443.89 55.05ZM442.85 63.78Q442.85 62.5 441.9 61.74Q440.95 60.98 439.3 60.98H434.87L433.64 67.98H438.15Q440.02 67.98 441.26 67.06Q442.49 66.14 442.77 64.51Q442.85 64.12 442.85 63.78Z M455.02 54.66 457.62 67.03 464.59 54.66H467.22L454.01 77.22H451.35L455.69 69.83L452.19 54.66Z M497.66 50.48 497.29 52.47H491.97L488.89 70H486.34L489.42 52.47H484.1L484.47 50.48Z M516.37 60.26Q516.37 60.84 516.23 61.68Q516.12 62.41 515.87 63.2H503.6Q503.55 63.76 503.55 64.01Q503.55 65.94 504.71 67.02Q505.87 68.1 507.75 68.1Q509.4 68.1 510.65 67.33Q511.89 66.56 512.54 65.27H515.28Q514.27 67.48 512.19 68.87Q510.1 70.25 507.36 70.25Q504.47 70.25 502.72 68.59Q500.97 66.92 500.97 64.04Q500.97 63.22 501.14 62.3Q501.56 59.92 502.85 58.13Q504.14 56.34 506.03 55.37Q507.92 54.4 510.13 54.4Q512.06 54.4 513.47 55.15Q514.89 55.89 515.63 57.22Q516.37 58.55 516.37 60.26ZM513.74 60.31Q513.74 58.52 512.61 57.54Q511.47 56.56 509.65 56.56Q507.69 56.56 506.1 57.83Q504.5 59.11 503.94 61.35H513.66Q513.74 60.79 513.74 60.31Z M530.8 54.4Q533.63 54.4 535.21 55.78Q536.8 57.15 536.96 59.58H534.22Q534.08 58.18 533.09 57.37Q532.09 56.56 530.41 56.56Q528.23 56.56 526.62 58.06Q525.01 59.56 524.53 62.3Q524.39 63.22 524.39 63.84Q524.39 65.88 525.48 66.99Q526.58 68.1 528.4 68.1Q530.08 68.1 531.32 67.31Q532.57 66.53 533.24 65.07H535.98Q534.98 67.42 532.88 68.84Q530.78 70.25 528 70.25Q525.12 70.25 523.43 68.6Q521.73 66.95 521.73 64.09Q521.73 63.22 521.9 62.3Q522.32 59.92 523.59 58.14Q524.87 56.36 526.74 55.38Q528.62 54.4 530.8 54.4Z M557.39 59.33Q557.39 60.23 557.25 60.96L555.65 70H553.13L554.67 61.32Q554.78 60.73 554.78 60.09Q554.78 58.38 553.85 57.48Q552.91 56.59 551.23 56.59Q549.21 56.59 547.8 57.85Q546.38 59.11 545.96 61.52V61.46L544.45 70H541.9L545.57 49.28H548.12L546.78 56.87Q547.73 55.69 549.2 55.03Q550.67 54.38 552.29 54.38Q554.59 54.38 555.99 55.65Q557.39 56.92 557.39 59.33Z"/></symbol></svg>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header><div class="wrap">
+<a class="brand" href="#topo" aria-label="NEXO, início"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg></a>
+<button id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav" aria-label="Principal"><a href="#nexo">O nome NEXO</a><a href="#servicos">Serviços</a><a href="#modelos">Modelos</a><a href="#galerias">Galerias</a><a href="#processo">Como trabalhamos</a><a href="#sobre">Sobre</a><a href="#faq">Dúvidas</a><a class="btn" href="#contato">Pedir proposta</a><button id="th" class="tg" type="button" aria-label="Alternar entre tema claro e escuro" title="Tema claro/escuro">◐</button></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero" id="topo">
+<div>
+<h1>Seu negócio online, <span>conectado</span> e funcionando.</h1>
+<p class="lead">Criamos sites, fortalecemos sua presença no Google e desenvolvemos soluções digitais para ampliar oportunidades, organizar processos e impulsionar seu negócio.</p>
+<div class="acts"><a class="btn" href="#contato">Pedir proposta grátis</a><a class="btn ghost" href="#servicos">Ver serviços</a></div>
+<div class="proof"><span><b>Soluções integradas</b>, não peças soltas</span><span><b>Escopo e preço</b> combinados antes</span><span><b>Suporte</b> contínuo após a entrega</span></div>
+</div>
+<svg class="net" viewBox="0 0 520 440" role="group" aria-label="Diagrama: seu negócio conectado a site, Google, WhatsApp e sistema">
+<path class="ln" d="M260 220 L100 90"/><path class="ln" d="M260 220 L420 90"/><path class="ln" d="M260 220 L100 350"/><path class="ln" d="M260 220 L420 350"/>
+<circle class="pulse" cx="260" cy="220" r="52"/>
+<circle class="core" cx="260" cy="220" r="52"/><text class="core-t" x="260" y="225">Seu negócio</text>
+<g><g class="n" data-k="site" tabindex="0" role="button" aria-label="Site"><rect class="nd" x="45" y="64" width="110" height="52" rx="26"/><text x="100" y="95">Site</text></g>
+<g class="n" data-k="google" tabindex="0" role="button" aria-label="Google"><rect class="nd" x="365" y="64" width="110" height="52" rx="26"/><text x="420" y="95">Google</text></g>
+<g class="n" data-k="whatsapp" tabindex="0" role="button" aria-label="WhatsApp"><rect class="nd" x="45" y="324" width="110" height="52" rx="26"/><text x="100" y="355">WhatsApp</text></g>
+<g class="n" data-k="sistema" tabindex="0" role="button" aria-label="Sistema"><rect class="nd" x="365" y="324" width="110" height="52" rx="26"/><text x="420" y="355">Sistema</text></g></g><text id="cap" x="260" y="428" role="status">Toque em um ponto para ver a ligação.</text>
+</svg>
+</div>
+
+<section id="nexo"><div class="wrap">
+<div class="head"><h2>O que a palavra NEXO quer dizer</h2><p>Do latim <i>nexus</i>, de <i>nectere</i>: atar, ligar, unir. É esse vínculo que construímos entre o seu negócio e os seus clientes. Experimente cada significado.</p></div>
+<div class="tb" role="tablist" aria-label="Significados de nexo"><button role="tab" id="t0" aria-controls="p0" aria-selected="true">Ligação</button><button role="tab" id="t1" aria-controls="p1" aria-selected="false">Coerência</button><button role="tab" id="t2" aria-controls="p2" aria-selected="false">Causa e efeito</button></div>
+<div class="pn" id="p0" role="tabpanel" aria-labelledby="t0"><div><p class="def">“União ou elo entre duas ou mais coisas.”</p><p class="use"><b>No seu negócio:</b> ligamos você ao cliente que está procurando exatamente o que você faz.</p></div>
+<div><svg viewBox="0 0 520 150" role="img" aria-label="Dois círculos, seu negócio e seu cliente, que se aproximam e se ligam" style="width:100%;height:auto"><line id="ll" x1="56" y1="70" x2="464" y2="70" style="stroke:var(--line);stroke-width:1"/><circle id="cl" class="cc" cx="56" cy="70" r="46"/><circle id="cr" class="cc" cx="464" cy="70" r="46"/><text id="tl" class="ct" x="56" y="75">Seu negócio</text><text id="tr" class="ct" x="464" y="75">Seu cliente</text></svg>
+<label class="sl">Arraste para aproximar<input id="rg" type="range" min="0" max="100" value="0"></label><p id="lt" class="use" role="status" aria-live="polite" style="margin-top:10px"></p></div></div>
+<div class="pn" id="p1" role="tabpanel" aria-labelledby="t1" hidden><div><p class="def">“Relação lógica entre ideias, partes de um todo.”</p><p class="use"><b>No seu negócio:</b> falar sem nexo é ter site, Google e WhatsApp soltos. Com nexo, eles formam um caminho só, do primeiro clique à venda.</p></div>
+<div><div class="cz" id="cz"><span class="rail"></span><span class="c" style="--sx:72%;--sy:20%;--ox:12.5%">Google</span><span class="c" style="--sx:16%;--sy:74%;--ox:37.5%">Site</span><span class="c" style="--sx:48%;--sy:84%;--ox:62.5%">WhatsApp</span><span class="c" style="--sx:84%;--sy:62%;--ox:87.5%">Venda</span></div>
+<button class="btn" id="cb" type="button" aria-pressed="false">Dar nexo</button><p id="cs" class="use" role="status" aria-live="polite" style="margin-top:12px">Sem nexo: canais soltos, sem caminho.</p></div></div>
+<div class="pn" id="p2" role="tabpanel" aria-labelledby="t2" hidden><div><p class="def">“O vínculo que une uma ação ao resultado que ela gera.”</p><p class="use"><b>No seu negócio:</b> cada coisa que fazemos tem um porquê. Toque em uma ação e veja o que ela provoca.</p></div>
+<div class="ce"><div class="r"><button type="button" aria-pressed="false">Perfil no Google</button><i class="ar"></i><span class="ef">Mais gente encontra você</span></div><div class="r"><button type="button" aria-pressed="false">Site rápido e claro</button><i class="ar"></i><span class="ef">Visitas viram conversas</span></div><div class="r"><button type="button" aria-pressed="false">Sistema organizado</button><i class="ar"></i><span class="ef">Menos erro e retrabalho</span></div></div></div>
+<p class="mdl">Esse é o nosso modelo: <b>ligamos</b> o seu negócio ao cliente, damos <b>coerência</b> aos canais e deixamos clara a <b>causa e efeito</b>, ou seja, o que foi feito e o que isso gerou.</p>
+</div></section>
+
+<section id="servicos"><div class="wrap">
+<div class="head"><h2>O que a NEXO coloca de pé para você</h2><p>Cada serviço tem escopo, prazo e preço combinados por escrito antes do primeiro dia de trabalho.</p></div>
+<div class="svc">
+<div class="row"><h3>Sites e experiências digitais</h3><p>Sites institucionais, páginas comerciais, catálogos e portfólios com identidade visual, boa navegação e foco em transformar visitas em contatos.</p><a href="#contato" data-s="Site profissional">Pedir proposta</a></div>
+<div class="row"><h3>Presença no Google</h3><p>Perfil da Empresa no Google, informações comerciais organizadas, avaliações por QR Code/NFC, WhatsApp e redes sociais trabalhando juntos.</p><a href="#contato" data-s="Presença no Google">Pedir proposta</a></div>
+<div class="row"><h3>Lojas e galerias comerciais</h3><p>Vitrines digitais para lojistas e portais para galerias, reunindo estabelecimentos, produtos, serviços, localização e espaços para locação.</p><a href="#contato" data-s="Loja ou catálogo">Pedir proposta</a></div>
+<div class="row"><h3>Sistemas e automação</h3><p>Ferramentas para organizar informações, automatizar tarefas repetitivas, estruturar fluxos de trabalho e acompanhar indicadores.</p><a href="#contato" data-s="Sistema ou automação">Pedir proposta</a></div>
+<div class="row"><h3>Gestão e suporte contínuo</h3><p>Atualização de sites, manutenção, acompanhamento das ferramentas digitais e melhorias constantes, em plano mensal.</p><a href="#contato" data-s="Manutenção e suporte">Pedir proposta</a></div>
+</div></div></section>
+
+<section id="modelos"><div class="wrap">
+<div class="head"><h2>Modelos prontos para o seu segmento</h2><p>Partimos de uma base profissional, adaptada à sua marca. Cada cartão mostra a página real do modelo. Passe o mouse para ver a rolagem ou abra a demonstração e teste: busca, filtros, lista de pedido e formulários funcionam. Os nomes, preços e fotos são de exemplo (as fotos foram geradas por IA), não são clientes reais.</p></div>
+<div class="mod">
+<div class="card"><div class="pv" data-k="loja"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>sualoja.com.br</span></div><div class="vp"><iframe data-k="loja" data-src="demos/loja/index.html" title="Prévia da página: Lojas e comércio" tabindex="-1" aria-hidden="true" loading="lazy"></iframe><button class="open" type="button" data-k="loja" aria-label="Abrir demonstração: Lojas e comércio">Abrir demonstração ▸</button></div></div><p class="pvn">Página de demonstração com dados fictícios.</p><small>Modelo 01</small><h3>Lojas e comércio</h3><p>Home, apresentação da marca, catálogo, localização, Instagram, avaliações e botão de WhatsApp. Para lojas de roupas, acessórios, serviços e pequenos comerciantes.</p><div class="chips"><span>Catálogo</span><span>Google</span><span>WhatsApp</span></div><a href="#contato" data-s="Loja ou catálogo">Quero para minha loja</a></div>
+<div class="card star"><div class="pv" data-k="galeria"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>suagaleria.com.br</span></div><div class="vp"><iframe data-k="galeria" data-src="demos/galeria/index.html" title="Prévia da página: Galerias comerciais" tabindex="-1" aria-hidden="true" loading="lazy"></iframe><button class="open" type="button" data-k="galeria" aria-label="Abrir demonstração: Galerias comerciais">Abrir demonstração ▸</button></div></div><p class="pvn">Página de demonstração com dados fictícios.</p><small>Modelo 02 · Estratégico</small><h3>Galerias comerciais</h3><p>Portal da galeria, diretório de lojas, categorias, mapa, espaços para aluguel e contato dos lojistas. Atende a administração e cada comerciante.</p><div class="chips"><span>Diretório de lojas</span><span>Mapa</span><span>Locação</span></div><a href="#galerias">Ver como funciona</a></div>
+<div class="card"><div class="pv" data-k="lazer"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>seuespaco.com.br</span></div><div class="vp"><iframe data-k="lazer" data-src="demos/lazer/index.html" title="Prévia da página: Espaços de lazer" tabindex="-1" aria-hidden="true" loading="lazy"></iframe><button class="open" type="button" data-k="lazer" aria-label="Abrir demonstração: Espaços de lazer">Abrir demonstração ▸</button></div></div><p class="pvn">Página de demonstração com dados fictícios.</p><small>Modelo 03</small><h3>Espaços de lazer</h3><p>Fotos, estrutura, capacidade, regras, localização e solicitação de reserva pelo WhatsApp. Para espaços de festas, eventos e locação por período.</p><div class="chips"><span>Galeria de fotos</span><span>Regras</span><span>Reserva</span></div><a href="#contato" data-s="Site profissional">Quero para meu espaço</a></div>
+<div class="card"><div class="pv" data-k="empresa"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>suaempresa.com.br</span></div><div class="vp"><iframe data-k="empresa" data-src="demos/empresa/index.html" title="Prévia da página: Empresas e prestadores" tabindex="-1" aria-hidden="true" loading="lazy"></iframe><button class="open" type="button" data-k="empresa" aria-label="Abrir demonstração: Empresas e prestadores">Abrir demonstração ▸</button></div></div><p class="pvn">Página de demonstração com dados fictícios.</p><small>Modelo 04</small><h3>Empresas e prestadores</h3><p>Apresentação institucional, serviços, diferenciais, portfólio e formulário para gerar oportunidades comerciais. Para empresas locais e profissionais.</p><div class="chips"><span>Serviços</span><span>Portfólio</span><span>Orçamento</span></div><a href="#contato" data-s="Site profissional">Quero para minha empresa</a></div>
+<div class="card wide"><div class="pv" data-k="negocio"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>seunegocio.com.br</span></div><div class="vp"><iframe data-k="negocio" data-src="demos/negocio-local/index.html" title="Prévia da página: Negócios locais" tabindex="-1" aria-hidden="true" loading="lazy"></iframe><button class="open" type="button" data-k="negocio" aria-label="Abrir demonstração: Negócios locais">Abrir demonstração ▸</button></div></div><p class="pvn">Página de demonstração com dados fictícios.</p><div class="tx"><small>Modelo 05</small><h3>Negócios locais</h3><p>Oficinas, barbearias e salões, lanchonetes, mercados, lavanderias, lava-jatos, farmácias, chaveiros e mais. Treze segmentos prontos, com cardápio ou serviços e agendamento, pedido ou reserva pelo WhatsApp.</p><div class="chips"><span>13 segmentos</span><span>Agendamento</span><span>Pedido</span></div><a href="#contato" data-s="Site profissional">Quero para meu negócio</a></div></div>
+</div></div></section>
+
+<section id="galerias"><div class="wrap two">
+<div class="head" style="margin:0"><h2>Uma galeria, muitas lojas visíveis</h2><p>Atendemos a administração da galeria e, a partir dela, os lojistas. A NEXO divulga a galeria; a galeria amplia a visibilidade de cada loja.</p>
+<div class="flow" aria-label="Caminho do cliente"><b>Placa de avaliação</b><i>→</i><b>Perfil no Google</b><i>→</i><b>Site ou catálogo</b><i>→</i><b>Manutenção</b></div>
+<p class="note" style="margin-top:20px">Na placa de avaliação Google (QR Code e NFC) entregamos tudo configurado e testado, com orientação à equipe. Não prometemos avaliações positivas nem oferecemos incentivos condicionados à nota.</p></div>
+<div class="gl">
+<div><b>Diretório de lojas</b><span>Nome, segmento, imagens, localização e contato de cada estabelecimento.</span></div>
+<div><b>Vitrine comercial</b><span>Produtos, serviços, promoções e novidades dos lojistas.</span></div>
+<div><b>Espaços disponíveis</b><span>Divulgação de lojas vazias para atrair interessados em locação.</span></div>
+<div><b>Presença digital</b><span>Integração com Google Maps, redes sociais e WhatsApp.</span></div>
+<div><b>Gestão de conteúdo</b><span>Atualização das informações e campanhas de divulgação.</span></div>
+</div></div></section>
+
+<section id="processo"><div class="wrap">
+<div class="head"><h2>Do primeiro contato ao site no ar</h2><p>Um caminho de oito etapas, claro do início ao suporte.</p></div>
+<div class="steps s8">
+<div class="step"><h3>Prospecção</h3><p>Identificamos oportunidades no seu negócio.</p></div>
+<div class="step"><h3>Briefing</h3><p>Entendemos você e seus objetivos.</p></div>
+<div class="step"><h3>Proposta e contrato</h3><p>Entregas, prazos e valores por escrito.</p></div>
+<div class="step"><h3>Design e protótipo</h3><p>Versões para desktop e celular.</p></div>
+<div class="step"><h3>Desenvolvimento</h3><p>Construímos o site e as funcionalidades.</p></div>
+<div class="step"><h3>Testes e aprovação</h3><p>Validamos navegação, contatos e segurança.</p></div>
+<div class="step"><h3>Publicação</h3><p>Hospedagem, domínio e presença no Google.</p></div>
+<div class="step"><h3>Suporte e manutenção</h3><p>Atualizamos, acompanhamos e evoluímos.</p></div>
+</div></div></section>
+
+<section id="sobre"><div class="wrap two">
+<div class="head" style="margin:0"><h2>Conceber. Construir. Documentar.</h2><p>Mais do que entregar uma página, a NEXO conecta os recursos digitais do seu negócio para que funcionem juntos. Você fala com quem constrói e recebe tudo documentado. Estamos também estruturando soluções próprias:</p>
+<div class="lab" style="margin-top:32px"><div><b>Portal NEXO</b><small>Em desenvolvimento</small></div><div><b>PLANNING.HUB</b><small>Em construção</small></div><div><b>Espaço de Clareza</b><small>Em construção</small></div><div><b>NEXO Site Builder</b><small>Projeto futuro</small></div></div></div>
+<div class="pts">
+<div><b>Linguagem simples</b><span>Sem jargão. Explicamos cada decisão e cada custo.</span></div>
+<div><b>Feito para durar</b><span>Código organizado e documentado, pronto para crescer com você.</span></div>
+<div><b>Seus dados protegidos</b><span>Seguimos a LGPD e usamos só o necessário para atender você.</span></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap" style="max-width:860px">
+<div class="head"><h2>Dúvidas comuns</h2></div>
+<details><summary>Quanto custa um site?</summary><p>Depende do escopo. Depois do briefing, enviamos proposta com valores, prazos e condições, sem taxas escondidas.</p></details>
+<details><summary>Em quanto tempo fica pronto?</summary><p>O prazo varia com o escopo e com a entrega dos materiais pelo cliente; o combinamos na proposta. </p></details>
+<details><summary>Preciso entender de tecnologia?</summary><p>Não. Cuidamos do domínio, da hospedagem e da publicação, e mostramos como atualizar o que for necessário.</p></details>
+<details><summary>E se eu precisar de ajuda depois?</summary><p>Oferecemos planos mensais de manutenção e suporte, e você escolhe se quer ou não.</p></details>
+</div></section>
+
+<section id="contato"><div class="wrap cta">
+<div class="head" style="margin:0"><h2>Vamos conversar sobre o seu projeto?</h2><p>Preencha ao lado e abriremos o WhatsApp com a sua mensagem pronta. É rápido, sem compromisso e sem cadastro.</p>
+<p class="note" style="margin-top:20px">Prefere falar direto? <a href="https://wa.me/5581997488294?text=Ol%C3%A1%21%20Conheci%20a%20NEXO%20pelo%20site%20e%20gostaria%20de%20uma%20proposta." target="_blank" rel="noopener noreferrer" data-wa style="color:var(--amber)">Chamar no WhatsApp</a></p></div>
+<form id="f" novalidate>
+<label>Seu nome<input id="n" required autocomplete="name"></label>
+<label>O que você precisa?<select id="s"><option>Site profissional</option><option>Presença no Google</option><option>Loja ou catálogo</option><option>Sistema ou automação</option><option>Portfólio digital</option><option>Galeria comercial</option><option>Placa de avaliação Google</option><option>Manutenção e suporte</option><option>Ainda não sei</option></select></label>
+<label>Conte um pouco sobre o projeto<textarea id="d" rows="4" required></textarea></label>
+<button class="btn" type="submit">Enviar pelo WhatsApp</button>
+<p class="note" id="st" role="status" aria-live="polite">Ao enviar, você abre uma conversa no seu WhatsApp. Nenhum dado fica guardado neste site.</p>
+</form></div></section>
+</main>
+<footer><div class="wrap"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg><span>Ideias conectadas. Soluções em movimento.</span><span>© <span id="y"></span> NEXO</span></div></footer>
+<a class="wa" data-wa href="https://wa.me/5581997488294?text=Ol%C3%A1%21%20Conheci%20a%20NEXO%20pelo%20site%20e%20gostaria%20de%20uma%20proposta." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<script>
+const PH='5581997488294',W='https://wa.me/'+PH+'?text=';
+const msg=t=>W+encodeURIComponent(t);
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=msg('Olá! Conheci a NEXO pelo site e gostaria de uma proposta.');a.target='_blank';a.rel='noopener noreferrer'});
+document.getElementById('y').textContent=new Date().getFullYear();
+try{const t=localStorage.getItem('nexo-tema');if(t)document.documentElement.dataset.theme=t}catch(e){}
+document.getElementById('th').onclick=()=>{const d=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=d;try{localStorage.setItem('nexo-tema',d)}catch(e){}};
+const CAP={site:'Site: sua vitrine, aberta o dia todo.',google:'Google: quem procura por perto encontra você.',whatsapp:'WhatsApp: a conversa que vira venda.',sistema:'Sistema: tudo organizado por dentro.'};
+const nodes=[...document.querySelectorAll('.net .n')],lns=document.querySelectorAll('.net .ln'),cap=document.getElementById('cap');
+nodes.forEach((n,i)=>{const go=()=>{nodes.forEach(x=>x.classList.remove('on'));lns.forEach(l=>l.classList.remove('on'));n.classList.add('on');lns[i].classList.add('on');cap.textContent=CAP[n.dataset.k]};n.addEventListener('click',go);n.addEventListener('mouseenter',go);n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+const tabs=[...document.querySelectorAll('.tb button')];
+tabs.forEach((b,i)=>b.onclick=()=>tabs.forEach((x,j)=>{x.setAttribute('aria-selected',i===j);document.getElementById('p'+j).hidden=i!==j}));
+const rg=document.getElementById('rg');
+function lk(){const v=rg.value/100,lx=56+v*114,rx=464-v*114,g=id=>document.getElementById(id),ln=g('ll');
+g('cl').setAttribute('cx',lx);g('cr').setAttribute('cx',rx);g('tl').setAttribute('x',lx);g('tr').setAttribute('x',rx);
+ln.setAttribute('x1',lx);ln.setAttribute('x2',rx);ln.style.strokeWidth=1+v*6;ln.style.stroke=v>.97?'var(--amber)':'var(--line)';
+g('lt').textContent=v>.97?'Ligados. Agora existe um nexo.':'Aproxime os dois para criar o vínculo.'}
+rg.oninput=lk;lk();
+const cz=document.getElementById('cz'),cb=document.getElementById('cb'),cs=document.getElementById('cs');
+cb.onclick=()=>{const ok=cz.classList.toggle('ok');cb.textContent=ok?'Desfazer o nexo':'Dar nexo';cb.setAttribute('aria-pressed',ok);cs.textContent=ok?'Com nexo: do Google à venda, um caminho só.':'Sem nexo: canais soltos, sem caminho.'};
+document.querySelectorAll('.ce .r').forEach(r=>{const b=r.querySelector('button');b.onclick=()=>{r.classList.toggle('on');b.setAttribute('aria-pressed',r.classList.contains('on'))}});
+const mb=document.getElementById('mb'),nv=document.getElementById('nav');
+mb.onclick=()=>{const o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nv.querySelectorAll('a').forEach(a=>a.onclick=()=>{nv.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+document.querySelectorAll('[data-s]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('s').value=a.dataset.s}));
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
+const n=document.getElementById('n').value.trim(),d=document.getElementById('d').value.trim(),s=document.getElementById('s').value,st=document.getElementById('st');
+if(!n||d.length<10){st.textContent='Preencha seu nome e descreva o projeto com pelo menos 10 letras.';return}
+st.textContent='Abrindo o WhatsApp...';
+const w=window.open(msg('Olá, sou '+n+'. Quero: '+s+'.\n\n'+d),'_blank','noopener');
+if(!w)st.innerHTML='Seu navegador bloqueou a janela. <a href="'+msg('Olá, sou '+n+'. Quero: '+s+'.\n\n'+d)+'" style="color:var(--amber)">Toque aqui para abrir o WhatsApp</a>.';
+});
+</script>
+<dialog id="dd" aria-labelledby="ddt"><div class="dh"><b id="ddt"></b><span class="seg" role="group" aria-label="Tamanho da tela"><button type="button" data-m="d" aria-pressed="true">Computador</button><button type="button" data-m="m" aria-pressed="false">Celular</button></span><a id="ddo" target="_blank" rel="noopener noreferrer" href="#">Abrir em nova aba</a><button class="x" id="ddx" type="button" aria-label="Fechar">✕</button></div><p class="dn">Demonstração com dados fictícios. Os botões de WhatsApp abrem uma conversa com a NEXO.</p><div class="dv" id="ddv"><iframe id="ddf" title="Demonstração do modelo"></iframe></div></dialog>
+<script>
+(function(){
+var SRC={loja:"demos/loja/index.html",galeria:"demos/galeria/index.html",lazer:"demos/lazer/index.html",empresa:"demos/empresa/index.html",negocio:"demos/negocio-local/index.html"};
+function load(f,k,modal){f.src=SRC[k];if(modal)document.getElementById("ddo").href=SRC[k]}
+
+var T={loja:"Lojas e comércio",galeria:"Galerias comerciais",lazer:"Espaços de lazer",empresa:"Empresas e prestadores",negocio:"Negócios locais"};
+function fit(){document.querySelectorAll(".pv .vp").forEach(function(v){v.style.setProperty("--s",v.clientWidth/1100)})}
+fit();addEventListener("resize",fit);if(window.ResizeObserver)document.querySelectorAll(".pv .vp").forEach(function(v){new ResizeObserver(fit).observe(v)});
+document.querySelectorAll(".pv iframe").forEach(function(f){load(f,f.dataset.k)});
+var dd=document.getElementById("dd"),ddf=document.getElementById("ddf"),ddv=document.getElementById("ddv"),cur=null,prev=null;
+function openDemo(k){cur=k;document.getElementById("ddt").textContent="Demonstração · "+T[k];load(ddf,k,true);setMode("d");dd.showModal()}
+function setMode(m){ddv.className="dv"+(m==="m"?" m":"");dd.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.m===m)})}
+dd.querySelectorAll(".seg button").forEach(function(b){b.onclick=function(){setMode(b.dataset.m)}});
+document.getElementById("ddx").onclick=function(){dd.close()};dd.addEventListener("click",function(e){if(e.target===dd)dd.close()});
+dd.addEventListener("close",function(){ddf.removeAttribute("src");ddf.removeAttribute("srcdoc")});
+document.querySelectorAll(".pv .open,.pv .vp").forEach(function(el){el.addEventListener("click",function(e){e.stopPropagation();openDemo(el.dataset.k||el.closest(".pv").dataset.k)})});
+if(matchMedia("(hover:none)").matches&&"IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle("live",x.isIntersecting)})},{threshold:.6});document.querySelectorAll(".pv").forEach(function(p){io.observe(p)})}
+})();
+</script>
+<script>
+(function(){
+var h=document.querySelector("header");if(!h)return;
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,g=document.getElementById("nxShine"),an=g&&g.querySelector("animateTransform");
+if(reduce&&an){an.parentNode.removeChild(an);g.setAttribute("gradientTransform","skewX(-18) translate(-0.5 0)")}
+var tick=false;
+function upd(){tick=false;var y=window.scrollY||0,d=document.documentElement,m=d.scrollHeight-innerHeight;h.classList.toggle("scrolled",y>12);h.style.setProperty("--p",m>0?Math.min(1,y/m):0)}
+addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();
+var links=[].slice.call(document.querySelectorAll('#nav a[href^="#"]:not(.btn)')),map={};
+links.forEach(function(a){var s=document.querySelector(a.getAttribute("href"));if(s)map[a.getAttribute("href")]=s});
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){var on=map[a.getAttribute("href")]===e.target;a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})})},{rootMargin:"-45% 0px -50% 0px"});Object.keys(map).forEach(function(k){io.observe(map[k])})}
+var br=h.querySelector(".brand");if(br&&an&&!reduce){br.addEventListener("mouseenter",function(){try{an.beginElement()}catch(e){}})}
+})();
+</script>
+<script>
+(function(){
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* Ligação: anel de impacto quando os dois se encontram */
+var rg=document.getElementById("rg"),svg=rg&&document.querySelector("svg:has(#ll)")||document.getElementById("ll")&&document.getElementById("ll").ownerSVGElement;
+if(rg&&svg){var b=document.createElementNS("http://www.w3.org/2000/svg","circle");b.id="bst";b.setAttribute("cx",260);b.setAttribute("cy",70);b.setAttribute("r",46);svg.insertBefore(b,svg.firstChild);
+var was=false;rg.addEventListener("input",function(){var on=rg.value/100>.97;if(on&&!was&&!RM){svg.classList.remove("lkok");void svg.getBoundingClientRect();svg.classList.add("lkok")}if(!on)svg.classList.remove("lkok");was=on})}
+/* Rede: pacote percorre a linha até o negócio */
+var nodes=[].slice.call(document.querySelectorAll(".net .n")),lns=document.querySelectorAll(".net .ln"),core=document.querySelector(".net .core"),net=document.querySelector("svg.net"),busy=false;
+function send(i){if(RM||busy||!net)return;busy=true;var p=lns[i],L=p.getTotalLength(),pk=document.createElementNS("http://www.w3.org/2000/svg","circle");pk.setAttribute("class","pk");pk.setAttribute("r",7);net.appendChild(pk);var t0=performance.now(),D=650;
+(function f(t){var k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3),pt=p.getPointAtLength(L*(1-e));pk.setAttribute("cx",pt.x);pk.setAttribute("cy",pt.y);if(k<1)requestAnimationFrame(f);else{pk.remove();busy=false;core.classList.remove("join");void core.getBoundingClientRect();core.classList.add("join")}})(t0)}
+nodes.forEach(function(n,i){n.addEventListener("click",function(){send(i)});n.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")send(i)});n.addEventListener("mouseenter",function(){send(i)})});
+})();
+</script>
+<script>
+(function(){var h=document.querySelector(".hero h1");if(!h||h.dataset.sp)return;h.dataset.sp=1;h.setAttribute("aria-label",h.textContent.trim());var i=0;
+function walk(n){[].slice.call(n.childNodes).forEach(function(c){if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(" "))}else{var s=document.createElement("span");s.className="w";s.setAttribute("aria-hidden","true");s.style.setProperty("--i",i++);s.textContent=t;f.appendChild(s)}});n.replaceChild(f,c)}else if(c.nodeType===1){walk(c)}})}
+walk(h)})();
+</script>
+</body>
+</html>

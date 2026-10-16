@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Negócio local | Serviços, cardápio e atendimento pelo WhatsApp</title><meta name="description" content="Conheça serviços, valores e atendimento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+:root{--ac:#8b4a2b;--on:#fff;--bg:#faf8f4;--sf:#fff;--ln:#e2ded5;--fg:#16161a;--mut:#5f5f66;--tint:#f1e6df;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;letter-spacing:-.03em;line-height:1.08;margin:0}p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.brand{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ac)}
+nav{display:flex;gap:24px;align-items:center;font-size:15px}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:var(--on);font:700 15px/1 "DM Sans",sans-serif;padding:14px 22px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px color-mix(in srgb,var(--ac) 30%,transparent)}
+.btn.ghost{background:none;color:var(--fg);border:1px solid var(--ln)}.btn.ghost:hover{border-color:var(--ac)}nav .btn{color:var(--on);padding:10px 18px}
+#mb{display:none;background:none;border:1px solid var(--ln);border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer;color:var(--fg)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:64px 0}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:800}.hero h1 span{color:var(--ac)}
+.lead{font-size:19px;color:var(--mut);margin:22px 0 28px;max-width:44ch}.acts{display:flex;flex-wrap:wrap;gap:12px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;width:100%;min-height:50px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 18%,transparent)}
+.ph{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:400/280;background:var(--ln)}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.info{position:absolute;left:14px;bottom:14px;right:14px;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:14px}
+.info b{display:block;font-size:12px;color:var(--ac);letter-spacing:.08em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--ln)}.stats div{padding:26px 0;text-align:center}
+.stats b{display:block;font:800 clamp(28px,4vw,44px) "Bricolage Grotesque",sans-serif;color:var(--ac)}.stats span{color:var(--mut);font-size:15px}
+section{padding:84px 0;border-top:1px solid var(--ln)}
+.head{max-width:640px;margin-bottom:34px}.head h2{font-size:clamp(30px,4.2vw,50px);font-weight:800}.head p{color:var(--mut);margin-top:12px;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips button{font:500 15px "DM Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--ln);border-radius:999px;padding:9px 18px;cursor:pointer}
+.chips button:hover{border-color:var(--ac)}.chips button[aria-pressed=true]{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}.two>*{min-width:0}
+.hr{display:grid;margin:18px 0}.hr div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--ln)}.hr span{color:var(--mut)}
+.pts{display:grid;gap:20px}.pts div{border-left:2px solid var(--ac);padding-left:18px}.pts b{display:block;font:700 19px "Bricolage Grotesque",sans-serif}.pts span{color:var(--mut)}
+form{display:grid;gap:14px;background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px}label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+.note{font-size:14px;color:var(--mut)}
+details{border-bottom:1px solid var(--ln);padding:18px 0}summary{cursor:pointer;font:700 19px "Bricolage Grotesque",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--ac);font-size:24px;line-height:1}details[open] summary:after{content:"–"}details p{color:var(--mut);margin-top:10px;max-width:62ch}
+footer{border-top:1px solid var(--ln);padding:34px 0 44px;color:var(--mut);font-size:15px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+dialog{border:0;border-radius:22px;padding:0;width:min(500px,calc(100% - 32px));max-height:88vh;background:var(--sf);color:var(--fg);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#0008}
+.dg{padding:26px;display:grid;gap:12px}.dg h3{font-size:28px}.dg .x{justify-self:end;background:none;border:1px solid var(--ln);border-radius:50%;width:38px;height:38px;cursor:pointer;color:var(--fg);font-size:16px}
+.mono{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--tint);color:var(--ac);font:800 20px "Bricolage Grotesque",sans-serif}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;box-shadow:0 8px 28px #0005}
+@media(max-width:900px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--ln);padding:10px 20px 20px}nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto}.hero,.two{grid-template-columns:1fr;gap:34px}.hero{padding:40px 0}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+.art{position:absolute;inset:0;background:linear-gradient(135deg,var(--ac),color-mix(in srgb,var(--ac) 50%,#000));display:grid;place-items:center}.art span{font:800 clamp(120px,20vw,220px)/1 "Bricolage Grotesque",sans-serif;color:#ffffff2e}.art[hidden],.ph img[hidden]{display:none}
+.ur{background:var(--ac);color:var(--on)}.ur .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:10px 0;font-weight:700}.ur .btn{background:var(--on);color:var(--ac);padding:10px 18px}
+.pto{background:var(--tint);border:1px solid var(--ac);border-radius:18px;padding:18px 22px;margin-bottom:8px;display:flex;gap:12px;align-items:center}.pto b{color:var(--ac)}
+.its{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.it{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:18px 20px;display:flex;justify-content:space-between;gap:16px;align-items:center;transition:border-color .2s}.it:hover{border-color:var(--ac)}
+.it h3{font-size:19px}.it p{color:var(--mut);font-size:15px;margin-top:2px}.it .rt{display:grid;gap:8px;justify-items:end;flex:none}.pc{font-weight:700;color:var(--ac);white-space:nowrap}.it .btn{padding:9px 14px;font-size:14px}
+.cnt{background:var(--on);color:var(--ac);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:13px;padding:0 6px}
+.li{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 0;border-bottom:1px solid var(--ln);align-items:center}.li small{color:var(--mut)}.qt{display:flex;align-items:center;gap:8px}.qt button{width:34px;height:34px;border-radius:50%;border:1px solid var(--ln);background:none;cursor:pointer;color:var(--fg);font-size:18px}.tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;padding-top:8px}
+#demo{position:sticky;top:0;z-index:40;background:#16161a;color:#fff;padding:8px 0;font-size:14px}#demo .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center}#demo select{width:auto;min-height:38px;padding:6px 12px;background:#2b2b31;color:#fff;border-color:#444}
+body.dm header{top:54px}
+@media(max-width:900px){.its{grid-template-columns:1fr}body.dm header{top:96px}}
+
+</style></head><body>
+<div id="demo" hidden><div class="wrap"><label for="seg" style="color:#fff;display:inline">Demonstração · veja o mesmo site para cada segmento:</label><select id="seg" aria-label="Escolher segmento"></select></div></div>
+<div class="ur" id="ur" hidden><div class="wrap"><span id="ut"></span><a class="btn" id="ub" target="_blank" rel="noopener noreferrer" href="#"></a></div></div>
+<header><div class="wrap"><a class="brand" href="#topo" id="bn">Negócio</a><button id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button><nav id="nav" aria-label="Principal"></nav></div></header>
+<main>
+<div class="wrap hero" id="topo"><div><p id="rt" style="font-weight:700;color:var(--ac);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px"></p><h1 id="h1"></h1><p class="lead" id="sl"></p><div class="acts"><a class="btn" href="#itens" id="c1">Ver</a><a class="btn ghost" id="w1" target="_blank" rel="noopener noreferrer" href="#">Falar no WhatsApp</a></div></div>
+<div class="ph"><img id="im" alt="" width="800" height="560" hidden><div class="art" id="ar" aria-hidden="true"><span id="am"></span></div><div class="info" id="inf"></div></div></div>
+<div class="wrap" id="pt" hidden><div class="pto"><b>Onde estou hoje:</b><span id="ptx"></span></div></div>
+<section id="itens"><div class="wrap"><div class="head"><h2 id="it"></h2><p id="is"></p></div><div class="chips" id="cats" role="group" aria-label="Categorias"></div><div class="its" id="gr"></div></div></section>
+<section id="sobre"><div class="wrap two"><div class="head" style="margin:0"><h2>Sobre</h2><p id="sb"></p></div><div class="pts" id="df"></div></div></section>
+<section id="contato"><div class="wrap two"><div id="vis"><div class="head" style="margin:0"><h2>Onde estamos</h2></div><p id="ad" style="margin-top:14px;font-size:18px"></p><div class="hr" id="hr"></div><p style="margin-top:16px"><a class="btn ghost" id="mp" target="_blank" rel="noopener noreferrer" href="#">Abrir no Google Maps</a> <a class="btn ghost" id="ig" target="_blank" rel="noopener noreferrer" href="#" hidden>Instagram</a></p></div>
+<div><div class="head" style="margin:0 0 20px"><h2 id="ft"></h2><p id="fs"></p></div><form id="f" novalidate></form></div></div></section>
+</main>
+<footer><div class="wrap"><span id="fc"></span><span>Site criado pela <a href="https://wa.me/5581997488294" target="_blank" rel="noopener noreferrer">NEXO</a> · Ideias conectadas. Soluções em movimento.</span></div><div class="wrap"><p class="note" id="av" hidden></p></div></footer>
+<a class="btn wa" id="wa" target="_blank" rel="noopener noreferrer" href="#">WhatsApp</a><dialog id="dlg"></dialog>
+<script>/* ===== NEXO · TEMPLATE NEGÓCIO LOCAL · 13 EXEMPLOS DE SEGMENTO =====
+   Dados fictícios. Para um cliente real, use um arquivo de exemplos/ como config.js. */
+const W="5581997488294";
+const H=[["Segunda a sexta","8h às 18h"],["Sábado","8h às 13h"],["Domingo","Fechado"]];
+const N=(nome,rotulo,cor,slogan,sobre,x={})=>Object.assign({nome,rotulo,slogan,sobre,endereco:"Rua Exemplo, 100 — Centro",cidade:"Recife — PE",mapaBusca:nome+" Recife",horarios:H,whatsapp:W,instagram:"",cor,corSobre:"#ffffff",imagemTopo:""},x);
+const I=(g,a)=>a.map(([nome,preco,detalhe,de])=>({nome,grupo:g,preco,detalhe:detalhe||"",de:!!de}));
+const F={nome:{id:"nome",rotulo:"Seu nome",tipo:"texto",obrigatorio:true},
+ data:{id:"data",rotulo:"Data desejada",tipo:"data",obrigatorio:true},
+ per:{id:"per",rotulo:"Período",tipo:"select",opcoes:["Manhã","Tarde","Noite"]},
+ obs:{id:"obs",rotulo:"Observações (opcional)",tipo:"longo"},
+ ent:{id:"ent",rotulo:"Entrega ou retirada?",tipo:"select",opcoes:["Retirada no local","Entrega"]},
+ end:{id:"end",rotulo:"Endereço para entrega (se for o caso)",tipo:"texto"}};
+const PRESETS={
+oficina_auto:{label:"Oficina automotiva",
+ negocio:N("Auto Center Exemplo","Oficina mecânica","#1f4e79","Diagnóstico claro e serviço combinado antes de começar.","Cuidamos do seu carro com orçamento transparente, peças informadas e prazo combinado."),
+ itensTitulo:"Serviços",itensSub:"Valores iniciais de referência. O orçamento final depende do veículo e do diagnóstico.",
+ itens:[...I("Manutenção",[["Revisão preventiva",null,"Checagem completa de itens de segurança"],["Troca de óleo e filtros",null,"Conforme o manual do veículo"]]),...I("Freios e suspensão",[["Freios",null,"Pastilhas, discos e fluido"],["Suspensão e direção",null,"Amortecedores, buchas e terminais"],["Alinhamento e balanceamento",null,"Mais estabilidade e menor desgaste"]]),...I("Elétrica",[["Diagnóstico eletrônico",null,"Leitura de falhas e testes"],["Bateria e alternador",null,"Teste e troca"]])],
+ pedido:null,
+ formulario:{titulo:"Peça seu orçamento",sub:"Conte o problema. Respondemos pelo WhatsApp para combinar o diagnóstico.",botao:"Pedir orçamento pelo WhatsApp",assunto:"Gostaria de um orçamento para o meu veículo.",campos:[F.nome,{id:"vei",rotulo:"Veículo (marca, modelo e ano)",tipo:"texto",obrigatorio:true},{id:"srv",rotulo:"Serviço",tipo:"select",opcoes:["Revisão","Troca de óleo","Freios","Suspensão","Elétrica","Não sei, preciso de diagnóstico"]},{id:"prob",rotulo:"Descreva o problema",tipo:"longo",obrigatorio:true}]},
+ diferenciais:[["Orçamento antes","Você aprova o valor antes do serviço começar."],["Peças informadas","Explicamos o que será trocado e por quê."],["Prazo combinado","Avisamos se algo mudar durante o serviço."]]},
+oficina_bike:{label:"Oficina de bicicletas",
+ negocio:N("Bike Oficina Exemplo","Oficina de bicicletas","#2f6b3a","Sua bike pronta para pedalar com segurança.","Revisão, ajustes e peças para bicicletas urbanas, de estrada, MTB e infantis."),
+ itensTitulo:"Serviços",itensSub:"Valores de referência. Peças são cobradas à parte, com aprovação prévia.",
+ itens:[...I("Revisões",[["Revisão básica",60,"Freios, câmbio, pneus e lubrificação",true],["Revisão completa",140,"Inclui limpeza e regulagens finas",true]]),...I("Reparos",[["Troca de câmara",25,"Mão de obra",true],["Regulagem de câmbio",30,"Ajuste de marchas",true],["Regulagem de freios",30,"Freio a disco ou V-brake",true],["Alinhamento de roda",35,"Centragem de aro",true]]),...I("Montagem",[["Montagem de bike nova",70,"Montagem e ajustes",true]])],
+ pedido:{rotulo:"Meus serviços",verbo:"Gostaria de agendar estes serviços",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Agende uma revisão",sub:"Escolha o dia e conte o que a bike precisa.",botao:"Agendar pelo WhatsApp",assunto:"Gostaria de agendar um serviço na minha bicicleta.",campos:[F.nome,{id:"tipo",rotulo:"Tipo de bicicleta",tipo:"select",opcoes:["Urbana","MTB","Estrada/Speed","Elétrica","Infantil","Outra"]},F.data,{id:"prob",rotulo:"O que precisa ser feito?",tipo:"longo"}]},
+ diferenciais:[["Revisão por etapas","Você sabe o que foi checado em cada parte."],["Peças aprovadas antes","Nada é trocado sem a sua autorização."],["Prazo curto","Serviços simples costumam ficar prontos rápido."]]},
+lanchonete:{label:"Lanchonete",
+ negocio:N("Lanchonete Exemplo","Lanchonete","#b3361b","Lanches feitos na hora, direto do balcão para a sua mesa.","Lanches, porções e bebidas com atendimento rápido, no local, para retirada ou entrega.",{horarios:[["Terça a domingo","17h às 23h"],["Segunda","Fechado"]]}),
+ itensTitulo:"Cardápio",itensSub:"Monte seu pedido e envie pelo WhatsApp. Valores sujeitos a alteração.",
+ itens:[...I("Lanches",[["X-Burger",22,"Pão, hambúrguer, queijo e salada"],["X-Bacon",26,"Hambúrguer, queijo e bacon"],["Misto quente",12,"Presunto e queijo"]]),...I("Porções",[["Batata frita",24,"Porção média"],["Calabresa acebolada",28,"Porção média"]]),...I("Bebidas",[["Refrigerante lata",6,""],["Suco natural",9,"Sabores do dia"],["Água",4,""]])],
+ pedido:{rotulo:"Meu pedido",verbo:"Gostaria de fazer um pedido",acao:"Enviar pedido pelo WhatsApp"},
+ formulario:{titulo:"Finalize o pedido",sub:"Informe como prefere receber.",botao:"Enviar pelo WhatsApp",assunto:"Quero finalizar meu pedido.",campos:[F.nome,F.ent,F.end,F.obs]},
+ diferenciais:[["Feito na hora","Seu pedido é preparado depois da confirmação."],["Retirada ou entrega","Combine a melhor opção pelo WhatsApp."],["Atendimento direto","Tire dúvidas sobre o cardápio sem fila."]]},
+supermercado:{label:"Supermercado",
+ negocio:N("Supermercado Exemplo","Supermercado","#0b6b3a","Ofertas da semana e compras com entrega no bairro.","Variedade de produtos, ofertas semanais e a opção de enviar sua lista de compras pelo WhatsApp.",{horarios:[["Segunda a sábado","7h às 21h"],["Domingo","8h às 13h"]]}),
+ itensTitulo:"Ofertas da semana",itensSub:"Preços válidos enquanto durarem os estoques. Confirme no atendimento.",
+ itens:[...I("Hortifruti",[["Banana prata",5.99,"por kg"],["Tomate",6.49,"por kg"],["Batata inglesa",4.99,"por kg"]]),...I("Mercearia",[["Arroz branco 5 kg",26.9,""],["Feijão carioca 1 kg",7.9,""],["Café torrado 500 g",19.9,""]]),...I("Açougue",[["Frango inteiro",11.9,"por kg"],["Carne moída",32.9,"por kg"]])],
+ pedido:{rotulo:"Minha lista",verbo:"Gostaria de comprar",acao:"Enviar lista pelo WhatsApp"},
+ formulario:{titulo:"Entrega ou retirada",sub:"Envie sua lista e combine como receber.",botao:"Enviar pelo WhatsApp",assunto:"Quero fazer minhas compras.",campos:[F.nome,F.ent,F.end,{id:"lista",rotulo:"Outros itens da sua lista",tipo:"longo"}]},
+ diferenciais:[["Ofertas toda semana","Confira os destaques e peça pelo WhatsApp."],["Entrega no bairro","Consulte área e taxa com a loja."],["Produtos frescos","Hortifruti e açougue renovados diariamente."]]},
+minimercado:{label:"Minimercado",
+ negocio:N("Minimercado Exemplo","Minimercado de bairro","#0e5a68","Tudo o que falta em casa, aqui pertinho.","Conveniência para o dia a dia: pães, bebidas, itens básicos e limpeza, com entrega rápida na vizinhança.",{horarios:[["Todos os dias","6h às 22h"]]}),
+ itensTitulo:"Mais pedidos",itensSub:"Faltou algo? Peça pelo WhatsApp e avisamos a disponibilidade.",
+ itens:[...I("Básicos",[["Pão francês",0.8,"unidade"],["Leite 1 L",5.5,""],["Ovos (dúzia)",12,""],["Água mineral 1,5 L",3.5,""]]),...I("Limpeza",[["Detergente",2.8,""],["Papel higiênico (4 un.)",8.9,""]]),...I("Bebidas",[["Refrigerante 2 L",9.5,""],["Cerveja lata",4.5,"Venda para maiores de 18 anos"]])],
+ pedido:{rotulo:"Meu pedido",verbo:"Gostaria de pedir",acao:"Enviar pedido pelo WhatsApp"},
+ formulario:{titulo:"Peça pelo WhatsApp",sub:"Informe seu endereço e o que precisa.",botao:"Enviar pelo WhatsApp",assunto:"Quero fazer um pedido.",campos:[F.nome,F.ent,F.end,F.obs]},
+ diferenciais:[["Aberto até tarde","Atendimento no horário em que você precisa."],["Entrega rápida","Pedidos pequenos para quem mora perto."],["Preço de bairro","Atendimento próximo e sem complicação."]],
+ aviso:"Venda de bebidas alcoólicas apenas para maiores de 18 anos."},
+salao_masculino:{label:"Barbearia / salão masculino",
+ negocio:N("Barbearia Exemplo","Barbearia","#2a2a30","Corte, barba e cuidado com hora marcada.","Atendimento com horário agendado, ambiente tranquilo e profissionais atentos ao seu estilo.",{horarios:[["Terça a sábado","9h às 20h"],["Domingo e segunda","Fechado"]]}),
+ itensTitulo:"Serviços e valores",itensSub:"Valores de referência. Escolha e agende pelo WhatsApp.",
+ itens:I("Serviços",[["Corte masculino",40,"Máquina e tesoura"],["Barba",30,"Toalha quente e finalização"],["Corte + barba",65,"Combo"],["Sobrancelha",15,""],["Pigmentação",null,"Sob consulta"]]),
+ pedido:{rotulo:"Meus serviços",verbo:"Gostaria de agendar",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Agende seu horário",sub:"Escolha dia e período. Confirmamos o horário exato pelo WhatsApp.",botao:"Agendar pelo WhatsApp",assunto:"Gostaria de agendar um horário.",campos:[F.nome,F.data,F.per,{id:"prof",rotulo:"Profissional",tipo:"select",opcoes:["Sem preferência","Profissional 1","Profissional 2"]}]},
+ diferenciais:[["Hora marcada","Menos espera, mais pontualidade."],["Higiene","Materiais higienizados a cada atendimento."],["Seu estilo","Conversamos antes de começar o corte."]]},
+salao_feminino:{label:"Salão feminino",
+ negocio:N("Salão Exemplo","Salão de beleza","#a63d6e","Cabelo, unhas e estética com atendimento personalizado.","Procedimentos com avaliação prévia, produtos de qualidade e agendamento facilitado.",{horarios:[["Terça a sábado","9h às 19h"],["Domingo e segunda","Fechado"]]}),
+ itensTitulo:"Serviços e valores",itensSub:"Valores de referência. Procedimentos como coloração dependem de avaliação.",
+ itens:[...I("Cabelo",[["Corte feminino",70,""],["Escova",50,"Conforme o comprimento",true],["Hidratação",80,"",true],["Coloração",null,"Sob avaliação"]]),...I("Estética",[["Maquiagem",120,"Social"],["Design de sobrancelha",35,""],["Depilação facial",25,""]])],
+ pedido:{rotulo:"Meus serviços",verbo:"Gostaria de agendar",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Agende seu horário",sub:"Escolha dia e período. Confirmamos o horário pelo WhatsApp.",botao:"Agendar pelo WhatsApp",assunto:"Gostaria de agendar um horário.",campos:[F.nome,F.data,F.per,F.obs]},
+ diferenciais:[["Avaliação prévia","Entendemos o que você quer antes de começar."],["Hora marcada","Atendimento com agenda organizada."],["Cuidado com o cabelo","Produtos escolhidos conforme o seu tipo de fio."]]},
+lavanderia:{label:"Lavanderia (roupas e calçados)",
+ negocio:N("Lavanderia Exemplo","Lavanderia","#1a6ea8","Roupas e calçados limpos, com coleta e entrega.","Lavagem e passadoria de roupas e higienização de calçados, com prazo combinado.",{horarios:[["Segunda a sexta","8h às 18h"],["Sábado","8h às 13h"]]}),
+ itensTitulo:"Serviços e valores",itensSub:"Valores de referência. Peças delicadas dependem de avaliação.",
+ itens:[...I("Roupas",[["Lavagem por kg",14,"Lavar e secar",true],["Passadoria (peça)",6,"",true],["Edredom casal",55,"",true],["Terno ou vestido",null,"Sob avaliação"]]),...I("Calçados",[["Tênis",45,"Higienização completa",true],["Sapato social",40,"Limpeza e hidratação",true],["Bolsa",null,"Sob avaliação"]])],
+ pedido:{rotulo:"Meu pedido",verbo:"Gostaria de solicitar",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Solicite coleta ou entrega",sub:"Informe como prefere entregar e receber suas peças.",botao:"Enviar pelo WhatsApp",assunto:"Quero solicitar um serviço.",campos:[F.nome,{id:"mod",rotulo:"Como prefere?",tipo:"select",opcoes:["Levo na lavanderia","Quero coleta e entrega"]},F.end,F.obs]},
+ diferenciais:[["Prazo combinado","Informamos a data de entrega no recebimento."],["Peças identificadas","Cada peça é conferida na entrada."],["Coleta e entrega","Consulte a área atendida."]]},
+lavajato:{label:"Lava-jato automotivo",
+ negocio:N("Lava Jato Exemplo","Lava-jato","#0a5f8a","Seu veículo limpo por dentro e por fora.","Lavagem, higienização e acabamento, com horário agendado para evitar espera.",{horarios:[["Segunda a sábado","8h às 17h"],["Domingo","Fechado"]]}),
+ itensTitulo:"Serviços e valores",itensSub:"Valores de referência por porte do veículo. Confirmamos ao agendar.",
+ itens:I("Serviços",[["Lavagem simples",35,"Externa",true],["Lavagem completa",60,"Externa e interna",true],["Higienização interna",150,"Bancos e carpetes",true],["Polimento",null,"Sob avaliação"],["Lavagem de motor",50,"",true]]),
+ pedido:{rotulo:"Meus serviços",verbo:"Gostaria de agendar",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Agende sua lavagem",sub:"Escolha o dia e o porte do veículo.",botao:"Agendar pelo WhatsApp",assunto:"Gostaria de agendar uma lavagem.",campos:[F.nome,{id:"vei",rotulo:"Veículo",tipo:"select",opcoes:["Moto","Carro pequeno","SUV/Sedã grande","Caminhonete"]},F.data,F.per]},
+ diferenciais:[["Hora marcada","Evite filas escolhendo o seu horário."],["Acabamento cuidadoso","Produtos adequados para cada superfície."],["Preço combinado","Valor informado antes do serviço."]]},
+farmacia:{label:"Farmácia",
+ negocio:N("Farmácia Exemplo","Farmácia","#0b7a5f","Atendimento próximo e entrega no bairro.","Itens de higiene e cuidado pessoal, serviços de saúde e atendimento por WhatsApp.",{horarios:[["Segunda a sábado","7h às 22h"],["Domingo","8h às 20h"]],aviso:"Medicamentos sujeitos a receita só são vendidos mediante apresentação, conforme a legislação. Disponibilidade e preços confirmados no atendimento. Em caso de emergência, procure um serviço de saúde."}),
+ itensTitulo:"Produtos e serviços",itensSub:"Consulte disponibilidade pelo WhatsApp. Não fazemos orientação médica por mensagem.",
+ itens:[...I("Higiene e cuidado",[["Protetor solar",null,"Consulte opções"],["Sabonete e higiene",null,"Consulte opções"],["Fraldas e cuidados infantis",null,"Consulte opções"]]),...I("Serviços",[["Aferição de pressão arterial",null,"Atendimento no balcão"],["Entrega no bairro",null,"Consulte área e taxa"]])],
+ pedido:{rotulo:"Minha consulta",verbo:"Gostaria de consultar a disponibilidade de",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Consulte disponibilidade",sub:"Informe o produto. Não envie dados de saúde sensíveis; para receitas, vá à farmácia.",botao:"Enviar pelo WhatsApp",assunto:"Gostaria de consultar um produto.",campos:[F.nome,{id:"prod",rotulo:"Produto desejado",tipo:"texto",obrigatorio:true},F.ent,F.end]},
+ diferenciais:[["Atendimento próximo","Tire dúvidas sobre produtos e horários."],["Entrega no bairro","Consulte área e taxa."],["Aberto até tarde","Horário estendido durante a semana."]]},
+chaveiro:{label:"Chaveiro",
+ negocio:N("Chaveiro Exemplo","Chaveiro","#9a6508","Cópias, aberturas e trocas de fechadura com rapidez.","Atendimento na loja e em domicílio na região, com orçamento informado antes do serviço.",{horarios:[["Segunda a sábado","8h às 18h"],["Emergências","Consulte disponibilidade"]]}),
+ urgencia:{texto:"Trancado para fora? Fale agora com o chaveiro.",botao:"Chamar no WhatsApp",mensagem:"Olá! Preciso de atendimento de emergência (abertura). Estou em: "},
+ itensTitulo:"Serviços",itensSub:"Valores variam conforme o modelo e a urgência. Informamos o orçamento antes de começar.",
+ itens:[...I("Cópias",[["Cópia de chave simples",10,"",true],["Chave tetra",30,"",true],["Chave codificada de veículo",null,"Sob consulta"]]),...I("Aberturas e trocas",[["Abertura residencial",null,"Orçamento por WhatsApp"],["Abertura de veículo",null,"Orçamento por WhatsApp"],["Troca de fechadura",null,"Sob consulta"]])],
+ pedido:null,
+ formulario:{titulo:"Peça atendimento",sub:"Diga o que aconteceu e onde você está.",botao:"Enviar pelo WhatsApp",assunto:"Preciso de atendimento de chaveiro.",campos:[F.nome,{id:"srv",rotulo:"Serviço",tipo:"select",opcoes:["Abertura residencial","Abertura de veículo","Cópia de chave","Troca de fechadura","Outro"]},{id:"loc",rotulo:"Onde você está? (bairro/endereço)",tipo:"texto",obrigatorio:true},F.obs]},
+ diferenciais:[["Orçamento antes","Você aprova o valor antes do serviço."],["Atendimento em domicílio","Consulte a área atendida."],["Sem danos desnecessários","Abertura com técnica adequada."]]},
+manicure:{label:"Manicure e pedicure",
+ negocio:N("Studio de Unhas Exemplo","Manicure e pedicure","#b04a7a","Unhas cuidadas, com hora marcada e materiais esterilizados.","Atendimento individual, com agendamento e materiais higienizados a cada cliente.",{horarios:[["Segunda a sábado","9h às 18h"]]}),
+ itensTitulo:"Serviços e valores",itensSub:"Valores de referência. Confirmamos ao agendar.",
+ itens:I("Serviços",[["Manicure",30,""],["Pedicure",35,""],["Mão e pé",60,""],["Esmaltação em gel",null,"Sob consulta"],["Alongamento",null,"Sob avaliação"]]),
+ pedido:{rotulo:"Meus serviços",verbo:"Gostaria de agendar",acao:"Enviar pelo WhatsApp"},
+ formulario:{titulo:"Agende seu horário",sub:"Escolha dia e período. Confirmamos o horário pelo WhatsApp.",botao:"Agendar pelo WhatsApp",assunto:"Gostaria de agendar um horário.",campos:[F.nome,F.data,F.per,{id:"loc",rotulo:"Atendimento",tipo:"select",opcoes:["No studio","Em domicílio (consulte a área)"]}]},
+ diferenciais:[["Materiais esterilizados","Higiene a cada atendimento."],["Hora marcada","Atendimento sem pressa."],["Seu estilo","Cores e acabamento do seu jeito."]]},
+coco:{label:"Vendedor de coco",
+ negocio:N("Coco Gelado Exemplo","Coco gelado","#3d7a2a","Água de coco geladinha, direto do coco.","Coco fresco e gelado, vendido na praça e com opção de reserva para retirada.",{horarios:[["Todos os dias","9h às 17h (conforme o clima)"]],pontoHoje:"Hoje estou na Praça Exemplo, perto do coreto, das 9h às 17h."}),
+ itensTitulo:"O que vendo",itensSub:"Valores de referência. Reserve pelo WhatsApp e retire no meu ponto.",
+ itens:I("Cocos",[["Coco gelado",8,"Para tomar na hora"],["Água de coco no copo",6,""],["Coco para levar (dúzia)",85,"Reserve com antecedência"]]),
+ pedido:{rotulo:"Minha reserva",verbo:"Gostaria de reservar",acao:"Reservar pelo WhatsApp"},
+ formulario:{titulo:"Reserve para retirada",sub:"Diga a quantidade e o horário.",botao:"Reservar pelo WhatsApp",assunto:"Quero reservar cocos para retirada.",campos:[F.nome,{id:"qtd",rotulo:"Quantidade",tipo:"numero"},{id:"hor",rotulo:"Horário de retirada",tipo:"texto"}]},
+ diferenciais:[["Sempre gelado","Coco refrigerado para o dia quente."],["Reserva fácil","Garanta o seu pelo WhatsApp."],["Ponto do dia","Veja aqui onde estou hoje."]]}
+};
+</script>
+<script>
+let G,C,cat='',lista={};
+const $=id=>document.getElementById(id);
+const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const wa=(t,n)=>'https://wa.me/'+(n||G.whatsapp)+'?text='+encodeURIComponent(t);
+const brl=v=>typeof v==='number'?v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'Sob consulta';
+function base(){const R=document.documentElement.style;R.setProperty('--ac',G.cor);R.setProperty('--on',G.corSobre);R.setProperty('--tint','color-mix(in srgb,'+G.cor+' 12%,white)');
+$('bn').textContent=G.nome;if(G.imagemTopo){$('im').hidden=false;$('im').src=G.imagemTopo;if($('ar'))$('ar').hidden=true}else{$('im').hidden=true;if($('ar')){$('ar').hidden=false;$('am').textContent=G.nome[0]}}$('hr').innerHTML=G.horarios.map(h=>'<div><b>'+e(h[0])+'</b><span>'+e(h[1])+'</span></div>').join('');
+$('ad').textContent=G.endereco+' · '+G.cidade;$('mp').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(G.mapaBusca);
+$('fc').textContent='© '+new Date().getFullYear()+' '+G.nome;$('wa').href=wa('Olá! Vim pelo site '+G.nome+'.');
+$('mb').onclick=()=>{const o=$('nav').classList.toggle('open');$('mb').setAttribute('aria-expanded',o)};$('nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('nav').classList.remove('open'));
+$('dlg').addEventListener('click',ev=>{if(ev.target===$('dlg'))$('dlg').close()})}
+function dlg(h){$('dlg').innerHTML='<div class="dg"><button class="x" aria-label="Fechar" onclick="document.getElementById(\'dlg\').close()">✕</button>'+h+'</div>';$('dlg').showModal()}
+
+const hasP=typeof PRESETS!=='undefined';
+function render(c){C=c;G=c.negocio;cat='';lista={};base();const ped=C.pedido;
+document.title=G.nome+' | '+G.rotulo;$('h1').innerHTML=e(G.nome).replace(/^(\S+)/,'$1 <span>')+'</span>';$('sl').textContent=G.slogan;$('rt').textContent=G.rotulo;$('sb').textContent=G.sobre;
+$('c1').textContent='Ver '+C.itensTitulo.toLowerCase();$('w1').href=wa('Olá! Vim pelo site da '+G.nome+' e gostaria de atendimento.');
+$('inf').innerHTML='<div><b>Endereço</b>'+e(G.endereco)+'</div><div><b>Horário</b>'+e(G.horarios[0][0])+': '+e(G.horarios[0][1])+'</div>';
+$('pt').hidden=!G.pontoHoje;if(G.pontoHoje)$('ptx').textContent=G.pontoHoje;
+$('ur').hidden=!C.urgencia;if(C.urgencia){$('ut').textContent=C.urgencia.texto;$('ub').textContent=C.urgencia.botao;$('ub').href=wa(C.urgencia.mensagem)}
+$('it').textContent=C.itensTitulo;$('is').textContent=C.itensSub;
+$('df').innerHTML=C.diferenciais.map(d=>'<div><b>'+e(d[0])+'</b><span>'+e(d[1])+'</span></div>').join('');
+$('ig').hidden=!G.instagram;if(G.instagram)$('ig').href=G.instagram;
+const av=G.aviso||C.aviso;$('av').hidden=!av;if(av)$('av').textContent=av;
+$('nav').innerHTML='<a href="#itens">'+e(C.itensTitulo)+'</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>'+(ped?'<button class="btn" id="lb" type="button">'+e(ped.rotulo)+' <span class="cnt" id="ct">0</span></button>':'<a class="btn" href="#contato">'+e(C.formulario.titulo)+'</a>');
+$('nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('nav').classList.remove('open'));if(ped)$('lb').onclick=()=>{$('nav').classList.remove('open');showList()};
+chips();draw();form()}
+function chips(){const g=[...new Set(C.itens.map(i=>i.grupo))];$('cats').hidden=g.length<2;$('cats').innerHTML=['Todos',...g].map(x=>'<button type="button" aria-pressed="'+((x==='Todos'&&!cat)||x===cat)+'" data-c="'+e(x)+'">'+e(x)+'</button>').join('');
+$('cats').querySelectorAll('button').forEach(b=>b.onclick=()=>{cat=b.dataset.c==='Todos'?'':b.dataset.c;chips();draw()})}
+const pr=i=>typeof i.preco==='number'?(i.de?'a partir de ':'')+brl(i.preco):'Sob consulta';
+function draw(){const r=C.itens.map((i,k)=>[i,k]).filter(([i])=>!cat||i.grupo===cat);
+$('gr').innerHTML=r.map(([i,k])=>'<article class="it"><div><h3>'+e(i.nome)+'</h3>'+(i.detalhe?'<p>'+e(i.detalhe)+'</p>':'')+'</div><div class="rt"><span class="pc">'+pr(i)+'</span>'+(C.pedido?'<button class="btn ghost" data-a="'+k+'" type="button">+ Adicionar</button>':'')+'</div></article>').join('');
+$('gr').querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{lista[b.dataset.a]=(lista[b.dataset.a]||0)+1;cnt();b.textContent='Adicionado ✓'})}
+function cnt(){const n=Object.values(lista).reduce((a,b)=>a+b,0);if($('ct'))$('ct').textContent=n}
+function linhas(){return Object.keys(lista).filter(k=>lista[k]>0)}
+function msgLista(ks){let t=0;const l=ks.map(k=>{const i=C.itens[k];if(typeof i.preco==='number')t+=i.preco*lista[k];return '- '+lista[k]+'x '+i.nome+' ('+pr(i)+')'}).join('\n');return {l,t}}
+function showList(){const ks=linhas(),P=C.pedido;if(!ks.length){dlg('<h3>'+e(P.rotulo)+'</h3><p class="note">Ainda vazio. Use "+ Adicionar" nos itens.</p>');return}
+let t=0,sem=false;const rows=ks.map(k=>{const i=C.itens[k],q=lista[k];if(typeof i.preco==='number')t+=i.preco*q;else sem=true;return '<div class="li"><div><b>'+e(i.nome)+'</b><br><small>'+pr(i)+'</small></div><div class="qt"><button data-m="'+k+'" aria-label="Diminuir">−</button><span>'+q+'</span><button data-p="'+k+'" aria-label="Aumentar">+</button></div></div>'}).join('');
+dlg('<h3>'+e(P.rotulo)+'</h3>'+rows+'<div class="tot"><span>Total estimado</span><span>'+brl(t)+'</span></div>'+(sem?'<p class="note">Itens sob consulta não entram no total.</p>':'')+'<p class="note">Preços e disponibilidade são confirmados pelo estabelecimento.</p><a class="btn" id="env" target="_blank" rel="noopener noreferrer" href="#">'+e(P.acao)+'</a>');
+$('env').href=wa('Olá! '+P.verbo+':\n'+msgLista(ks).l+'\nTotal estimado: '+brl(t));
+$('dlg').querySelectorAll('[data-m],[data-p]').forEach(b=>b.onclick=()=>{const k=b.dataset.m||b.dataset.p;lista[k]=Math.max(0,lista[k]+(b.dataset.p?1:-1));cnt();showList()})}
+function form(){const Fm=C.formulario,d=new Date(),p=x=>String(x).padStart(2,'0'),min=d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());
+$('ft').textContent=Fm.titulo;$('fs').textContent=Fm.sub;
+$('f').innerHTML=Fm.campos.map(c=>{const id='c_'+c.id,r=c.obrigatorio?' *':'';let el;
+if(c.tipo==='select')el='<select id="'+id+'">'+c.opcoes.map(o=>'<option>'+e(o)+'</option>').join('')+'</select>';
+else if(c.tipo==='longo')el='<textarea id="'+id+'" rows="3"></textarea>';
+else if(c.tipo==='data')el='<input id="'+id+'" type="date" min="'+min+'">';
+else if(c.tipo==='numero')el='<input id="'+id+'" type="number" min="1" inputmode="numeric">';
+else el='<input id="'+id+'" autocomplete="off">';return '<label>'+e(c.rotulo)+r+el+'</label>'}).join('')+'<button class="btn" type="submit">'+e(Fm.botao)+'</button><p class="note" id="st" role="status" aria-live="polite">Nenhum dado fica guardado neste site.</p>';
+$('f').onsubmit=ev=>{ev.preventDefault();const v={};for(const c of Fm.campos){v[c.id]=$('c_'+c.id).value.trim();if(c.obrigatorio&&!v[c.id]){$('st').textContent='Preencha: '+c.rotulo+'.';return}}
+const nome=v.nome||'cliente',ks=linhas();let m='Olá, sou '+nome+'. '+Fm.assunto+'\n';
+for(const c of Fm.campos){if(c.id!=='nome'&&v[c.id]){m+='\n'+c.rotulo+': '+(c.tipo==='data'?v[c.id].split('-').reverse().join('/'):v[c.id])}}
+if(ks.length)m+='\n\n'+(C.pedido?C.pedido.rotulo:'Itens')+':\n'+msgLista(ks).l;
+const u=wa(m);$('st').textContent='Abrindo o WhatsApp...';if(!window.open(u,'_blank','noopener'))$('st').innerHTML='Janela bloqueada. <a href="'+u+'">Toque aqui para abrir o WhatsApp</a>.'}}
+if(hasP){const ks=Object.keys(PRESETS);$('demo').hidden=false;document.body.classList.add('dm');$('seg').innerHTML=ks.map(k=>'<option value="'+k+'">'+e(PRESETS[k].label)+'</option>').join('');$('seg').onchange=()=>{render(PRESETS[$('seg').value]);window.scrollTo(0,0)};render(PRESETS[ks[0]])}else render(CONFIG);
+</script></body></html>

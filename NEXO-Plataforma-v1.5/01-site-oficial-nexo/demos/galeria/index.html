@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galeria Exemplo | Lojas, promoções e espaços para locação</title>
+<meta name="description" content="Conheça as lojas, serviços, promoções e espaços disponíveis para locação da galeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+:root{--ac:#0f5c4d;--on:#fff;--bg:#faf8f4;--sf:#fff;--ln:#e2ded5;--fg:#16161a;--mut:#5f5f66;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;letter-spacing:-.03em;line-height:1.08;margin:0}p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ac)}
+nav{display:flex;gap:26px;align-items:center;font-size:15px}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:var(--on);font:700 15px/1 "DM Sans",sans-serif;padding:14px 22px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px color-mix(in srgb,var(--ac) 30%,transparent)}
+.btn.ghost{background:none;color:var(--fg);border:1px solid var(--ln)}nav .btn{color:var(--on);padding:10px 18px}
+#mb{display:none;background:none;border:1px solid var(--ln);border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer;color:var(--fg)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:64px 0}
+.hero h1{font-size:clamp(40px,6vw,74px);font-weight:800}.hero h1 span{color:var(--ac)}
+.lead{font-size:19px;color:var(--mut);margin:22px 0 28px;max-width:44ch}
+.sb{display:flex;gap:10px;flex-wrap:wrap}.sb input{flex:1;min-width:220px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;width:100%;min-height:50px}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 18%,transparent)}
+.ph{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:400/280;background:var(--ln)}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.info{position:absolute;left:14px;bottom:14px;right:14px;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:14px}
+.info b{display:block;font-size:12px;color:var(--ac);letter-spacing:.08em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--ln)}.stats div{padding:26px 0;text-align:center}
+.stats b{display:block;font:800 clamp(30px,4vw,46px) "Bricolage Grotesque",sans-serif;color:var(--ac)}.stats span{color:var(--mut);font-size:15px}
+section{padding:84px 0}
+.head{max-width:640px;margin-bottom:34px}.head h2{font-size:clamp(30px,4.2vw,50px);font-weight:800}.head p{color:var(--mut);margin-top:12px;font-size:18px}
+.flt{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:16px}.flt select{width:auto;min-width:160px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips button{font:500 15px "DM Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--ln);border-radius:999px;padding:9px 18px;cursor:pointer}
+.chips button:hover{border-color:var(--ac)}.chips button[aria-pressed=true]{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.st{text-align:left;font:inherit;color:inherit;background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:20px;cursor:pointer;display:grid;gap:10px;transition:border-color .2s,transform .2s}
+.st:hover{border-color:var(--ac);transform:translateY(-3px)}
+.mono{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--tint);color:var(--ac);font:800 20px "Bricolage Grotesque",sans-serif}
+.st h3{font-size:20px}.st small{color:var(--mut);font-size:14px}.st em{font-style:normal;font-size:13px;color:var(--ac);font-weight:700}
+.none{color:var(--mut);padding:30px 0}
+.promos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pm{background:var(--ac);color:var(--on);border-radius:20px;padding:26px;display:grid;gap:8px;align-content:start}.pm small{opacity:.8;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.pm h3{font-size:24px}.pm p{opacity:.88;font-size:16px}
+.vg{border-top:1px solid var(--ln)}.vr{display:grid;grid-template-columns:90px 1fr auto auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid var(--ln)}
+.vr b{font:800 22px "Bricolage Grotesque",sans-serif;color:var(--ac)}.vr h3{font-size:20px}.vr p{color:var(--mut);font-size:16px}
+.bd{font-size:13px;font-weight:700;border:1px solid var(--ac);color:var(--ac);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}.two>*{min-width:0}
+.hr{display:grid;gap:0;margin:18px 0}.hr div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--ln)}.hr span{color:var(--mut)}
+form{display:grid;gap:14px;background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:26px}label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+.note{font-size:14px;color:var(--mut)}
+footer{border-top:1px solid var(--ln);padding:34px 0 44px;color:var(--mut);font-size:15px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+dialog{border:0;border-radius:22px;padding:0;width:min(480px,calc(100% - 32px));background:var(--sf);color:var(--fg);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#0008}
+.dg{padding:28px;display:grid;gap:12px}.dg h3{font-size:28px}.dg .x{justify-self:end;background:none;border:1px solid var(--ln);border-radius:50%;width:38px;height:38px;cursor:pointer;color:var(--fg);font-size:16px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;box-shadow:0 8px 28px #0005}
+@media(max-width:900px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--ln);padding:10px 20px 20px}nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto}
+.hero,.two{grid-template-columns:1fr;gap:34px}.hero{padding:40px 0}.promos{grid-template-columns:1fr}.vr{grid-template-columns:1fr;gap:8px}.flt{grid-template-columns:1fr}.flt select{width:100%}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="#topo" id="bn">Galeria</a>
+<button id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav" aria-label="Principal"><a href="#lojas">Lojas</a><a href="#promocoes">Promoções</a><a href="#locacao">Locação</a><a href="#visite">Visite</a><a class="btn" href="#contato">Fale conosco</a></nav></div></header>
+<main>
+<div class="wrap hero" id="topo"><div><h1 id="h1"></h1><p class="lead" id="sl"></p>
+<div class="sb"><input id="q0" type="search" placeholder="Buscar loja ou serviço" aria-label="Buscar loja ou serviço"><button class="btn" id="go" type="button">Buscar</button></div></div>
+<div class="ph"><img id="im" alt="Corredor da galeria com lojas" width="800" height="560"><div class="info" id="inf"></div></div></div>
+<div class="wrap stats" id="stats"></div>
+
+<section id="lojas"><div class="wrap"><div class="head"><h2>Lojas e serviços</h2><p>Encontre o que procura por nome, categoria ou piso.</p></div>
+<div class="flt"><input id="q" type="search" placeholder="Digite o nome da loja ou o que você procura" aria-label="Filtrar lojas"><select id="pf" aria-label="Filtrar por piso"></select></div>
+<div class="chips" id="cats" role="group" aria-label="Categorias"></div>
+<div class="grid" id="gr" aria-live="polite"></div><p class="none" id="no" hidden>Nenhuma loja encontrada. Tente outra busca ou categoria.</p></div></section>
+
+<section id="promocoes" style="border-top:1px solid var(--ln)"><div class="wrap"><div class="head"><h2>Promoções e novidades</h2><p>Ofertas divulgadas pelos lojistas. Confirme condições e validade diretamente na loja.</p></div><div class="promos" id="pr"></div></div></section>
+
+<section id="locacao" style="border-top:1px solid var(--ln)"><div class="wrap"><div class="head"><h2>Espaços para locação</h2><p>Quer ter sua loja ou serviço aqui? Veja os espaços e fale com a administração.</p></div><div class="vg" id="vg"></div></div></section>
+
+<section id="visite" style="border-top:1px solid var(--ln)"><div class="wrap two"><div><div class="head" style="margin:0"><h2>Visite a galeria</h2></div><p id="ad" style="margin-top:14px;font-size:18px"></p><div class="hr" id="hr"></div><p class="note" id="cc"></p><p style="margin-top:18px"><a class="btn ghost" id="mp" target="_blank" rel="noopener noreferrer" href="#">Abrir no Google Maps</a></p></div>
+<div id="contato"><div class="head" style="margin:0 0 20px"><h2>Fale com a administração</h2><p>Dúvidas, sugestões ou interesse em locação. Abrimos o WhatsApp com a sua mensagem pronta.</p></div>
+<form id="f" novalidate><label>Seu nome<input id="n" autocomplete="name"></label><label>Assunto<select id="s"><option>Dúvida sobre a galeria</option><option>Quero alugar um espaço</option><option>Sou lojista</option><option>Sugestão</option></select></label><label>Mensagem<textarea id="m" rows="3"></textarea></label><button class="btn" type="submit">Enviar pelo WhatsApp</button><p class="note" id="st" role="status" aria-live="polite">Nenhum dado fica guardado neste site.</p></form></div></div></section>
+</main>
+<footer><div class="wrap"><span id="fc"></span><span>Site criado pela <a href="https://wa.me/5581997488294" target="_blank" rel="noopener noreferrer">NEXO</a> · Ideias conectadas. Soluções em movimento.</span></div></footer>
+<a class="btn wa" id="wa" target="_blank" rel="noopener noreferrer" href="#">WhatsApp</a>
+<dialog id="dlg" aria-labelledby="dt"><div class="dg"><button class="x" id="dx" aria-label="Fechar">✕</button><div class="mono" id="dm"></div><h3 id="dt"></h3><p class="note" id="dl"></p><p id="dd"></p><div id="da" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px"></div></div></dialog>
+<script src="config.js"></script>
+<script>
+const $=id=>document.getElementById(id),G=CONFIG.galeria,L=CONFIG.lojas;
+const wa=(t,n)=>'https://wa.me/'+(n||G.whatsapp)+'?text='+encodeURIComponent(t);
+const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const R=document.documentElement.style;R.setProperty('--ac',G.cor);R.setProperty('--on',G.corSobre);R.setProperty('--tint','color-mix(in srgb,'+G.cor+' 12%,white)');
+document.title=G.nome+' | Lojas, promoções e espaços para locação';
+$('bn').textContent=G.nome;$('h1').innerHTML=e(G.nome).replace(/^(\S+)/,'$1 <span>')+'</span>';$('sl').textContent=G.slogan;$('im').src=G.imagemTopo;
+const hj=G.horarios[0];
+$('inf').innerHTML='<div><b>Endereço</b>'+e(G.endereco)+'</div><div><b>Horário</b>'+e(hj[0])+': '+e(hj[1])+'</div>';
+const pisos=[...new Set(L.map(l=>l.piso))],cats=[...new Set(L.map(l=>l.categoria))],vd=CONFIG.vagas.filter(v=>v.status==='Disponível').length;
+$('stats').innerHTML=[[L.length,'lojas e serviços'],[pisos.length,'pisos'],[vd,'espaços disponíveis']].map(a=>'<div><b>'+a[0]+'</b><span>'+a[1]+'</span></div>').join('');
+$('pf').innerHTML='<option value="">Todos os pisos</option>'+pisos.map(p=>'<option>'+e(p)+'</option>').join('');
+let cat='';
+function chips(){$('cats').innerHTML=['Todas',...cats].map(c=>'<button type="button" aria-pressed="'+((c==='Todas'&&!cat)||c===cat)+'" data-c="'+e(c)+'">'+e(c)+'</button>').join('');
+$('cats').querySelectorAll('button').forEach(b=>b.onclick=()=>{cat=b.dataset.c==='Todas'?'':b.dataset.c;chips();draw()})}
+function draw(){const q=$('q').value.trim().toLowerCase(),p=$('pf').value;
+const r=L.map((l,i)=>[l,i]).filter(([l])=>(!cat||l.categoria===cat)&&(!p||l.piso===p)&&(!q||(l.nome+' '+l.categoria+' '+l.descricao).toLowerCase().includes(q)));
+$('gr').innerHTML=r.map(([l,i])=>'<button class="st" type="button" data-i="'+i+'"><span class="mono" aria-hidden="true">'+e(l.nome[0])+'</span><h3>'+e(l.nome)+'</h3><small>'+e(l.categoria)+'</small><em>Loja '+e(l.loja)+' · '+e(l.piso)+'</em></button>').join('');
+$('no').hidden=r.length>0;
+$('gr').querySelectorAll('.st').forEach(b=>b.onclick=()=>abrirLoja(L[b.dataset.i]))}
+function abrirLoja(l){$('dm').textContent=l.nome[0];$('dt').textContent=l.nome;$('dl').textContent=l.categoria+' · Loja '+l.loja+' · '+l.piso;$('dd').textContent=l.descricao;
+let a='<a class="btn" target="_blank" rel="noopener noreferrer" href="'+wa('Olá! Vi a '+l.nome+' no site da '+G.nome+' e gostaria de mais informações.',l.whatsapp)+'">Falar no WhatsApp</a>';
+if(l.instagram)a+='<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="'+e(l.instagram)+'">Instagram</a>';
+$('da').innerHTML=a;$('dlg').showModal()}
+$('dx').onclick=()=>$('dlg').close();$('dlg').addEventListener('click',ev=>{if(ev.target===$('dlg'))$('dlg').close()});
+$('q').oninput=draw;$('pf').onchange=draw;
+$('go').onclick=()=>{$('q').value=$('q0').value;draw();$('lojas').scrollIntoView()};$('q0').onkeydown=ev=>{if(ev.key==='Enter')$('go').click()};
+$('pr').innerHTML=CONFIG.promocoes.map(p=>'<div class="pm"><small>'+e(p.loja)+'</small><h3>'+e(p.titulo)+'</h3><p>'+e(p.detalhe)+'</p><p><b>'+e(p.validade)+'</b></p></div>').join('');
+$('vg').innerHTML=CONFIG.vagas.map(v=>'<div class="vr"><b>'+e(v.id)+'</b><div><h3>'+e(v.piso)+' · '+e(v.area)+'</h3><p>'+e(v.descricao)+'</p></div><span class="bd">'+e(v.status)+'</span><a class="btn ghost" target="_blank" rel="noopener noreferrer" href="'+wa('Olá! Tenho interesse no espaço '+v.id+' ('+v.piso+', '+v.area+') da '+G.nome+'.')+'">Tenho interesse</a></div>').join('');
+$('ad').textContent=G.endereco+' · '+G.cidade;$('hr').innerHTML=G.horarios.map(h=>'<div><b>'+e(h[0])+'</b><span>'+e(h[1])+'</span></div>').join('');$('cc').textContent=G.comoChegar;
+$('mp').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(G.mapaBusca);
+$('fc').textContent='© '+new Date().getFullYear()+' '+G.nome;$('wa').href=wa('Olá! Vim pelo site da '+G.nome+'.');
+$('mb').onclick=()=>{const o=$('nav').classList.toggle('open');$('mb').setAttribute('aria-expanded',o)};$('nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('nav').classList.remove('open'));
+$('f').addEventListener('submit',ev=>{ev.preventDefault();const n=$('n').value.trim(),m=$('m').value.trim();
+if(!n||m.length<5){$('st').textContent='Preencha seu nome e escreva uma mensagem.';return}
+$('st').textContent='Abrindo o WhatsApp...';if(!window.open(wa('Olá, sou '+n+'. Assunto: '+$('s').value+'.\n\n'+m),'_blank','noopener'))$('st').innerHTML='Janela bloqueada. <a href="'+wa('Olá, sou '+n+'. Assunto: '+$('s').value+'.\n\n'+m)+'">Toque aqui para abrir o WhatsApp</a>.'});
+chips();draw();
+</script>
+</body>
+</html>
