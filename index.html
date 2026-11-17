@@ -38,7 +38,7 @@
 {"@type":"WebSite","@id":"https://www.nexobytech.com.br/#site","url":"https://www.nexobytech.com.br/","name":"NEXO By Tech","inLanguage":"pt-BR","publisher":{"@id":"https://www.nexobytech.com.br/#org"}}
 ]}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=&#39;stylesheet&#39;"><noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{--bg:#faf8f4;--surface:#fff;--line:#e2ded5;--fg:#16161a;--mut:#5f5f66;--amber:#9a6508;--on-amber:#fff;--glow:#9a65081a;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme="dark"]{--bg:#0c0c0e;--surface:#16161a;--line:#2b2b31;--fg:#f4f4f2;--mut:#a3a3a9;--amber:#d49a29;--on-amber:#141414;--glow:#d49a2926;color-scheme:dark}
@@ -120,6 +120,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
  .steps{grid-template-columns:1fr;gap:30px}.step:after{display:none}
  section{padding:68px 0}
 }
+@media(min-width:901px) and (max-width:1179px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px 20px}nav.open{display:flex}nav a{padding:12px 0;width:100%}nav .btn{width:auto;margin-top:8px}}
 .net .n{cursor:pointer}.net .n .nd{transition:stroke .2s,fill .2s}.net .n:hover .nd,.net .n.on .nd{stroke:var(--amber);fill:var(--glow)}.net .n:focus{outline:none}.net .n:focus-visible .nd{stroke:var(--amber);stroke-width:3}.net .ln.on{stroke-width:3.4}.net #cap{fill:var(--mut);font-size:14px}
 .tb{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .tb button{font:500 16px "IBM Plex Sans",sans-serif;color:var(--fg);background:none;border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:background .2s,color .2s}
