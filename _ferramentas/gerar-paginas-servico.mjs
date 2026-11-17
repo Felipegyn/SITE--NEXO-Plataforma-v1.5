@@ -31,14 +31,15 @@ const cssExtra = `
 .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .ex a{display:block;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:22px;text-decoration:none;transition:border-color .2s,transform .2s}
 .ex a:hover{border-color:var(--amber);transform:translateY(-2px)}.ex b{display:block;font-size:19px;margin-bottom:6px}.ex span{color:var(--mut);font-size:15px}.ex small{display:block;margin-top:12px;color:var(--amber);font-weight:700}
-.outros{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.outros{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .outros a{border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;background:var(--surface);transition:border-color .2s}
 .outros a:hover{border-color:var(--amber)}.outros b{display:block;font-size:18px;margin-bottom:6px}.outros span{color:var(--mut);font-size:15px}
 .aviso{font-size:15px;color:var(--mut);border:1px dashed var(--line);border-radius:14px;padding:16px 18px;margin-top:28px;max-width:70ch}
 .fl{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}.fl a{color:var(--mut);text-decoration:none}.fl a:hover{color:var(--fg);text-decoration:underline}
 /* A correção de nav.bc/nav.fl vem do CSS da home. */
+/* Menu das páginas de serviço tem mais itens que o da home: evita quebra entre 1180 e 1279 px. */
+@media(min-width:1180px){#nav a{white-space:nowrap}}@media(min-width:1180px) and (max-width:1279px){#nav{gap:18px}}
 @media(max-width:900px){.chk,.ex,.outros{grid-template-columns:1fr}.hero.one{padding-top:28px}}
-@media(min-width:901px) and (max-width:1179px){.outros{grid-template-columns:repeat(2,1fr)}}
 `;
 fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'assets', 'nexo.css'), '/* Gerado por _ferramentas/gerar-paginas-servico.mjs a partir de index.html. Não editar à mão. */\n' + css.trim() + '\n' + cssExtra);
@@ -188,6 +189,45 @@ const PAGINAS = [
       ['E se algo mudar no processo?', 'Como tudo fica documentado, os ajustes são feitos com segurança. Oferecemos planos mensais de suporte, se você quiser.'],
     ],
   },
+  {
+    slug: 'google-ads', menu: 'Google Ads', curto: 'Campanhas ligadas ao site e ao WhatsApp.',
+    title: 'Google Ads para pequenos negócios em Recife | NEXO By Tech',
+    desc: 'Gestão de campanhas no Google Ads para negócios de Recife e Jaboatão: planejamento, público-alvo, integração com site e WhatsApp e acompanhamento de indicadores.',
+    servico: 'Google Ads', serviceType: 'Gestão de campanhas no Google Ads',
+    h1: 'Google Ads ligado ao seu site e ao seu WhatsApp',
+    lead: 'Planejamos e gerenciamos campanhas no Google Ads para levar quem já está procurando o seu serviço até uma página clara e a um contato direto, acompanhando o que cada campanha gera.',
+    wa: 'Olá! Vi a página de Google Ads da NEXO e gostaria de uma proposta.',
+    problemasTitulo: 'Quando os anúncios não trazem resultado',
+    problemas: [
+      ['Anúncio sem destino certo', 'o clique cai numa página genérica e o visitante não encontra o que procurou.'],
+      ['Objetivo indefinido', 'a campanha está no ar sem saber se o foco é ligação, mensagem ou visita.'],
+      ['Público amplo demais', 'o orçamento vai para pesquisas que não têm relação com o negócio.'],
+      ['Sem acompanhamento', 'não se sabe quais campanhas geram conversas e quais geram só cliques.'],
+    ],
+    entregasTitulo: 'O que a gestão inclui',
+    entregas: [
+      ['Planejamento de campanhas', 'Estrutura de campanhas e anúncios a partir dos serviços que você quer vender.'],
+      ['Objetivos e público-alvo', 'Definição do que medir e de quem alcançar: região, termos de pesquisa e horários.'],
+      ['Integração com site e WhatsApp', 'Anúncios que levam a páginas comerciais coerentes e a um contato direto.'],
+      ['Gestão de campanhas', 'Configuração, publicação e ajustes das campanhas no Google Ads.'],
+      ['Acompanhamento de indicadores', 'Relatórios com cliques, custos e contatos gerados, em linguagem simples.'],
+      ['Otimização contínua', 'Revisão de termos, anúncios e distribuição do orçamento com base nos dados.'],
+      ['Consultoria de presença digital', 'Orientação para anúncios, Perfil da Empresa e site trabalharem juntos.'],
+    ],
+    aviso: 'O investimento em mídia (o valor pago ao Google pelos anúncios) é contratado e pago separadamente da prestação de serviços da NEXO. Não prometemos primeira posição, quantidade de clientes nem retorno financeiro específico: os resultados dependem do mercado, da concorrência, do orçamento e das regras do Google.',
+    exemplosTitulo: 'Caminhos relacionados',
+    exemplos: [
+      ['/criacao-de-sites/', 'Página de destino', 'Anúncio bom precisa de uma página clara para virar contato.'],
+      ['/google-perfil-da-empresa/', 'Google Perfil da Empresa', 'Presença no Google Maps junto com os anúncios.'],
+      ['/automacao-de-processos/', 'Atendimento organizado', 'Contatos que chegam pelos anúncios sem se perder.'],
+    ],
+    faq: [
+      ['Quanto preciso investir em anúncios?', 'O valor de mídia é definido com você no planejamento, conforme objetivo e região, e pago diretamente ao Google. A gestão da NEXO é orçada à parte, com proposta por escrito.'],
+      ['Em quanto tempo vejo resultado?', 'Os anúncios começam a rodar depois da revisão do Google, e os ajustes que melhoram o desempenho dependem dos dados das primeiras semanas. Não prometemos prazo para retorno.'],
+      ['Vocês garantem a primeira posição?', 'Não. A posição dos anúncios é definida pelo leilão do Google, que considera o lance, a qualidade e a relevância do anúncio e da página.'],
+      ['Preciso ter um site?', 'Recomendamos uma página clara para cada serviço anunciado. Se você ainda não tiver, podemos criar a página junto com a campanha.'],
+    ],
+  },
 ];
 
 // ---------- Montagem ----------
@@ -208,7 +248,7 @@ function pagina(p) {
         { '@type': 'ListItem', position: 2, name: p.menu === 'Google Perfil' ? 'Google Perfil da Empresa' : p.menu, item: url }] },
     ],
   };
-  const opts = ['Site profissional', 'Presença no Google', 'Loja ou catálogo', 'Sistema ou automação', 'Portfólio digital', 'Galeria comercial', 'Placa de avaliação Google', 'Manutenção e suporte', 'Ainda não sei']
+  const opts = ['Site profissional', 'Presença no Google', 'Google Ads', 'Loja ou catálogo', 'Sistema ou automação', 'Portfólio digital', 'Galeria comercial', 'Placa de avaliação Google', 'Manutenção e suporte', 'Ainda não sei']
     .map(o => `<option${o === p.servico ? ' selected' : ''}>${o}</option>`).join('');
   const outros = PAGINAS.filter(o => o.slug !== p.slug).map(o => `<a href="/${o.slug}/"><b>${o.menu === 'Google Perfil' ? 'Google Perfil da Empresa' : o.menu === 'Sistemas' ? 'Sistemas sob medida' : o.menu === 'Automação' ? 'Automação de processos' : o.menu}</b><span>${o.curto}</span></a>`).join('')
     + `<a href="/#modelos"><b>Modelos prontos</b><span>Veja as demonstrações por segmento.</span></a>`;
@@ -285,7 +325,7 @@ ${p.faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`)
 </form></div></section>
 <section id="outros"><div class="wrap"><div class="head"><h2>Outros serviços da NEXO</h2></div><div class="outros">${outros}</div></div></section>
 </main>
-<footer><div class="wrap"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg><nav class="fl" aria-label="Serviços"><a href="/criacao-de-sites/">Criação de sites</a><a href="/google-perfil-da-empresa/">Google Perfil da Empresa</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/automacao-de-processos/">Automação de processos</a></nav><span>Ideias conectadas. Soluções em movimento.</span><span>© <span id="y"></span> NEXO</span></div></footer>
+<footer><div class="wrap"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg><nav class="fl" aria-label="Serviços"><a href="/criacao-de-sites/">Criação de sites</a><a href="/google-perfil-da-empresa/">Google Perfil da Empresa</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/automacao-de-processos/">Automação de processos</a><a href="/google-ads/">Google Ads</a></nav><span>Ideias conectadas. Soluções em movimento.</span><span>© <span id="y"></span> NEXO</span></div></footer>
 <a class="wa" href="${waLink(p.wa)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 <script>
 const W='https://wa.me/${WA}?text=',msg=t=>W+encodeURIComponent(t);

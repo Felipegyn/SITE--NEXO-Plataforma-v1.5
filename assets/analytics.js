@@ -18,7 +18,7 @@
     if (a.matches('button.open')) return ['clique_demonstracao', { demonstracao: a.dataset.k || '' }];
     if (/wa\.me\//.test(href)) return ['clique_whatsapp', { local: a.classList.contains('wa') ? 'flutuante' : 'pagina' }];
     if (/#contato$/.test(href)) return ['clique_pedir_proposta', { local: a.closest('header') ? 'cabecalho' : 'pagina' }];
-    var m = href.match(/^\/(criacao-de-sites|google-perfil-da-empresa|sistemas-sob-medida|automacao-de-processos)\/$/);
+    var m = href.match(/^\/(criacao-de-sites|google-perfil-da-empresa|sistemas-sob-medida|automacao-de-processos|google-ads)\/$/);
     if (m) return ['clique_servico', { servico: m[1] }];
     if (/^\/?demos\//.test(href)) return ['clique_demonstracao', { demonstracao: href.split('/')[href.charAt(0) === '/' ? 2 : 1] }];
     return null;
