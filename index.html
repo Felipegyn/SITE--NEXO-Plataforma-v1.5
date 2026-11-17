@@ -30,10 +30,10 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://www.nexobytech.com.br/#org","name":"NEXO By Tech","alternateName":"NEXO","url":"https://www.nexobytech.com.br/","logo":{"@type":"ImageObject","url":"https://www.nexobytech.com.br/logo-512.png","width":512,"height":512},"image":"https://www.nexobytech.com.br/og-image.png","slogan":"Ideias conectadas. Soluções em movimento.","description":"Criação de sites, presença no Google, integração com WhatsApp, sistemas e automação para pequenos negócios.","areaServed":[{"@type":"City","name":"Recife"},{"@type":"City","name":"Jaboatão dos Guararapes"}],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+55-81-99748-8294","availableLanguage":"pt-BR","url":"https://wa.me/5581997488294"},"knowsAbout":["Criação de sites","Google Perfil da Empresa","Sistemas sob medida","Automação de processos","Presença digital para empresas"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Serviços NEXO","itemListElement":[
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sites e experiências digitais","description":"Sites institucionais, páginas comerciais, catálogos e portfólios."}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Presença no Google","description":"Perfil da Empresa no Google e informações comerciais organizadas."}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sites e experiências digitais","url":"https://www.nexobytech.com.br/criacao-de-sites/","description":"Sites institucionais, páginas comerciais, catálogos e portfólios."}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Presença no Google","url":"https://www.nexobytech.com.br/google-perfil-da-empresa/","description":"Perfil da Empresa no Google e informações comerciais organizadas."}},
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lojas e galerias comerciais","description":"Vitrines digitais para lojistas e portais para galerias comerciais."}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sistemas e automação","description":"Ferramentas para organizar informações e automatizar tarefas repetitivas."}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sistemas e automação","url":"https://www.nexobytech.com.br/sistemas-sob-medida/","description":"Ferramentas para organizar informações e automatizar tarefas repetitivas."}},
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gestão e suporte contínuo","description":"Atualização, manutenção e acompanhamento das ferramentas digitais."}}]}},
 {"@type":"WebSite","@id":"https://www.nexobytech.com.br/#site","url":"https://www.nexobytech.com.br/","name":"NEXO By Tech","inLanguage":"pt-BR","publisher":{"@id":"https://www.nexobytech.com.br/#org"}}
 ]}
@@ -85,6 +85,8 @@ section{padding:92px 0;border-top:1px solid var(--line)}
 .row h3{font-size:26px;font-weight:700}
 .row p{color:var(--mut);max-width:52ch}
 .row a{color:var(--amber);text-decoration:none;font-weight:700;white-space:nowrap}.row a:hover{text-decoration:underline}
+.row .mais{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:15px}
+.fl{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}.fl a{color:var(--mut);text-decoration:none}.fl a:hover{color:var(--fg);text-decoration:underline}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
 .step{padding:0 26px 0 0;position:relative}
 .step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--amber);color:var(--on-amber);font:800 18px "IBM Plex Sans",sans-serif;margin-bottom:22px;position:relative;z-index:1}
@@ -257,7 +259,8 @@ header.scrolled .brand svg.logo{height:26px}
 .hero h1 .w{animation:wIn .8s var(--ease,cubic-bezier(.2,.8,.2,1)) forwards,wave 8s ease-in-out infinite;animation-delay:calc(.15s + var(--i)*.12s),calc(2.2s + var(--i)*.4s)}
 @keyframes wave{0%,34%,100%{transform:none;color:inherit}14%{transform:translateY(-3px);color:color-mix(in srgb,var(--amber) 78%,var(--fg))}}
 @media(prefers-reduced-motion:reduce){.hero h1 .w{animation:none;opacity:1}}
-</style>
+
+nav.bc,nav.fl{position:static;display:flex;flex-direction:row;align-items:center;background:none;border:0;padding:0;animation:none}nav.bc a,nav.fl a{padding:0;width:auto}nav.bc{padding-top:28px}</style>
 </head>
 <body>
 <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><linearGradient id="nxShine" x1="0" y1="0" x2="2" y2="0" spreadMethod="repeat" gradientTransform="skewX(-18) translate(-1.4 0)"><stop offset="0" style="stop-color:var(--lgA)"/><stop offset=".36" style="stop-color:var(--lgA)"/><stop offset=".43" style="stop-color:var(--lgB)"/><stop offset=".5" style="stop-color:var(--lgC)"/><stop offset=".57" style="stop-color:var(--lgB)"/><stop offset=".64" style="stop-color:var(--lgA)"/><stop offset="1" style="stop-color:var(--lgA)"/><animateTransform attributeName="gradientTransform" type="translate" additive="sum" from="0 0" to="2 0" dur="6s" repeatCount="indefinite"/></linearGradient></defs></svg>
@@ -305,10 +308,10 @@ header.scrolled .brand svg.logo{height:26px}
 <section id="servicos"><div class="wrap">
 <div class="head"><h2>O que a NEXO coloca de pé para você</h2><p>Cada serviço tem escopo, prazo e preço combinados por escrito antes do primeiro dia de trabalho.</p></div>
 <div class="svc">
-<div class="row"><h3>Sites e experiências digitais</h3><p>Sites institucionais, páginas comerciais, catálogos e portfólios com identidade visual, boa navegação e foco em transformar visitas em contatos.</p><a href="#contato" data-s="Site profissional">Pedir proposta</a></div>
-<div class="row"><h3>Presença no Google</h3><p>Perfil da Empresa no Google, informações comerciais organizadas, avaliações por QR Code/NFC, WhatsApp e redes sociais trabalhando juntos.</p><a href="#contato" data-s="Presença no Google">Pedir proposta</a></div>
+<div class="row"><h3>Sites e experiências digitais</h3><p>Sites institucionais, páginas comerciais, catálogos e portfólios com identidade visual, boa navegação e foco em transformar visitas em contatos.<span class="mais"><a href="/criacao-de-sites/">Criação de sites ›</a></span></p><a href="#contato" data-s="Site profissional">Pedir proposta</a></div>
+<div class="row"><h3>Presença no Google</h3><p>Perfil da Empresa no Google, informações comerciais organizadas, avaliações por QR Code/NFC, WhatsApp e redes sociais trabalhando juntos.<span class="mais"><a href="/google-perfil-da-empresa/">Google Perfil da Empresa ›</a></span></p><a href="#contato" data-s="Presença no Google">Pedir proposta</a></div>
 <div class="row"><h3>Lojas e galerias comerciais</h3><p>Vitrines digitais para lojistas e portais para galerias, reunindo estabelecimentos, produtos, serviços, localização e espaços para locação.</p><a href="#contato" data-s="Loja ou catálogo">Pedir proposta</a></div>
-<div class="row"><h3>Sistemas e automação</h3><p>Ferramentas para organizar informações, automatizar tarefas repetitivas, estruturar fluxos de trabalho e acompanhar indicadores.</p><a href="#contato" data-s="Sistema ou automação">Pedir proposta</a></div>
+<div class="row"><h3>Sistemas e automação</h3><p>Ferramentas para organizar informações, automatizar tarefas repetitivas, estruturar fluxos de trabalho e acompanhar indicadores.<span class="mais"><a href="/sistemas-sob-medida/">Sistemas sob medida ›</a><a href="/automacao-de-processos/">Automação de processos ›</a></span></p><a href="#contato" data-s="Sistema ou automação">Pedir proposta</a></div>
 <div class="row"><h3>Gestão e suporte contínuo</h3><p>Atualização de sites, manutenção, acompanhamento das ferramentas digitais e melhorias constantes, em plano mensal.</p><a href="#contato" data-s="Manutenção e suporte">Pedir proposta</a></div>
 </div></div></section>
 
@@ -375,7 +378,7 @@ header.scrolled .brand svg.logo{height:26px}
 <p class="note" id="st" role="status" aria-live="polite">Ao enviar, você abre uma conversa no seu WhatsApp. Nenhum dado fica guardado neste site.</p>
 </form></div></section>
 </main>
-<footer><div class="wrap"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg><span>Ideias conectadas. Soluções em movimento.</span><span>© <span id="y"></span> NEXO</span></div></footer>
+<footer><div class="wrap"><svg class="logo" role="img" aria-label="NEXO"><use href="#logo"/></svg><nav class="fl" aria-label="Serviços"><a href="/criacao-de-sites/">Criação de sites</a><a href="/google-perfil-da-empresa/">Google Perfil da Empresa</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/automacao-de-processos/">Automação de processos</a></nav><span>Ideias conectadas. Soluções em movimento.</span><span>© <span id="y"></span> NEXO</span></div></footer>
 <a class="wa" data-wa href="https://wa.me/5581997488294?text=Ol%C3%A1%21%20Conheci%20a%20NEXO%20pelo%20site%20e%20gostaria%20de%20uma%20proposta." target="_blank" rel="noopener noreferrer">WhatsApp</a>
 <script>
 const PH='5581997488294',W='https://wa.me/'+PH+'?text=';
@@ -464,5 +467,6 @@ function walk(n){[].slice.call(n.childNodes).forEach(function(c){if(c.nodeType==
 walk(h)})();
 </script>
 <script>(function(){var b=document.querySelector("a.wa"),c=document.getElementById("contato");if(!b||!c||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)},{threshold:0.15}).observe(c)})();</script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>
