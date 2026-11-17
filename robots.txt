@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /NEXO-Plataforma-v1.5/
 
 Sitemap: https://www.nexobytech.com.br/sitemap.xml
