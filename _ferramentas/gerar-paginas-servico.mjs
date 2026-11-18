@@ -31,6 +31,7 @@ const cssExtra = `
 .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .ex a{display:block;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:22px;text-decoration:none;transition:border-color .2s,transform .2s}
 .ex a:hover{border-color:var(--amber);transform:translateY(-2px)}.ex b{display:block;font-size:19px;margin-bottom:6px}.ex span{color:var(--mut);font-size:15px}.ex small{display:block;margin-top:12px;color:var(--amber);font-weight:700}
+@media(min-width:901px){.ex.tipos{grid-template-columns:repeat(2,1fr)}}
 .outros{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .outros a{border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;background:var(--surface);transition:border-color .2s}
 .outros a:hover{border-color:var(--amber)}.outros b{display:block;font-size:18px;margin-bottom:6px}.outros span{color:var(--mut);font-size:15px}
@@ -48,12 +49,20 @@ fs.writeFileSync(path.join(ROOT, 'assets', 'nexo.css'), '/* Gerado por _ferramen
 const PAGINAS = [
   {
     slug: 'criacao-de-sites', menu: 'Criação de sites', curto: 'Sites profissionais, responsivos e ligados ao WhatsApp.',
-    title: 'Criação de sites em Recife e Jaboatão | NEXO By Tech',
-    desc: 'Criação de sites profissionais para pequenos negócios em Recife e Jaboatão dos Guararapes: responsivos, ligados ao WhatsApp e ao Google, com proposta por escrito.',
+    title: 'Criação de sites e landing pages em Recife | NEXO By Tech',
+    desc: 'Sites para empresas, landing pages e catálogos para pequenos negócios em Recife e Jaboatão: responsivos, ligados ao WhatsApp e ao Google, com proposta por escrito.',
     servico: 'Site profissional', serviceType: 'Criação de sites',
     h1: 'Criação de sites para pequenos negócios em Recife e região',
     lead: 'Sites institucionais, páginas comerciais (landing pages), catálogos e portfólios com a identidade da sua marca, navegação clara no celular e um caminho direto para o WhatsApp.',
     wa: 'Olá! Vi a página de criação de sites da NEXO e gostaria de uma proposta.',
+    tiposTitulo: 'Qual tipo de site o seu negócio precisa',
+    tiposIntro: 'Cada formato resolve uma necessidade diferente. No briefing ajudamos a escolher; se fizer sentido, eles podem ser combinados.',
+    tipos: [
+      ['Site institucional para empresa', 'Apresenta a empresa, os serviços, os diferenciais e as formas de contato em várias páginas. Para quem quer ser encontrado e transmitir confiança.', '/demos/empresa/', 'Ver exemplo ▸', 'Site profissional'],
+      ['Landing page', 'Uma página só, focada em um serviço, oferta ou campanha, com um objetivo claro: levar o visitante ao contato pelo WhatsApp ou formulário. Combina com anúncios no Google.', '#contato', 'Pedir proposta de landing page ▸', 'Landing page'],
+      ['Site para loja e catálogo', 'Vitrine com produtos, categorias, localização e pedido pelo WhatsApp. Para lojas de roupas, acessórios e comércio local.', '/demos/loja/', 'Ver exemplo ▸', 'Loja ou catálogo'],
+      ['Site para prestador de serviços', 'Serviços, valores ou orçamento, agendamento e avaliações. Para oficinas, salões, barbearias, lava-jatos e outros negócios locais.', '/demos/negocio-local/', 'Ver exemplo ▸', 'Site profissional'],
+    ],
     problemasTitulo: 'Quando um site faz falta',
     problemas: [
       ['Informação espalhada', 'o cliente não acha horário, endereço, serviços ou formas de contato em um só lugar.'],
@@ -220,7 +229,7 @@ const PAGINAS = [
     aviso: 'O investimento em mídia (o valor pago ao Google pelos anúncios) é contratado e pago separadamente da prestação de serviços da NEXO. Não prometemos primeira posição, quantidade de clientes nem retorno financeiro específico: os resultados dependem do mercado, da concorrência, do orçamento e das regras do Google.',
     exemplosTitulo: 'Caminhos relacionados',
     exemplos: [
-      ['/criacao-de-sites/', 'Página de destino', 'Anúncio bom precisa de uma página clara para virar contato.'],
+      ['/criacao-de-sites/#tipos', 'Landing page para anúncios', 'Anúncio bom precisa de uma página clara para virar contato.'],
       ['/google-perfil-da-empresa/', 'Google Perfil da Empresa', 'Presença no Google Maps junto com os anúncios.'],
       ['/automacao-de-processos/', 'Atendimento organizado', 'Contatos que chegam pelos anúncios sem se perder.'],
     ],
@@ -251,7 +260,7 @@ function pagina(p) {
         { '@type': 'ListItem', position: 2, name: p.menu === 'Google Perfil' ? 'Google Perfil da Empresa' : p.menu, item: url }] },
     ],
   };
-  const opts = ['Site profissional', 'Presença no Google', 'Google Ads', 'Loja ou catálogo', 'Sistema ou automação', 'Portfólio digital', 'Galeria comercial', 'Placa de avaliação Google', 'Manutenção e suporte', 'Ainda não sei']
+  const opts = ['Site profissional', 'Landing page', 'Presença no Google', 'Google Ads', 'Loja ou catálogo', 'Sistema ou automação', 'Portfólio digital', 'Galeria comercial', 'Placa de avaliação Google', 'Manutenção e suporte', 'Ainda não sei']
     .map(o => `<option${o === p.servico ? ' selected' : ''}>${o}</option>`).join('');
   const outros = PAGINAS.filter(o => o.slug !== p.slug).map(o => `<a href="/${o.slug}/"><b>${o.menu === 'Google Perfil' ? 'Google Perfil da Empresa' : o.menu === 'Sistemas' ? 'Sistemas sob medida' : o.menu === 'Automação' ? 'Automação de processos' : o.menu}</b><span>${o.curto}</span></a>`).join('')
     + `<a href="/#modelos"><b>Modelos prontos</b><span>Veja as demonstrações por segmento.</span></a>`;
@@ -305,7 +314,8 @@ ${svgDefs}
 <div class="acts"><a class="btn" href="#contato">Pedir proposta grátis</a><a class="btn ghost" href="${waLink(p.wa)}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a></div>
 <div class="proof"><span><b>Atendemos</b> Recife, Jaboatão dos Guararapes e região</span><span><b>Escopo e preço</b> combinados antes</span><span><b>Suporte</b> contínuo após a entrega</span></div></div>
 </div></div>
-<section id="problemas"><div class="wrap"><div class="head"><h2>${p.problemasTitulo}</h2></div>
+${p.tipos ? `<section id="tipos"><div class="wrap"><div class="head"><h2>${p.tiposTitulo}</h2><p>${p.tiposIntro}</p></div><div class="ex tipos">${p.tipos.map(([t, d, h, cta, s]) => `<a href="${h}"${h === '#contato' ? ` data-s="${s}"` : ''}><b>${t}</b><span>${d}</span><small>${cta}</small></a>`).join('')}</div></div></section>
+` : ''}<section id="problemas"><div class="wrap"><div class="head"><h2>${p.problemasTitulo}</h2></div>
 <ul class="chk">${p.problemas.map(([b, t]) => `<li><b>${b}:</b> ${t}</li>`).join('')}</ul></div></section>
 <section id="entregas"><div class="wrap"><div class="head"><h2>${p.entregasTitulo}</h2><p>Cada serviço tem escopo, prazo e preço combinados por escrito antes do primeiro dia de trabalho.</p></div>
 <div class="svc">${p.entregas.map(([h, t]) => `<div class="row"><h3>${h}</h3><p>${t}</p><span></span></div>`).join('')}</div>
@@ -337,6 +347,7 @@ document.getElementById('th').onclick=()=>{const d=document.documentElement.data
 const mb=document.getElementById('mb'),nv=document.getElementById('nav');
 mb.onclick=()=>{const o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
 nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nv.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+document.querySelectorAll('[data-s]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('s').value=a.dataset.s}));
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
 const n=document.getElementById('n').value.trim(),d=document.getElementById('d').value.trim(),s=document.getElementById('s').value,st=document.getElementById('st');
 if(!n||d.length<10){st.textContent='Preencha seu nome e descreva o projeto com pelo menos 10 letras.';return}

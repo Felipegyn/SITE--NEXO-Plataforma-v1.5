@@ -240,6 +240,7 @@ nav.bc,nav.fl{position:static;display:flex;flex-direction:row;align-items:center
 .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .ex a{display:block;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:22px;text-decoration:none;transition:border-color .2s,transform .2s}
 .ex a:hover{border-color:var(--amber);transform:translateY(-2px)}.ex b{display:block;font-size:19px;margin-bottom:6px}.ex span{color:var(--mut);font-size:15px}.ex small{display:block;margin-top:12px;color:var(--amber);font-weight:700}
+@media(min-width:901px){.ex.tipos{grid-template-columns:repeat(2,1fr)}}
 .outros{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .outros a{border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;background:var(--surface);transition:border-color .2s}
 .outros a:hover{border-color:var(--amber)}.outros b{display:block;font-size:18px;margin-bottom:6px}.outros span{color:var(--mut);font-size:15px}
