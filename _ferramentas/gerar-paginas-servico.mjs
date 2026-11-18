@@ -52,7 +52,7 @@ const PAGINAS = [
     desc: 'Criação de sites profissionais para pequenos negócios em Recife e Jaboatão dos Guararapes: responsivos, ligados ao WhatsApp e ao Google, com proposta por escrito.',
     servico: 'Site profissional', serviceType: 'Criação de sites',
     h1: 'Criação de sites para pequenos negócios em Recife e região',
-    lead: 'Sites institucionais, páginas comerciais, catálogos e portfólios com a identidade da sua marca, navegação clara no celular e um caminho direto para o WhatsApp.',
+    lead: 'Sites institucionais, páginas comerciais (landing pages), catálogos e portfólios com a identidade da sua marca, navegação clara no celular e um caminho direto para o WhatsApp.',
     wa: 'Olá! Vi a página de criação de sites da NEXO e gostaria de uma proposta.',
     problemasTitulo: 'Quando um site faz falta',
     problemas: [
@@ -78,17 +78,18 @@ const PAGINAS = [
     faq: [
       ['Quanto custa um site?', 'Depende do escopo. Depois do briefing, enviamos proposta com valores, prazos e condições por escrito, sem taxas escondidas.'],
       ['Em quanto tempo fica pronto?', 'O prazo varia com o escopo e com a entrega dos materiais (textos, fotos, logo). Ele é combinado na proposta.'],
+      ['Vocês fazem landing page?', 'Sim. Uma landing page é uma página comercial focada em um serviço ou campanha, com o contato direto pelo WhatsApp. Ela pode ser feita sozinha ou como parte de um site maior.'],
       ['Meu site vai aparecer no Google?', 'Fazemos a configuração técnica inicial (títulos, descrições, sitemap) e ligamos o site ao seu Perfil da Empresa. A posição nos resultados depende do Google e da concorrência, por isso não prometemos posição.'],
       ['Preciso entender de tecnologia?', 'Não. Cuidamos do domínio, da hospedagem e da publicação, e mostramos como atualizar o que for necessário.'],
     ],
   },
   {
     slug: 'google-perfil-da-empresa', menu: 'Google Perfil', curto: 'Perfil no Google organizado e ligado ao site.',
-    title: 'Google Perfil da Empresa em Recife | NEXO By Tech',
+    title: 'Google Meu Negócio e Perfil da Empresa em Recife | NEXO',
     desc: 'Configuração e organização do Perfil da Empresa no Google para negócios de Recife e Jaboatão: informações corretas, ligação com site e WhatsApp e placa de avaliação.',
     servico: 'Presença no Google', serviceType: 'Gestão do Perfil da Empresa no Google',
     h1: 'Google Perfil da Empresa organizado e ligado ao seu site',
-    lead: 'Configuramos o Perfil da Empresa no Google com informações comerciais corretas e o conectamos ao seu site, ao WhatsApp e às redes sociais, para quem procura por perto chegar até você.',
+    lead: 'Configuramos o Perfil da Empresa no Google (o antigo Google Meu Negócio) com informações comerciais corretas e o conectamos ao seu site, ao WhatsApp e às redes sociais, para quem procura por perto chegar até você.',
     wa: 'Olá! Vi a página de Google Perfil da Empresa da NEXO e gostaria de uma proposta.',
     problemasTitulo: 'Sinais de que o perfil precisa de atenção',
     problemas: [
@@ -112,6 +113,7 @@ const PAGINAS = [
     ],
     aviso: 'Não prometemos avaliações positivas nem oferecemos incentivos condicionados à nota. A verificação e a posição no Google dependem das regras e dos sistemas do próprio Google, sem garantia de posição ou de volume de contatos.',
     faq: [
+      ['Como colocar minha empresa no Google Maps?', 'O Google Maps usa o Perfil da Empresa no Google. Criamos ou reivindicamos o perfil, preenchemos as informações e acompanhamos a verificação pedida pelo Google. Criar o perfil não tem custo no Google; o nosso trabalho é a configuração e a ligação com o site e o WhatsApp.'],
       ['Meu negócio não recebe clientes no local. Posso ter perfil?', 'Em muitos casos, sim: o Google permite perfis de prestadores que atendem no endereço do cliente sem exibir o próprio endereço. A elegibilidade é definida pelas regras do Google, e verificamos isso antes de começar.'],
       ['Quanto tempo leva a verificação?', 'Depende do método de verificação que o Google solicitar para o seu perfil. Acompanhamos o processo com você.'],
       ['Como funciona a placa de avaliação?', 'O cliente aproxima o celular (NFC) ou lê o QR Code e cai direto na página de avaliação do seu perfil. Entregamos a placa configurada e testada.'],
@@ -120,11 +122,11 @@ const PAGINAS = [
   },
   {
     slug: 'sistemas-sob-medida', menu: 'Sistemas', curto: 'Cadastros, controles e painéis do seu jeito.',
-    title: 'Sistemas sob medida para pequenos negócios | NEXO By Tech',
+    title: 'Sistemas e software sob medida em Recife | NEXO By Tech',
     desc: 'Desenvolvimento de sistemas sob medida em Recife e Jaboatão dos Guararapes: cadastros, controles, painéis e fluxos de trabalho do jeito que o seu negócio funciona.',
     servico: 'Sistema ou automação', serviceType: 'Desenvolvimento de sistemas sob medida',
     h1: 'Sistemas sob medida para organizar o seu negócio',
-    lead: 'Ferramentas para organizar informações, estruturar fluxos de trabalho e acompanhar indicadores, construídas a partir de como o seu negócio já funciona.',
+    lead: 'Desenvolvimento de software sob medida: ferramentas para organizar informações, estruturar fluxos de trabalho e acompanhar indicadores, construídas a partir de como o seu negócio já funciona.',
     wa: 'Olá! Vi a página de sistemas sob medida da NEXO e gostaria de conversar sobre um projeto.',
     problemasTitulo: 'Quando vale pensar em um sistema',
     problemas: [
@@ -184,6 +186,7 @@ const PAGINAS = [
     exemplosTitulo: 'Exemplos e caminhos relacionados',
     faq: [
       ['O que dá para automatizar?', 'Tarefas com regra clara e repetição: transferir dados, montar mensagens, organizar pedidos e consolidar números. No briefing apontamos onde há ganho real.'],
+      ['Vocês fazem automação de WhatsApp?', 'Fazemos integrações com o WhatsApp conforme o escopo: desde mensagens prontas a partir do site e de formulários até fluxos com a plataforma oficial do WhatsApp para empresas, que exige conta aprovada pela Meta e tem custos próprios. Avaliamos os requisitos no briefing, antes de propor.'],
       ['Vou precisar trocar meus programas?', 'Avaliamos primeiro as ferramentas que você já usa. A troca só é proposta quando a ferramenta atual impede a integração.'],
       ['Quanto custa?', 'Automação é orçada por escopo, com proposta por escrito antes do início.'],
       ['E se algo mudar no processo?', 'Como tudo fica documentado, os ajustes são feitos com segurança. Oferecemos planos mensais de suporte, se você quiser.'],
@@ -191,11 +194,11 @@ const PAGINAS = [
   },
   {
     slug: 'google-ads', menu: 'Google Ads', curto: 'Campanhas ligadas ao site e ao WhatsApp.',
-    title: 'Google Ads para pequenos negócios em Recife | NEXO By Tech',
+    title: 'Gestão de Google Ads e tráfego pago em Recife | NEXO',
     desc: 'Gestão de campanhas no Google Ads para negócios de Recife e Jaboatão: planejamento, público-alvo, integração com site e WhatsApp e acompanhamento de indicadores.',
     servico: 'Google Ads', serviceType: 'Gestão de campanhas no Google Ads',
     h1: 'Google Ads ligado ao seu site e ao seu WhatsApp',
-    lead: 'Planejamos e gerenciamos campanhas no Google Ads para levar quem já está procurando o seu serviço até uma página clara e a um contato direto, acompanhando o que cada campanha gera.',
+    lead: 'Gestão de tráfego pago no Google: planejamos e gerenciamos campanhas no Google Ads para levar quem já está procurando o seu serviço até uma página clara e a um contato direto, acompanhando o que cada campanha gera.',
     wa: 'Olá! Vi a página de Google Ads da NEXO e gostaria de uma proposta.',
     problemasTitulo: 'Quando os anúncios não trazem resultado',
     problemas: [
