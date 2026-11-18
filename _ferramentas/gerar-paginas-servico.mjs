@@ -86,7 +86,7 @@ const PAGINAS = [
   {
     slug: 'google-perfil-da-empresa', menu: 'Google Perfil', curto: 'Perfil no Google organizado e ligado ao site.',
     title: 'Google Meu Negócio e Perfil da Empresa em Recife | NEXO',
-    desc: 'Configuração e organização do Perfil da Empresa no Google para negócios de Recife e Jaboatão: informações corretas, ligação com site e WhatsApp e placa de avaliação.',
+    desc: 'Perfil da Empresa no Google (antigo Google Meu Negócio) para negócios de Recife e Jaboatão: sua empresa no Google Maps, ligada ao site e ao WhatsApp.',
     servico: 'Presença no Google', serviceType: 'Gestão do Perfil da Empresa no Google',
     h1: 'Google Perfil da Empresa organizado e ligado ao seu site',
     lead: 'Configuramos o Perfil da Empresa no Google (o antigo Google Meu Negócio) com informações comerciais corretas e o conectamos ao seu site, ao WhatsApp e às redes sociais, para quem procura por perto chegar até você.',
@@ -123,7 +123,7 @@ const PAGINAS = [
   {
     slug: 'sistemas-sob-medida', menu: 'Sistemas', curto: 'Cadastros, controles e painéis do seu jeito.',
     title: 'Sistemas e software sob medida em Recife | NEXO By Tech',
-    desc: 'Desenvolvimento de sistemas sob medida em Recife e Jaboatão dos Guararapes: cadastros, controles, painéis e fluxos de trabalho do jeito que o seu negócio funciona.',
+    desc: 'Desenvolvimento de software e sistemas sob medida em Recife e Jaboatão: cadastros, controles, painéis e fluxos do jeito que o seu negócio funciona.',
     servico: 'Sistema ou automação', serviceType: 'Desenvolvimento de sistemas sob medida',
     h1: 'Sistemas sob medida para organizar o seu negócio',
     lead: 'Desenvolvimento de software sob medida: ferramentas para organizar informações, estruturar fluxos de trabalho e acompanhar indicadores, construídas a partir de como o seu negócio já funciona.',
@@ -195,7 +195,7 @@ const PAGINAS = [
   {
     slug: 'google-ads', menu: 'Google Ads', curto: 'Campanhas ligadas ao site e ao WhatsApp.',
     title: 'Gestão de Google Ads e tráfego pago em Recife | NEXO',
-    desc: 'Gestão de campanhas no Google Ads para negócios de Recife e Jaboatão: planejamento, público-alvo, integração com site e WhatsApp e acompanhamento de indicadores.',
+    desc: 'Gestão de Google Ads e tráfego pago para negócios de Recife e Jaboatão: planejamento, público-alvo, integração com site e WhatsApp e indicadores.',
     servico: 'Google Ads', serviceType: 'Gestão de campanhas no Google Ads',
     h1: 'Google Ads ligado ao seu site e ao seu WhatsApp',
     lead: 'Gestão de tráfego pago no Google: planejamos e gerenciamos campanhas no Google Ads para levar quem já está procurando o seu serviço até uma página clara e a um contato direto, acompanhando o que cada campanha gera.',
